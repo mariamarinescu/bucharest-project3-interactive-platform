@@ -11,6 +11,8 @@ class SignUp extends React.Component {
             password: '',
             confirmPass: ""
         }
+        this.handleSignUp = this.handleSignUp.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSignUp(event) {
@@ -21,6 +23,10 @@ class SignUp extends React.Component {
             confirmPassword: event.target.value
         })
     }
+    handleSubmit(event) {
+       console.log(`name: ${this.state.name} and password: ${this.state.confirmPass} and email: ${this.state.email}`);
+        event.preventDefault();
+      }
     render() {
         return (
             <div>
@@ -30,33 +36,30 @@ class SignUp extends React.Component {
                     </Modal.Header>
 
                     <Modal.Body>
-                        <Form >
+                        <Form onChange={this.handleChange} onSubmit={this.handleSubmit}>
                             <Form.Group controlId="formBasicName">
                                 <Form.Control type="name"
                                 value={this.state.name} 
-                                onChange={this.handleChange} 
-                                placeholder="Nume complet" />
+                               />
                             </Form.Group>
                             <Form.Group controlId="formBasicEmail">
                                 <Form.Control type="email" 
                                 value={this.state.email} 
-                                onChange={this.handleChange} 
-                                placeholder="Email" />
+                                />
                             </Form.Group>
 
                             <Form.Group controlId="formBasicPassword">
 
                                 <Form.Control type="password" 
                                 value={this.state.password} 
-                                onChange={this.handleChange} 
-                                placeholder="Password" />
+                               />
                             </Form.Group>
                             <Form.Group controlId="formBasicConfirmPassword">
 
                                 <Form.Control type="password"
                                 value={this.state.confirmPass} 
-                                onChange={this.handleChange} 
-                                placeholder="Confirma parola" />
+                                 
+                             />
                             </Form.Group>
 
                             <Button variant="outline-secondary">Creeaza cont</Button>

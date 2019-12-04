@@ -22,6 +22,26 @@ class SignUp extends React.Component {
     }
 
     render() {
+        const fieldEmailError = this.state.errorEmailText ?
+            (
+                <div className="errorMessage">
+                    {this.state.errorEmailText}
+                </div>) : null;
+        const fieldNameError = this.state.errorNameText ?
+            (
+                <div className="errorMessage">
+                    {this.state.errorNameText}
+                </div>) : null;
+        const fieldPasswordError = this.state.errorPasswordText ?
+            (
+                <div className="errorMessage">
+                    {this.state.errorPasswordText}
+                </div>) : null;
+        const fieldConfirmPassError = this.state.errorConfirmPasswordText ?
+            (
+                <div className="errorMessage">
+                    {this.state.errorConfirmPasswordText}
+                </div>) : null;
         return (
             <div >
                 <Modal.Dialog>
@@ -30,32 +50,32 @@ class SignUp extends React.Component {
                     </Modal.Header>
 
                     <Modal.Body>
-                    <form>
-                    <input className={classNames("input", { ["inputError"]: this.state.errorNameText })}
-                        placeholder="Your name"
-                        ref={(f) => { this.nameField = f; }}
-                        type="text" />
-                        {fieldNameError}
+                        <form>
+                            <input className={classNames("input", { ["inputError"]: this.state.errorNameText })}
+                                placeholder="Your name"
+                                ref={(f) => { this.nameField = f; }}
+                                type="text" />
+                            {fieldNameError}
 
-                    <input className={classNames("input", { ["inputError"]: this.state.errorEmailText })}
-                        placeholder="Your email"
-                        ref={(f) => { this.emailField = f; }}
-                        type="email" />
-                    {fieldEmailError}
-                    <input className={classNames("input", { ["inputError"]: this.state.errorPasswordText })}
-                        placeholder="Your password"
-                        ref={(f) => { this.passwordField = f; }}
-                        type="password" />
-                        {fieldPasswordError}
-                    <input className={classNames("input", { ["inputError"]: this.state.errorConfirmPasswordText })}
-                        placeholder="Confirm password"
-                        ref={(f) => { this.confPasswordField = f; }}
-                        type="password" />
-                        {fieldConfirmPassError}
-                    <div className="actionContainer">
-                        <div className="button" onClick={this.login}>Login</div>
-                    </div>
-                </form>
+                            <input className={classNames("input", { ["inputError"]: this.state.errorEmailText })}
+                                placeholder="Your email"
+                                ref={(f) => { this.emailField = f; }}
+                                type="email" />
+                            {fieldEmailError}
+                            <input className={classNames("input", { ["inputError"]: this.state.errorPasswordText })}
+                                placeholder="Your password"
+                                ref={(f) => { this.passwordField = f; }}
+                                type="password" />
+                            {fieldPasswordError}
+                            <input className={classNames("input", { ["inputError"]: this.state.errorConfirmPasswordText })}
+                                placeholder="Confirm password"
+                                ref={(f) => { this.confPasswordField = f; }}
+                                type="password" />
+                            {fieldConfirmPassError}
+                            <div className="actionContainer">
+                                <div className="button" onClick={this.login}>Login</div>
+                            </div>
+                        </form>
                     </Modal.Body>
                 </Modal.Dialog>
             </div>

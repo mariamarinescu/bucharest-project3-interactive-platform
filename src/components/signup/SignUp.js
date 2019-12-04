@@ -16,9 +16,52 @@ class SignUp extends React.Component {
             email: '',
             name: '',
             password: '',
-            confPass: ''
+            confPass: '',
+            password_message: 'Parola trebuie sa contina minim 8 caractere: minim 1 cifra, 1 litera mica si o litera mare'
         }
 
+    }
+    login = () => {
+        const email = this.emailField.value;
+        const name = this.nameField.value;
+        const password = this.passwordField.value;
+        const passwordConfirmed = this.confPasswordField.value;
+        const regExpNonDigit = RegExp(/^[^0-9]+$/);
+        const regExp8CharsIpperAndLowerAndDigit = RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/);
+        if (!validator.validate(email)) {
+            this.setState({
+                errorEmailText: 'Please provide the correct email.'
+            });
+            return;
+        } else if (regExpNonDigit.test(name) === false) {
+            this.setState({
+                errorNameText: 'Please enter your name corectly.'
+            });
+            return;
+        } else if (regExp8CharsIpperAndLowerAndDigit.test(password) === false) {  // at least 8 characters, one letter and one number
+            this.setState({
+                errorPasswordText: 'Password must contain minimum 8 characters, 1 letter and 1 number.'
+            });
+            return;
+        } else if (password !== passwordConfirmed) {
+            this.setState({
+                errorConfirmPasswordText: "Passwords don't match"
+            });
+            return;
+        }
+        this.setState({
+            errorNameText: null,
+            errorPasswordText: null,
+            errorConfirmPasswordText: null,
+            errorEmailText: null,
+            email: email,
+            name: name,
+            password: password,
+            confPass: passwordConfirmed
+
+        });
+        console.log('email: ' + this.state.email + ', name: ' + this.state.name + ',  pass: ' +
+            this.state.password + ', confpass: ' + this.state.confPass);
     }
 
     render() {
@@ -39,41 +82,44 @@ class SignUp extends React.Component {
                 </div>) : null;
         const fieldConfirmPassError = this.state.errorConfirmPasswordText ?
             (
-                <div className="errorMessage">
+                <div className="errorMessage">5
                     {this.state.errorConfirmPasswordText}
                 </div>) : null;
+        const passMsg = (<div className="message">
+            {this.state.password_message}
+        </div>)
         return (
             <div >
-                <Modal.Dialog>
+                <Modal.Dialog className="my-signup-modal">
                     <Modal.Header closeButton>
-                        <Modal.Title>Inregistrare</Modal.Title>
                     </Modal.Header>
-
                     <Modal.Body>
                         <form>
                             <input className={classNames("input", { ["inputError"]: this.state.errorNameText })}
-                                placeholder="Your name"
+                                placeholder="Nume complet"
                                 ref={(f) => { this.nameField = f; }}
                                 type="text" />
                             {fieldNameError}
 
                             <input className={classNames("input", { ["inputError"]: this.state.errorEmailText })}
-                                placeholder="Your email"
+                                placeholder="Adresa de email"
                                 ref={(f) => { this.emailField = f; }}
                                 type="email" />
                             {fieldEmailError}
                             <input className={classNames("input", { ["inputError"]: this.state.errorPasswordText })}
-                                placeholder="Your password"
+                                placeholder="Parola"
                                 ref={(f) => { this.passwordField = f; }}
                                 type="password" />
+                                
                             {fieldPasswordError}
                             <input className={classNames("input", { ["inputError"]: this.state.errorConfirmPasswordText })}
-                                placeholder="Confirm password"
+                                placeholder="Confirma parola"
                                 ref={(f) => { this.confPasswordField = f; }}
                                 type="password" />
                             {fieldConfirmPassError}
+                            {passMsg}
                             <div className="actionContainer">
-                                <div className="button" onClick={this.login}>Login</div>
+                                <div className="button" onClick={this.signup}>Creeaza cont</div>
                             </div>
                         </form>
                     </Modal.Body>

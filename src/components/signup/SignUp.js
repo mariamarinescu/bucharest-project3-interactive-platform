@@ -119,7 +119,7 @@ class SignUp extends React.Component {
                             {fieldConfirmPassError}
                             {passMsg}
                             <div className="actionContainer">
-                                <div className="button" onClick={this.signup}>Creeaza cont</div>
+                                <div className="button btn btn-dark" onClick={this.signup}>Creeaza cont</div>
                             </div>
                         </form>
                     </Modal.Body>

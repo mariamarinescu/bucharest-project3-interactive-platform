@@ -90,9 +90,9 @@ class SignUp extends React.Component {
         </div>)
         return (
             <div >
-                <Modal.Dialog className="my-signup-modal">
-                    <Modal.Header closeButton>
-                    </Modal.Header>
+                <Modal.Dialog id="my-signup-modal">
+                    {/* <Modal.Header closeButton>
+                    </Modal.Header> */}
                     <Modal.Body>
                         <form>
                             <input className={classNames("input", { ["inputError"]: this.state.errorNameText })}

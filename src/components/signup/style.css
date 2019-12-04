@@ -1,7 +1,14 @@
-.my-signup-modal {
+#my-signup-modal {
     width: 370px;
-    height: 800px;
-   
+    height: 360px;
+}
+
+.modal-content {
+    border: 1px solid white!important;
+}
+
+.input:hover {
+    border: 1px solid purple;
 }
 
 .input {
@@ -11,18 +18,7 @@
     padding: 10px;
     border-radius: 25px;
     border: 1px solid grey;
-    /* padding: 20px;  */
     height: 30px;
-    /* width: 200px;
-    height: 15px;   */
-}
-
-
-.actionContainer {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 25px;
-    
 }
 
 .button{ 
@@ -32,24 +28,26 @@
     cursor: pointer; 
     color: darkgray;
 }
+
 .button:hover {
     background-color: darkgray;
     color: white;
     font-weight: 700;
 }
+
 .errorMessage {
     color: #ce1313;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 14px;
 }
+
 .message {
     color: darkgrey;
     padding-top: 2px;
     padding-bottom: 2px;
     font-size: 10px;
     width: 100%;
-
 }
 
 .inputError {

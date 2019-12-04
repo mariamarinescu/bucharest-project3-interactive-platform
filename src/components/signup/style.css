@@ -1,0 +1,35 @@
+.heading {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.input {
+    border-bottom-color: rgba(0,0,0,0.2);
+    border-bottom-width: 1px;
+    border-bottom-style: solid; padding: 5px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    width: 100%;
+    font-size: 18px;
+}
+
+.actionContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+    
+}
+
+.button{ 
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 2; 
+    cursor: pointer; 
+    color: #00afcc;
+}
+.button:hover {
+    background-color: rgba(0,0,0,0.5);
+    font-weight: 700;
+}

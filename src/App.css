@@ -1,4 +1,13 @@
 .form-control {
   border-radius: 10px;
 }
+
+.login-btn {
+  border-radius: 15px;
+}
+
+.login-text {
+  margin-left: 18px;
+  margin-right: 18px;
+}
 /*# sourceMappingURL=App.css.map */

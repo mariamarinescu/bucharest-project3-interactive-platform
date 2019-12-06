@@ -14,14 +14,14 @@ export class login extends Component {
         this.onChangeEmail = this.onChangeEmail.bind(this)
         this.onChangePass = this.onChangePass.bind(this)
     }
- onChangeEmail(event) {
-     this.setState({email: event.target.value})
-     console.log(this.state.email)
-}
-onChangePass(event) {
-    this.setState({pass: event.target.value})
-    console.log(this.state.pass)
-}
+    onChangeEmail(event) {
+        //  this.setState({email: event.target.value})
+        //  console.log(this.state.email)
+    }
+    onChangePass(event) {
+        // this.setState({pass: event.target.value})
+        // console.log(this.state.pass)
+    }
 
 
     render() {
@@ -29,16 +29,18 @@ onChangePass(event) {
             <div className='login'>
                 {this.props.isActive ?
                     <Row>
-                        <Col md={{ offset: 7, span: 3 }}>
+                        <Col className = 'py-3' md={{ offset: 8, span: 3 }}>
                             <Form>
                                 <Form.Group controlId="formBasicEmail">
-                                    <Form.Control onChange = {this.onChangeEmail()} type="email" placeholder="Email" size='sm' />
+                                    <Form.Control onChange={this.onChangeEmail()} type="email" placeholder="Email" size='sm' />
                                 </Form.Group>
                                 <Form.Group controlId="formBasicPassword">
-                                    <Form.Control onChange = {this.onChangePass()} type="password" placeholder="Parola" size='sm' />
+                                    <Form.Control onChange={this.onChangePass()} type="password" placeholder="Parola" size='sm' />
                                 </Form.Group>
                                 <Col md={{ offset: 4, span: 1 }}>
-                                    <Button variant="outline-secondary" type="submit">Logare</Button>
+                                    <Button className='login-btn' variant="outline-secondary" type="submit">
+                                        <div className='login-text'>Logare</div>
+                                    </Button>
                                 </Col>
                             </Form>
                         </Col>

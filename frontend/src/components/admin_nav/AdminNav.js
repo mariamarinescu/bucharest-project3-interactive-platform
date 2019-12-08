@@ -1,6 +1,7 @@
 import React from 'react'
 import {Button, ButtonToolbar} from 'react-bootstrap';
 import './AdminNav.css';
+import {Link} from 'react-router-dom';
 
 
 
@@ -51,12 +52,19 @@ class AdminNav extends React.Component {
 
             <div className="admin-nav">
                 <ButtonToolbar>
-                <Button style={this.state.descriptionBttnState ? this.descbtnStyleActive : this.descbtnStyleInactive} className="admin-desc-bttn" onClick={this.handleDescription} variant="secondary" size="lg">
+               
+                    <Button  to="/admin/editeaza-descrieri" variant="secondary" size="lg" onClick={this.handleDescription}
+                    style={this.state.descriptionBttnState ? this.descbtnStyleActive : this.descbtnStyleInactive} className="admin-desc-bttn" onClick={this.handleDescription}>
                     Descrieri
                 </Button>
-                <Button  style={this.state.quizBttnState ? this.quizbtnStyleActive : this.quizbtnStyleInactive} className="admin-quiz-bttn" onClick={this.handleQuiz} variant="secondary" size="lg">
+                
+              
+                <Button variant="secondary" to="/admin/editeaza-chestionar" onClick={this.handleQuiz} 
+                style={this.state.quizBttnState ? this.quizbtnStyleActive : this.quizbtnStyleInactive}
+                size="lg" className="admin-quiz-bttn" >
                     Chestionar
-                </Button>
+                    </Button>
+              
                 </ButtonToolbar>
             </div>
         )

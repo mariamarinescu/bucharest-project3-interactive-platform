@@ -1,162 +1,113 @@
 import React from 'react';
-import { Modal, Button, Form } from 'react-bootstrap';
 import './style.css'
-import validator from 'email-validator'
-import classNames from 'classnames';
-// import bcrypt from 'bcrypt'
+import FormErrors from './FormErrors.js';
+import {Button} from 'react-bootstrap';
 
+export default class extends React.Component {
 
-
-
-
-
-class SignUp extends React.Component {
-    encryptSuccess = false;
-    pass;
-    confirm;
     constructor(props) {
         super(props);
         this.state = {
-            errorEmailText: '',
-            errorNameText: '',
-            errorPasswordText: '',
-            errorConfirmPasswordText: '',
-            email: '',
             name: '',
+            email: '',
             password: '',
-            password_message: 'Parola trebuie sa contina minim 8 caractere: minim 1 cifra, 1 litera mica si o litera mare'
+            confirmPassword: '',
+            formErrors: { email: '', password: '', confirmPassword: '' },
+            emailValid: false,
+            passwordValid: false,
+            formValid: false,
+            confirmPasswordValid: false
+        }
+        
+    }
+
+
+    handleUserInput = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        this.setState({ [name]: value },
+            () => { this.validateField(name, value) })
+        if (this.state.password === this.state.confirmPassword && this.state.password !== '' && this.state.confirmPassword !== '') {
+            this.setState({
+                confirmPasswordValid: true
+            })
         }
 
     }
-    // async hash(passParam) {
-    //     await bcrypt.hash(passParam, 10, (err, hash) => {
-    //         if (err) {
-    //             console.error(err)
-    //             return
-    //         }
-    //         console.log(hash)
-    //     })
-    // }
-    // async confirmHash(passParam, hashParam) {
-    //     await bcrypt.compare(passParam, hashParam, (err, res) => {
-    //         if (err) {
-    //             console.error(err)
-    //             return
-    //         } else this.encryptSuccess = true;
-    //     }
 
-    //     )
-    // }
-    signup = () => {
-        const email = this.emailField.value;
-        const name = this.nameField.value;
 
-        const password = this.passwordField.value;
-        const passwordConfirmed = this.confPasswordField.value;
-        const regExpNonDigit = RegExp(/^[^0-9]+$/);
-        const regExp8CharsIpperAndLowerAndDigit = RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/);
-        if (!validator.validate(email)) {
-            this.setState({
-                errorEmailText: 'Please provide the correct email.'
-            });
-            
-        // } else if (regExpNonDigit.test(name) === true) {
-        //     this.setState({
-        //         errorNameText: 'Please enter your name corectly.'
-        //     });
-        //     return;
-        } else if (regExp8CharsIpperAndLowerAndDigit.test(password) === false) {  // at least 8 characters, one letter and one number
-            this.setState({
-                errorPasswordText: 'Password must contain minimum 8 characters, 1 letter and 1 number.'
-            });
-           
-        } else if (password !== passwordConfirmed) {
-            this.setState({
-                errorConfirmPasswordText: "Passwords don't match"
-            });
-            
-        } else if (password === passwordConfirmed) {
-           
-                            this.setState({
-                                errorNameText: null,
-                                errorPasswordText: null,
-                                errorConfirmPasswordText: null,
-                                errorEmailText: null,
-                                email: email,
-                                name: name,
-                                password: password,
+    validateField(fieldName, value) {
+        let fieldValidationErrors = this.state.formErrors;
+        let emailValid = this.state.emailValid;
+        let passwordValid = this.state.passwordValid;
+        let confirmPasswordValid = this.state.confirmPasswordValid;
 
-                            });
-                     
-                    }
-        console.log('email: ' + this.state.email + ', name: ' + this.state.name + ',  pass: ' +
-            this.state.password);
+        switch (fieldName) {
+            case 'email':
+                emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i); //an example regex from the Devise library.
+                fieldValidationErrors.email = emailValid ? '' : ' nu este valid.';
+                break;
+            case 'password':
+                passwordValid = value.length >= 6;
+                fieldValidationErrors.password = passwordValid ? '' : ' este prea scurta.';
+                break;
+            case 'confirmPassword':
+                confirmPasswordValid = value === this.state.password;
+                fieldValidationErrors.confirmPassword = confirmPasswordValid ? '' : 'nu se potrivesc.';
+                break;
+            default:
+                break;
+
+        }
+
+        this.setState({
+            formErrors: fieldValidationErrors,
+            emailValid: emailValid,
+            passwordValid: passwordValid
+        }, this.validateForm);
+    }
+
+    validateForm() {
+        this.setState({ formValid: this.state.emailValid && this.state.passwordValid });
     }
 
     render() {
-        const fieldEmailError = this.state.errorEmailText ?
-            (
-                <div className="errorMessage">
-                    {this.state.errorEmailText}
-                </div>) : null;
-        const fieldNameError = this.state.errorNameText ?
-            (
-                <div className="errorMessage">
-                    {this.state.errorNameText}
-                </div>) : null;
-        const fieldPasswordError = this.state.errorPasswordText ?
-            (
-                <div className="errorMessage">
-                    {this.state.errorPasswordText}
-                </div>) : null;
-        const fieldConfirmPassError = this.state.errorConfirmPasswordText ?
-            (
-                <div className="errorMessage">
-                    {this.state.errorConfirmPasswordText}
-                </div>) : null;
-        const passMsg = (<div className="message">
-            {this.state.password_message}
-        </div>)
         return (
-            <div >
-                <Modal.Dialog id="my-signup-modal">
-                    {/* <Modal.Header closeButton>
-                    </Modal.Header> */}
-                    <Modal.Body>
-                        <form>
-                            <input className={classNames("input", { ["inputError"]: this.state.errorNameText })}
-                                placeholder="Nume complet"
-                                ref={(f) => { this.nameField = f; }}
-                                type="text" />
-                            {fieldNameError}
-
-                            <input className={classNames("input", { ["inputError"]: this.state.errorEmailText })}
-                                placeholder="Adresa de email"
-                                ref={(f) => { this.emailField = f; }}
-                                type="email" />
-                            {fieldEmailError}
-                            <input className={classNames("input", { ["inputError"]: this.state.errorPasswordText })}
-                                placeholder="Parola"
-                                ref={(f) => { this.passwordField = f; }}
-                                type="password" />
-
-                            {fieldPasswordError}
-                            <input className={classNames("input", { ["inputError"]: this.state.errorConfirmPasswordText })}
-                                placeholder="Confirma parola"
-                                ref={(f) => { this.confPasswordField = f; }}
-                                type="password" />
-                            {fieldConfirmPassError}
-                            {passMsg}
-                            <div className="actionContainer">
-                                <div className="button btn btn-dark" onClick={this.signup}>Creeaza cont</div>
-                            </div>
-                        </form>
-                    </Modal.Body>
-                </Modal.Dialog>
+            <div id="signup-form">
+                <form className="">
+                    <div className="form-group">
+                        <input type="text" className="form-control mySignUp-input"
+                            name="name" value={this.state.name}
+                            placeholder="Nume complet"
+                            onChange={(event) => this.handleUserInput(event)} />
+                    </div>
+                    <div className="form-group">
+                        <input type="email" className="form-control mySignUp-input"
+                            name="email" value={this.state.email}
+                            placeholder="Email"
+                            onChange={(event) => this.handleUserInput(event)} />
+                    </div>
+                    <div className="form-group">
+                        <input type="password" className="form-control mySignUp-input"
+                            name="password" value={this.state.password}
+                            placeholder="Parola"
+                            onChange={(event) => this.handleUserInput(event)} />
+                    </div>
+                    <div className="form-group">
+                        <input type="password" className="form-control mySignUp-input"
+                            name="confirmPassword" value={this.state.confirmPassword}
+                            placeholder="Confirma parola"
+                            onChange={(event) => this.handleUserInput(event)} />
+                    </div>
+                    <Button variant="outline-dark" className="mySignUp-bttn" type="submit"
+                     disabled={!this.state.formValid}>
+                         Logare
+                    </Button>
+                </form>
+                <div className="panel panel-default">
+                    <FormErrors formErrors={this.state.formErrors} />
+                </div>
             </div>
         )
     }
-
 }
-
-export default SignUp;

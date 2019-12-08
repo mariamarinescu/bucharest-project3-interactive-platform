@@ -1,6 +1,6 @@
 import React from 'react'
 import {Button, ButtonToolbar} from 'react-bootstrap';
-import classNames from 'classnames';
+import './AdminNav.css';
 
 
 
@@ -8,59 +8,53 @@ class AdminNav extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            descColor: '#696969',
-            quizColor: '#DCDCDC',
-            descActive: true,
-            quizActive: false,
-            descText: '#fff',
-            quixText: '#A9A9A9'
+            quizBttnState: false,
+            descriptionBttnState: false
             
         }
     }
-
-    watcher=()=> {
-        if(this.state.descActive === true && this.state.quizActive === false ) {
-            this.setState({
-                descColor: '#696969',
-                quizColor: '#DCDCDC',
-                descText: '#fff',
-                quixText: '#A9A9A9'
-
-            })
-        } else {
-            this.setState({
-                descColor: '#DCDCDC',
-                quizColor: '#696969',
-                descText: '#A9A9A9',
-                quixText: '#fff'
-            })
-        }
+    descbtnStyleActive = {
+        backgroundColor: '#A9A9A9',
+        color: '#696969'
     }
+    descbtnStyleInactive = {
+        backgroundColor: '#696969',
+        color: 'white'
+    }
+    quizbtnStyleActive = {
+        backgroundColor: '#A9A9A9',
+        color: '#696969'
+    }
+    quizbtnStyleInactive = {
+        backgroundColor: '#696969',
+        color: 'white'
+    }
+
+  
     componentDidUpdate() {
-        this.watcher()
-    }
-    activateIt = () => {
-        this.setState({
-            descActive: !this.state.descActive
-        })
-            
-        
-    }
-    activateQuiz = () => {
-        this.setState({
-            quizActive: !this.state.quizActive
-        })
     
     }
+   handleDescription = () => {
+       this.setState({
+           descriptionBttnState: !this.state.descriptionBttnState
+       })
+   }
+
+   handleQuiz = () => {
+    this.setState({
+        quizBttnState: !this.state.quizBttnState
+    })
+}
    
     render() {
         return (
-            <div>
+
+            <div className="admin-nav">
                 <ButtonToolbar>
-                <Button style={{backgroundColor:this.state.descColor}} className="admin-desc-bttn" onClick={this.activateIt} variant="secondary" size="lg">
+                <Button style={this.state.descriptionBttnState ? this.descbtnStyleActive : this.descbtnStyleInactive} className="admin-desc-bttn" onClick={this.handleDescription} variant="secondary" size="lg">
                     Descrieri
                 </Button>
-                <Button  style={{backgroundColor:this.state.quizColor, color: this.state.descText}} className="admin-quiz-bttn" onClick={this.activateQuiz} variant="secondary" size="lg">
+                <Button  style={this.state.quizBttnState ? this.quizbtnStyleActive : this.quizbtnStyleInactive} className="admin-quiz-bttn" onClick={this.handleQuiz} variant="secondary" size="lg">
                     Chestionar
                 </Button>
                 </ButtonToolbar>

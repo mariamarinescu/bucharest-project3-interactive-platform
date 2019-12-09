@@ -1,22 +1,17 @@
-.App {
-  text-align: center;
+.q-img {
+  margin:  20px;
 }
 
-.App-logo {
-  height: 40vmin;
+.q-first-question,
+.q-second-question {
+  width: 600px;
+  position: absolute;
+  left: 40%;
+ 
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.q-first-question {
+  top: 190px;
 }
-
-.App-link {
-  color: #09d3ac;
+.q-second-question {
+  top: 240px;
 }

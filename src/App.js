@@ -1,23 +1,30 @@
-import React, { Component }  from 'react';
+import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Login from './components/loging/login'
+import Maps from './components/maps/Maps'
+import { Container, Row, Col } from 'react-bootstrap';
 
 
-export class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showLogin: true
+
     }
   }
   render() {
     return (
-      <div>
-        <Login isActive={this.state.showLogin} />
+      <div className='app'>
+        <div>
+          <div style = {{height: '60vh'}}>
+            
+              <Maps />
+            
+          </div>
+        </div>
       </div>
     );
   }
 }
 
-export default App;
+

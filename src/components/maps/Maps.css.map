@@ -2,9 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "App.scss",
-        "components/maps/Maps.scss"
+        "Maps.scss"
     ],
     "names": [],
-    "file": "App.css"
+    "file": "Maps.css"
 }

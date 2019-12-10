@@ -1,55 +1,96 @@
 import React from 'react'
-import * as data from './my_fake_db/my_fake_db.json';
-import {Button} from 'react-bootstrap';
-import ModalQ from './Modal'
+import { Button, Modal } from 'react-bootstrap';
+
 
 
 class Question extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            isValid: false
+            showSuccess: false,
+            showFailure: false
         }
     }
- 
-    validateAnswer = () => {
-        // if(answerIndex === 0) {
-            // this.setState({
-            //     isValid: true
-            // })
-        // } else return;
-      
-        this.setState({
-            isValid: true
-        })
 
+    setShowSuccess(bool) {
+        this.setState({
+            showSuccess: bool
+        })
+    }
+
+    handleSuccessClose = () => {
+        this.setShowSuccess(false)
     }
 
 
+    handleSuccessShow = () => {
+        this.setShowSuccess(true)
+    }
+
+    setShowFailure(bool) {
+        this.setState({
+            showFailure: bool
+        })
+    }
+
+    handleFailureClose = () => {
+        this.setShowFailure(false)
+    }
 
 
-    
+    handleFailureShow = () => {
+        this.setShowFailure(true)
+    }
 
     render() {
-      
-        return(
+        return (
             <div className="quiz-q-container">
-                <h3 className="q-question">{data.quiz.face.firstQuestion.question}</h3>
-                <img className="q-img" src={data.quiz.face.firstQuestion.firstQuestionImg} alt="question"
-                 width="250px" height="250px"></img>
+                <h3 className="q-question">{this.props.question}</h3>
+                <img className="q-img" src={this.props.image} alt="question"
+                    width="250px" height="250px"></img>
                 <div className="questions-container">
-                <Button variant="secondary" className="q-first-question"  onClick={this.validateAnswer} size="lg" block>{data.quiz.face.firstQuestion.answers[0]} </Button>
-                <Button variant="secondary" className="q-second-question" size="lg" block>{data.quiz.face.firstQuestion.answers[1]} </Button>
-                {this.state.isValid ? <ModalQ/> : <p>Nope</p>  }
+                    <Button variant={
+                        this.state.showSuccess ? "success" : "outline-dark"
+                    } className="q-first-ans" onClick={this.handleSuccessShow} size="lg" block>{this.props.answers[0]} </Button>
+                    <Button variant="outline-dark" onClick={this.handleFailureShow} className="q-second-ans" size="lg" block>{this.props.answers[1]} </Button>
+                    <Modal show={this.state.showSuccess} onHide={this.handleSuccessClose}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Felicitari! Tocmai ai castigat o reducere de {this.props.discount} de lei pe Techir.ro</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body> {this.props.modalSuccessDescription}
+                            <p className="red-quiz-modal-message">{this.props.modalSuccessLastMessage}</p>
+                            <div class="yeey">
+                                <div class="before"></div>
+                                <div class="after"></div>
+                            </div>
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <img src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" alt="logo" />
+                        </Modal.Footer>
+                    </Modal>
+                    <Modal show={this.state.showFailure} onHide={this.handleFailureClose}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Aww, mai mult noroc data viitoare!</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body> {this.props.modalFailureDescription}
+                            <p className="red-quiz-modal-message">{this.props.modalFailureLastMessage}</p>
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <img src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" alt="logo" />
+                        </Modal.Footer>
+                    </Modal>
 
-             
-          
+
+
+                </div>
+
             </div>
-            </div>
-            
+
         )
     }
 }
 
 
+
 export default Question;
+

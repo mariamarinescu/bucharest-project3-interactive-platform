@@ -15,11 +15,20 @@
                     "correct": 1
                 },
                 "discounts": {
-                    "ten": "FATA1234510",
-                    "twenty": "FATA1234520",
-                    "thirty": "FATA1234530"
+                    "ten": { 
+                        "code": "FATA1234510",
+                        "sum": 10 
+                    },
+                    "twenty": {
+                        "code": "FATA1234520",
+                        "sum": 20
+                    },
+                    "thirty": {
+                        "code": "FATA1234530",
+                        "sum": 30
                 }
-            },
+            }
+        },
             "hair" :{
                 "firstQuestion": {
                     "question" : "",

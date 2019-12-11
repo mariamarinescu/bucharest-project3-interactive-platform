@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button, Modal } from 'react-bootstrap';
-
-
+import QuizModal from './Modal.js'
 
 class Question extends React.Component {
     constructor(props) {
@@ -78,15 +77,21 @@ class Question extends React.Component {
                     >
                         {this.props.answers[1]} 
                     </Button>
-
+                    {/* <QuizModal show={this.state.showSuccess} handleClose={this.handleSuccessClose}
+                    title={this.props.modalSuccessTitle}  description={this.props.modalSuccessDescription}
+                    lastMessage={this.props.modalSuccessLastMessage} 
+                    />
+                     <QuizModal show={this.state.showFailure} handleClose={this.handleFailureClose}
+                    title={this.props.modalFailureTitle}  description={this.props.modalFailureDescription}
+                    lastMessage={this.props.modalFailureLastMessage} 
+                    /> */}
                     <Modal 
                         show = { this.state.showSuccess } 
                         onHide = { this.handleSuccessClose }
                     >
                         <Modal.Header closeButton>
                             <Modal.Title>
-                                Felicitari! Tocmai ai castigat o reducere de 
-                                    { this.props.discount } lei pe <a href='http://www.techir.ro'>Techir.ro</a>
+                                Felicitari! Tocmai ai castigat un cupon de reducere  pe <a href='http://www.techir.ro'>Techir.ro</a>
                             </Modal.Title>
                         </Modal.Header>
 
@@ -133,9 +138,6 @@ class Question extends React.Component {
                             <img src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" alt="logo" />
                         </Modal.Footer>
                     </Modal>
-
-
-
                 </div>
 
             </div>

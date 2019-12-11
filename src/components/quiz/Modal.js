@@ -1,41 +1,55 @@
-import React, { useState} from 'react';
-import {Button,Modal} from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Button, Modal } from 'react-bootstrap';
 
 
 
-function ModalQ() {
-// const [show, setShow] = useState(false);
+const QuizModal = () => {
+  const fireworks = <div class="yeey">
+  <div class="before"></div>
+  <div class="after"></div>
+</div>;
 
-const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-// const handleShow = () => setShow(true);
-
-return (
-
-   
-  <>
-  <Button variant="primary" onClick={handleShow}>
-    Launch demo modal
-  </Button>
-
-  <Modal show={show} onHide={handleClose}>
+return(
+  <div>
+<Modal
+    show={this.props.show}
+    onHide={this.props.handleClose}
+  >
     <Modal.Header closeButton>
-      <Modal.Title>Modal heading</Modal.Title>
+
+      <Modal.Title>
+       {this.props.title}
+      </Modal.Title>
+
     </Modal.Header>
-    <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+
+    <Modal.Body>
+
+      {this.props.description}
+
+      <p className="red-quiz-modal-message">
+        {this.props.lastMessage}
+      </p>
+      { this.props.show ? fireworks : null}
+      {/* <div class="yeey">
+        <div class="before"></div>
+        <div class="after"></div>
+      </div> */}
+
+    </Modal.Body>
+
     <Modal.Footer>
-      <Button variant="secondary" onClick={handleClose}>
-        Close
-      </Button>
-      <Button variant="primary" onClick={handleClose}>
-        Save Changes
-      </Button>
+      <img
+        src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png"
+        alt="logo"
+      />
     </Modal.Footer>
+
   </Modal>
-</>
+  </div>
+)
+  
+}
 
-)}
 
-export default ModalQ
+export default QuizModal;

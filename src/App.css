@@ -2,8 +2,7 @@
 
 
 .quiz-container,
-.quiz-q-container 
-{
+.quiz-q-container {
   position: relative;
   height: 100%;
   margin: 0;
@@ -11,22 +10,19 @@
   width: 100%;
 }
 
-.quiz-q-container
-{
+.quiz-q-container {
   top: 300px;
 }
 
 .quiz-title,
 .quiz-desc,
-.q-question 
-{
+.q-question {
   font-family: 'PT Serif', serif;
   position: absolute;
   color: #878787;
 }
 
-.quiz-title 
-{
+.quiz-title {
   top: 150px;
   left: 38%;
   z-index: 10;
@@ -34,23 +30,20 @@
   font-weight: 900;
 }
 
-.quiz-desc 
-{
+.quiz-desc {
   top: 266px;
   z-index: 10;
   left: 15%;
   font-size: 22px;
 }
 
-.q-question 
-{
+.q-question {
   top: 22px;
   font-size: 29px;
   left: 15%;
 }
 
-.q-img 
-{
+.q-img {
   margin: 80px;
   border-radius: 80px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 0 10px;
@@ -64,8 +57,7 @@
   transition: .3s ease-in-out;
 }
 
-.q-img:hover 
-{
+.q-img:hover {
   top: 46px;
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
@@ -82,18 +74,15 @@
   color: #878787;
 }
 
-.q-first-ans
-{
+.q-first-ans{
   top: 110px;
 }
 
-.q-second-ans 
-{
+.q-second-ans {
   top: 210px;
 }
 
-.modal 
-{
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -102,8 +91,7 @@
   background: rgba(0, 0, 0, 0.6);
 }
 
-.modal-main 
-{
+.modal-main {
   position: fixed;
   background: white;
   width: 80%;
@@ -114,18 +102,15 @@
           transform: translate(-50%, -50%);
 }
 
-.display-block 
-{
+.display-block {
   display: block;
 }
 
-.display-none 
-{
+.display-none {
   display: none;
 }
 
-.red-quiz-modal-message 
-{
+.red-quiz-modal-message {
   margin-top: 25px;
   margin-bottom: 25px;
   color: red;

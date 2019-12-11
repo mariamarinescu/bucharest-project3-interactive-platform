@@ -15,11 +15,34 @@ class Quiz extends React.Component {
             question: data.quiz.face.firstQuestion.question,
             image: data.quiz.face.firstQuestion.firstQuestionImg,
             answers: [data.quiz.face.firstQuestion.answers[0], data.quiz.face.firstQuestion.answers[1]],
-            discount: data.quiz.face.discounts.twenty.sum
+            discount: data.quiz.face.discounts.twenty.sum,
+            firstQuestionCorrect: false,
+            secondQuestionCorrect: false
         }
+
+        
     }
 
+    // questionOne = () => {
+    //     getQuestion()
+    // }
 
+    // questionTwo = () => {
+    //     getQuestion()
+    // }
+
+    // getQuestion() {
+    //     // GET /api/question
+
+    //     //Response:
+    //     // {
+    //     //     text: "",
+    //     //     answer: "",
+    //     //     discount: "",
+    //     //     image: "",
+    //     //     correct: 0
+    //     // }
+    // }
 
 
     render() {
@@ -27,9 +50,11 @@ class Quiz extends React.Component {
             <div className="quiz-container">
                 <h1 className="quiz-title">Concurs Techir</h1>
                 <h6 className="quiz-desc">Participa, raspunzand la doua intrebari si poti castiga reduceri la produsele tale favorite.</h6>
-                <Question modalSuccessDescription={this.state.modalSuccessDescription} modalSuccessLastMessage={this.state.modalSuccessLastMessage} 
-                modalFailureDescription={this.state.modalFailureDescription} modalFailureLastMessage={this.state.modalSuccessLastMessage} 
-                question={this.state.question} image={this.state.image} answers={this.state.answers} discount={this.state.discount}/>
+                <Question 
+                    question={this.state.question} image={this.state.image} answers={this.state.answers} discount={this.state.discount}
+                    modalSuccessDescription={this.state.modalSuccessDescription} modalSuccessLastMessage={this.state.modalSuccessLastMessage} 
+                    modalFailureDescription={this.state.modalFailureDescription} modalFailureLastMessage={this.state.modalFailureLastMessage} 
+                />
             </div>
         )
     }

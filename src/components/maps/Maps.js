@@ -1,8 +1,8 @@
 import React from 'react'
 import { Map, Marker, GoogleApiWrapper, InfoWindow } from 'google-maps-react';
 
-const apiKey = 'AIzaSyBuqivjlUHx_1CzHXli6ft9xLWrI-dOGwo' /* ISS TEAM API KEY */
-// const yek = 'AIzaSyBFBgzKEMmLB-LGdSrmFOejutT8m8pOvQk' /* MY BROKEN API KEY */
+// const apiKey = 'AIzaSyBuqivjlUHx_1CzHXli6ft9xLWrI-dOGwo' /* ISS TEAM API KEY */
+const yek = 'AIzaSyBFBgzKEMmLB-LGdSrmFOejutT8m8pOvQk' /* MY BROKEN API KEY */
 
 class GMap extends React.Component {
     constructor(props) {
@@ -57,4 +57,4 @@ class GMap extends React.Component {
     }
 }
 
-export default GoogleApiWrapper({ apiKey: (apiKey) })(GMap)
+export default GoogleApiWrapper({ apiKey: ('AIzaSyAI7nWxzjV64pxGJ1p8SmjTeV-1LW2XlTA') })(GMap)

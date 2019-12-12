@@ -11,15 +11,19 @@ class Info extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      chosenCategory: "",
+      activeLink: "",
       faceActive: false,
       hairActive: false,
       anticel: false,
       massage: false,
       category: "",
-      info: ""
+      info: "",
+      blogLink: ""
 
     }
   }
+
 
   retrieveAndSetChosenCateg = () => {
     let categ = data.hover.category[1];
@@ -34,9 +38,16 @@ class Info extends React.Component {
       info: info
     })
   }
+  retrieveBlogLink = () => {
+    let blogLink = data.hover.face.linkBlog
+    this.setState({
+      blogLink: blogLink
+    })
+  }
 
   componentDidMount() {
     this.retrieveAndSetAboutFaceInfo();
+    this.retrieveBlogLink();
   }
   handleHover = () => {
     this.setState({
@@ -49,7 +60,7 @@ handleLeaveHover = () => {
       isHovered: false
     })
     
-  }, 1500)
+  }, 18000000)
 }
  
 render() {
@@ -62,8 +73,8 @@ render() {
         
             <img src={check} width="50px" height="50px" className="check"/>
             <p className="hover-text">{this.state.info}</p>
-              <Button className="onhover-quiz-bttn" variant="outline-danger">Participa si castiga</Button>
-              <Button className="onhover-findoutMore-bttn" variant="outline-secondary">Afla detalii</Button>
+              <Button className="onhover-quiz-bttn" variant="outline-danger" href={this.state.blogLink}>Participa si castiga</Button>
+              <Button className="onhover-findoutMore-bttn" variant="outline-secondary" href={this.state.blogLink}>Afla detalii</Button>
           </div>
        {/* <Content info={this.state.info}/> */}
      </div>

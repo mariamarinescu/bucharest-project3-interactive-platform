@@ -78,7 +78,9 @@
         "category" : ["par", "fata", "anticelulita", "masaj"],
         "hair" : {},
         "face" : {
-            "one" : "Se intampla ca zi de zi sa purtam machiaj care ne incarca tenul din ce in ce mai mult. Afla solutiile gasite de noi si produsele Techir din ingrediente naturale cu efecte terapeutice, care iti vor lumina si hidrata tenul zi de zi."
+            "one" : "Se intampla ca zi de zi sa purtam machiaj care ne incarca tenul din ce in ce mai mult. Afla solutiile gasite de noi si produsele Techir din ingrediente naturale cu efecte terapeutice, care iti vor lumina si hidrata tenul zi de zi.",
+            "linkBlog": "http://www.techir.ro/blog-techir/importanta-si-utilizarea-apei/"
+            
         }
     }
     

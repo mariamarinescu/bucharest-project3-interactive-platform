@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LightningBoye from './components/Gurl/GirlModel'
+import './App.css'
 
 
 export default class App extends Component {

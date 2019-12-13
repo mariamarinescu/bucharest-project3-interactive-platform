@@ -60,7 +60,7 @@ handleLeaveHover = () => {
       isHovered: false
     })
     
-  }, 18000000)
+  }, 1800)
 }
  
 render() {

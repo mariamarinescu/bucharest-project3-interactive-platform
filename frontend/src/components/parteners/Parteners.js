@@ -5,81 +5,61 @@ class Parteners extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            parteners: {
-                megaImage: '',
-                carturesti: '',
-                farmaciaVital: '',
-                enatural: '',
-                camaraCuMerine: '',
-                stamDeVorba: '',
-                allBoutique: '',
-                tastingRomania: '',
-                iCosmetice: '',
-                EllaPlant: '',
-                byaPlantMed: '',
-                floraFarm: '',
-                redPixie: '',
-                getWell: '',
-                natura4All: '',
-                avalon: ''
-            }
-           
+            megaImage: data.parteners.megaImage,
+            carturesti: data.parteners.carturesti,
+            farmaciaVital: data.parteners.farmaciaVital,
+            eNatural: data.parteners.eNatural,
+            camaraCuMerinde: data.parteners.camaraCuMerinde,
+            stamDeVorba: data.parteners.stamDeVorba,
+            allBoutique: data.parteners.allBoutique,
+            tastingRomania: data.parteners.tastingRomania,
+            iCosmetice: data.parteners.iCosmetice,
+            elaPlant: data.parteners.elaPlant,
+            byaPlantMed: data.parteners.byaPlantMed,
+            floraFarm: data.parteners.floraFarm,
+            redPixie: data.parteners.redPixie,
+            getWell: data.parteners.getWell,
+            natura4All: data.parteners.natura4All,
+            avalon: data.parteners.avalon
+
+
         }
     }
 
 
-        retrieveParteners = () => {
-            let megaImage = data.parteners.megaImage
-            let carturesti = data.parteners.carturesti
-            let farmaciaVital = data.parteners.farmaciaVital
-            let enatural = data.parteners.eNatural
-            let camaraCuMerine = data.parteners.camaraCuMerinde
-            let stamDeVorba = data.parteners.stamDeVorba
-            let allBoutique = data.parteners.allBoutique
-            let tastingRomania = data.parteners.tastingRomania
-            let iCosmetice = data.parteners.iCosmetice
-            let EllaPlant = data.parteners.elaPlant
-            let byaPlantMed = data.parteners.byaPlant
-            let floraFarm = data.parteners.floraFarm
-            let redPixie = data.parteners.redPixie
-            let getWell = data.parteners.getWell
-            let natura4All = data.parteners.natura4All
-            let avalon = data.parteners.avalon
+    // retrieveParteners = () => {
+    // }
 
-            this.setState({
-                    megaImage: megaImage,
-                    carturesti: carturesti,
-                    farmaciaVital: farmaciaVital,
-                    enatural: enatural,
-                    camaraCuMerine: camaraCuMerine,
-                    stamDeVorba: stamDeVorba,
-                    allBoutique: allBoutique,
-                    tastingRomania: tastingRomania,
-                    iCosmetice: iCosmetice,
-                    EllaPlant: EllaPlant,
-                    byaPlantMed: byaPlantMed,
-                    floraFarm: floraFarm,
-                    redPixie: redPixie,
-                    getWell: getWell,
-                    natura4All: natura4All,
-                    avalon: avalon
+    componentDidMount() {
+        // this.retrieveParteners();
+        console.log(this.state.megaImage)
+    }
 
-            })
-            if(this.state.parteners.megaImage !== '') {
-                console.log(this.state.megaImage)
-            }
-            
-        }
-
-componentDidMount() {
-    this.retrieveParteners();
-}
-    
-render() {
-    return(
-        <div></div>
-    )
-}
+    render() {
+        return (
+            <div className="parteners-container" >
+                <h1 className="parteners-title">Parteneri Online</h1>
+                <div className="logo-container">
+                <img className="one" src={this.state.megaImage} alt="Mega-Image"/>
+                <img className="two" src={this.state.carturesti} alt="Carturesti"/>
+                <img className="three" src={this.state.farmaciaVital} alt="farmacia-Vital"/>
+                <img className="four" src={this.state.eNatural} alt="e-Natural"/>
+                {/* <img className="five" src={this.state.camaraCuMerinde} alt="Camara-Cu-Merinde"/>
+                <img className="six" src={this.state.stamDeVorba} alt="Stam-De-Vorba"/>
+                <img className="seven" src={this.state.allBoutique} alt="allBoutique"/>
+                <img className="eight" src={this.state.tastingRomania} alt="Tasting-Romania"/>
+                <img className="nine" src={this.state.iCosmetice} alt="iCosmetice"/>
+                <img className="ten" src={this.state.elaPlant} alt="ElaPlant"/>
+                <img className="eleven" src={this.state.byaPlantMed} alt="ByaPlantMed"/>
+                <img className="twelve" src={this.state.floraFarm} alt="FloraFarm"/>
+                <img className="thirteen" src={this.state.redPixie} alt="RedPixie"/>
+                <img className="fourteen" src={this.state.getWell} alt="GetWell"/>
+                <img className="fifthteen" src={this.state.natura4All} alt="Natura4All"/>
+                <img className="sixteen" src={this.state.avalon} alt="Avalon"/> */}
+                </div>
+            </div>
+        )
+    }
 }
 
 export default Parteners;

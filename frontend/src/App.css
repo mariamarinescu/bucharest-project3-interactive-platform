@@ -1,22 +1,81 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
+
+
+.parteners-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 100px;
+}
+.logo-container {
+  position: absolute;
+  top: 100px;
+}
+.one, .two,.three,
+.four, .five,.six, 
+.seven, .eight, .nine, 
+.ten,.eleven,.twelve, 
+.thirteen, .fourteen, .fifthteen {
+position: absolute;
+
 }
 
-.App-logo {
-  height: 40vmin;
+.parteners-title {
+  position: absolute;
+  left: 44%;
+  font-family: 'PT Serif', serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media only screen and(max-width: 640px) {
+  /* vertical one line */
+  /* .one, .two,.three,
+.four, .five,.six, 
+.seven, .eight, .nine, 
+.ten,.eleven,.twelve, 
+.thirteen, .fourteen, .fifthteen {
+  left: 10%!important;
+} */
+.one {
+  position: relative;
+  left: 20%;
+  top: 400px;
+}
 }
 
-.App-link {
-  color: #09d3ac;
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
+    /* 1,4,7,10,13,16 ( last one on the middle) */
+    .one {
+      position: relative;
+      left: 20%;
+      top: 400px;
+    }
+}
+
+@media only screen and (min-width: 1008px) {
+/* 1, 5,9, 13 */
+ /* vertical one line */
+  /* .one, .two,.three,
+.four, .five,.six, 
+.seven, .eight, .nine, 
+.ten,.eleven,.twelve, 
+.thirteen, .fourteen, .fifthteen {
+  left: 10%!important;
+} */
+.one, .five,
+.nine, .thirteen {
+  left: 45%;
+}
+.one, .two, .three, .four {
+  top: 100px;
+}
+/* .two {
+
+} */
+
+.one {
+  left: 20%;
+  top: 400px;
+}
 }

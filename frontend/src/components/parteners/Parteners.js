@@ -30,33 +30,28 @@ class Parteners extends React.Component {
     // retrieveParteners = () => {
     // }
 
-    componentDidMount() {
-        // this.retrieveParteners();
-        console.log(this.state.megaImage)
-    }
+  
 
     render() {
         return (
             <div className="parteners-container" >
-                <h1 className="parteners-title">Parteneri Online</h1>
-                <div className="logo-container">
-                <img className="one" src={this.state.megaImage} alt="Mega-Image"/>
-                <img className="two" src={this.state.carturesti} alt="Carturesti"/>
-                <img className="three" src={this.state.farmaciaVital} alt="farmacia-Vital"/>
-                <img className="four" src={this.state.eNatural} alt="e-Natural"/>
-                {/* <img className="five" src={this.state.camaraCuMerinde} alt="Camara-Cu-Merinde"/>
-                <img className="six" src={this.state.stamDeVorba} alt="Stam-De-Vorba"/>
-                <img className="seven" src={this.state.allBoutique} alt="allBoutique"/>
-                <img className="eight" src={this.state.tastingRomania} alt="Tasting-Romania"/>
-                <img className="nine" src={this.state.iCosmetice} alt="iCosmetice"/>
-                <img className="ten" src={this.state.elaPlant} alt="ElaPlant"/>
-                <img className="eleven" src={this.state.byaPlantMed} alt="ByaPlantMed"/>
-                <img className="twelve" src={this.state.floraFarm} alt="FloraFarm"/>
-                <img className="thirteen" src={this.state.redPixie} alt="RedPixie"/>
-                <img className="fourteen" src={this.state.getWell} alt="GetWell"/>
-                <img className="fifthteen" src={this.state.natura4All} alt="Natura4All"/>
-                <img className="sixteen" src={this.state.avalon} alt="Avalon"/> */}
-                </div>
+                <h1 className="p-title">Parteneri Online</h1>
+                <img className="p-mega" src={this.state.megaImage} alt="Mega"/>
+                <img className="p-carturesti" src={this.state.carturesti} alt="Carturesti"/>
+                <img className="p-vital" src={this.state.farmaciaVital} alt="farmacia-Vital"/>
+                <img className="p-enatural" src={this.state.eNatural} alt="e-Natural"/>
+                <img className="p-camara" src={this.state.camaraCuMerinde} alt="Camara-Cu-Merinde"/>
+                <img className="p-stam-de-vorba" src={this.state.stamDeVorba} alt="Stam-De-Vorba"/>
+                <img className="p-allboutique" src={this.state.allBoutique} alt="allBoutique"/>
+                <img className="p-tastingRO" src={this.state.tastingRomania} alt="Tasting-Romania"/>
+                <img className="p-icosmetice" src={this.state.iCosmetice} alt="iCosmetice"/>
+                <img className="p-ela" src={this.state.elaPlant} alt="ElaPlant"/>
+                <img className="p-bya" src={this.state.byaPlantMed} alt="ByaPlantMed"/>
+                <img className="p-flora" src={this.state.floraFarm} alt="FloraFarm"/>
+                <img className="p-pixie" src={this.state.redPixie} alt="RedPixie"/>
+                <img className="p-get-well" src={this.state.getWell} alt="GetWell"/>
+                <img className="p-natura" src={this.state.natura4All} alt="Natura4All"/>
+                <img className="p-avalon" src={this.state.avalon} alt="Avalon"/>
             </div>
         )
     }

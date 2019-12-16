@@ -1,70 +1,83 @@
 import React from 'react';
-import { Card, ListGroup, ListGroupItem, InputGroup, FormControl } from 'react-bootstrap';
+import { Card, ListGroup, ListGroupItem, InputGroup, FormControl, Button } from 'react-bootstrap';
 
 
 class QCard extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             category: "",
             Qno: "",
             question: "",
-            answers: [],
-            image: ""
-
-
+            firstAns: "",
+            secondAns: "",
+            imgLink: ""
         }
+    }
+
+    handleAdminInput = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        this.setState({[name]: value})
+    } 
+
+    saveQuizQ = () => {
+        console.log(this.state.imgLink + ";" + this.state.firstAns + ";" + this.state.secondAns + ";" + this.state.question + ";")
     }
 
 
     render() {
         return (
             <div className="q-card">
-                <Card style={{ width: '88rem' }}>
+                <Card style={{ width: '23rem', height: '29rem' }}>
                     <Card.Body>
-                        <Card.Title>Categoria aleasa: {this.props.category}. {this.props.Qno} intrebare:</Card.Title>
-                        <Card.Text>
+                        <Card.Title>Categoria aleasa: {this.props.category}.</Card.Title>
                             <FormControl
+                                className="ac-question"
                                 placeholder={this.props.question}
                                 aria-label="Question"
                                 aria-describedby="basic-addon1"
-                                value={}
+                                name="question"
+                                value={this.state.question}
+                                onChange={(event) => this.handleAdminInput(event)}
+                                as="textarea" rows="3"
                             />
-                        </Card.Text>
                     </Card.Body>
-                    {/* <ListGroup className="list-group-flush">
-                    <ListGroupItem>{this.props.question}</ListGroupItem>
-                </ListGroup> */}
-                    <InputGroup >
-                        {/* className="mb-3" */}
-                        <InputGroup.Prepend>
-                            <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
-                        </InputGroup.Prepend>
-                        <hr />
+                    
                         <FormControl
+                            className="ac-f-ans"
                             placeholder={this.props.answers[0]}
                             aria-label="Username"
                             aria-describedby="basic-addon1"
+                            name="firstAns"
+                            value={this.state.firstAns}
+                            onChange={(event) => this.handleAdminInput(event)}
                         />
                         <FormControl
+                            className="ac-s-ans"
                             placeholder={this.props.answers[1]}
                             aria-label="Username"
                             aria-describedby="basic-addon1"
+                            name="secondAns"
+                            value={this.state.secondAns}
+                            onChange={(event) => this.handleAdminInput(event)}
                         />
-                    </InputGroup>
-                    <Card.Body>
-                        <Card.Text>
-                            <Card.Title>Link imagine:</Card.Title>
+                        <Card.Title className="q-c-img-title">Link imagine:</Card.Title>
                             <FormControl
+                                className="ac-img-src"
                                 placeholder={this.props.image}
                                 aria-label="Username"
                                 aria-describedby="basic-addon1"
+                                name="imgLink"
+                                value={this.state.imgLink}
+                                onChange={(event) => this.handleAdminInput(event)}
                             />
-                        </Card.Text></Card.Body>
                     <Card.Body>
-                        <Card.Link href="#">Card Link</Card.Link>
-                        <Card.Link href="#">Another Link</Card.Link>
-                    </Card.Body>
+                        <Card.Text>
+                            
+                        </Card.Text>
+                        <Button variant="outline-dark" className="mySaveCardQuiz-bttn" type="submit" onClick={this.saveQuizQ}>Salveaza</Button>
+                        </Card.Body>
                 </Card>
             </div>
         )

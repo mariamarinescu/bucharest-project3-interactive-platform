@@ -7,7 +7,7 @@ class QCard extends React.Component {
         super(props)
     }
 
-    
+
     render() {
         return (
             <div className="q-card">
@@ -45,7 +45,6 @@ class QCard extends React.Component {
                     <Card.Body>
                         <Card.Text>
                             <Card.Title>Link imagine:</Card.Title>
-
                             <FormControl
                                 placeholder={this.props.image}
                                 aria-label="Username"

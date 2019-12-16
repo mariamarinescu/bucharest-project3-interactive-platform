@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LightningBoye from './components/Gurl/GirlModel'
+import Footer from './components/Footer/Footer'
 import './App.css'
 
 
@@ -13,7 +13,7 @@ export default class App extends Component {
   render() {
     return (
       <div className='app'>
-        <LightningBoye />
+        <Footer />
       </div>
     );
   }

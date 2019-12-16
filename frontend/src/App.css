@@ -33,7 +33,7 @@
 .gurl {
   height: 80vh;
   -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .spinner {
@@ -83,8 +83,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .loading div {
@@ -94,24 +94,24 @@
   background: #000000;
   border-radius: 50%;
   -webkit-animation: 0.9s bounce infinite alternate;
-          animation: 0.9s bounce infinite alternate;
+  animation: 0.9s bounce infinite alternate;
 }
 
 .loading div:nth-child(2) {
   -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 .loading div:nth-child(3) {
   -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
 @-webkit-keyframes bounce {
   to {
     opacity: 0.3;
     -webkit-transform: translate3d(0, -1rem, 0);
-            transform: translate3d(0, -1rem, 0);
+    transform: translate3d(0, -1rem, 0);
   }
 }
 
@@ -119,7 +119,7 @@
   to {
     opacity: 0.3;
     -webkit-transform: translate3d(0, -1rem, 0);
-            transform: translate3d(0, -1rem, 0);
+    transform: translate3d(0, -1rem, 0);
   }
 }
 
@@ -131,7 +131,7 @@
   border: 0.3rem solid rgba(0, 0, 0, 0.3);
   border-top-color: #000000;
   -webkit-animation: 1.5s spin infinite linear;
-          animation: 1.5s spin infinite linear;
+  animation: 1.5s spin infinite linear;
 }
 
 .donut.multi {
@@ -141,14 +141,14 @@
 @-webkit-keyframes spin {
   to {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes spin {
   to {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -159,20 +159,20 @@
   border-radius: 50%;
   border: 0.3rem solid #000000;
   -webkit-transform: translate(50%);
-          transform: translate(50%);
+  transform: translate(50%);
   -webkit-animation: 1s ripple ease-out infinite;
-          animation: 1s ripple ease-out infinite;
+  animation: 1s ripple ease-out infinite;
 }
 
 @-webkit-keyframes ripple {
   from {
     -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
     opacity: 1;
   }
   to {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 0;
   }
 }
@@ -180,12 +180,12 @@
 @keyframes ripple {
   from {
     -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
     opacity: 1;
   }
   to {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 0;
   }
 }
@@ -203,12 +203,12 @@
   border-radius: 50%;
   border: 0.3rem solid #000000;
   -webkit-animation: 1.5s ripple infinite;
-          animation: 1.5s ripple infinite;
+  animation: 1.5s ripple infinite;
 }
 
 .multi-ripple div:nth-child(2) {
   -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 .fancy-spinner {
@@ -216,11 +216,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 5rem;
   height: 5rem;
 }
@@ -237,7 +237,7 @@
   border-style: solid;
   border-color: transparent;
   -webkit-animation: 2s fancy infinite alternate;
-          animation: 2s fancy infinite alternate;
+  animation: 2s fancy infinite alternate;
 }
 
 .fancy-spinner div.ring:nth-child(1) {
@@ -249,7 +249,7 @@
   border-top-color: #000000;
   border-bottom-color: #000000;
   -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 .fancy-spinner div.dot {
@@ -261,14 +261,78 @@
 @-webkit-keyframes fancy {
   to {
     -webkit-transform: rotate(360deg) scale(0.5);
-            transform: rotate(360deg) scale(0.5);
+    transform: rotate(360deg) scale(0.5);
   }
 }
 
 @keyframes fancy {
   to {
     -webkit-transform: rotate(360deg) scale(0.5);
-            transform: rotate(360deg) scale(0.5);
+    transform: rotate(360deg) scale(0.5);
   }
 }
-/*# sourceMappingURL=App.css.map */
+
+@import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
+.hover-question {
+  position: absolute;
+  height: 220px;
+  width: 400px;
+  left: 60%;
+  top: 10%;
+  margin: 0;
+  padding: 0;
+  -webkit-box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
+  display: block;
+}
+
+#building-line-1 {
+  position: absolute;
+  height: 50px;
+  background: black;
+  top: 270px;
+  width: 200px;
+}
+
+.not-hovered-question {
+  display: none;
+}
+
+.check {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.hover-text {
+  position: absolute;
+  top: 10px;
+  left: 64px;
+  width: 330px;
+  font-family: 'PT Serif', serif;
+}
+
+.loading {
+  position: relative;
+  top: 300px;
+  left: 700px;
+  background: coral;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.onhover-quiz-bttn {
+  position: absolute;
+  top: 155px;
+  left: 33px;
+  width: 180px;
+}
+
+.onhover-findoutMore-bttn {
+  position: absolute;
+  top: 155px;
+  left: 238px;
+  width: 140px;
+}

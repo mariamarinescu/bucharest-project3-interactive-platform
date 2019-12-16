@@ -1,5 +1,6 @@
 import React from 'react';
-import * as data from '../my_fake_db.json';
+import * as data from './my_fake_db.json';
+import QCard from './quiz-card/QCard';
 
 
 
@@ -70,4 +71,14 @@ class QCards extends React.Component {
         
     }
     }
+
+    render() {
+        return(
+            <div>
+                <QCard question={this.state.face.firstQ.question} answers={this.state.face.firstQ.answers} category={"Fata"} Qno={"Prima"} image={this.state.face.firstQ.image}/>
+            </div>
+        )
+    }
 }
+
+export default QCards;

@@ -1,12 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import QCard from './components/quiz-cards/quiz-card/QCard'
+import QCards from './components/quiz-cards//QCards'
 
 function App() {
   return (
     <div className="App">
-     <QCard/>
+     <QCards/>
     </div>
   );
 }

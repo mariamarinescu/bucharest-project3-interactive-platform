@@ -11,17 +11,21 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+
         <AdminNav />
+
         <Switch>
+
           <Route path='/admin/editeaza-descrieri'>
             <EditInfoCards />
           </Route>
-        </Switch>
-        <Switch>
+
           <Route path='/admin/editeaza-chestionar'>
             <QCards />
           </Route>
+
         </Switch>
+        
       </BrowserRouter>
     </div>
   );

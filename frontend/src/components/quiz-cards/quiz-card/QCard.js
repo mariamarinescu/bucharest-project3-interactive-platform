@@ -3,7 +3,7 @@ import { Card, ListGroup, ListGroupItem,InputGroup,FormControl } from 'react-boo
 
 
 
-const QCard = ({ }) => {
+const QCard = ({question}) => {
 
     return (
         <div className="q-card">

@@ -1,9 +1,7 @@
 import React from 'react'
-import {Button, ButtonToolbar} from 'react-bootstrap';
+import { Button, ButtonToolbar } from 'react-bootstrap';
 import './AdminNav.css';
-import {Link} from 'react-router-dom';
-
-
+import { Link } from 'react-router-dom';
 
 class AdminNav extends React.Component {
     constructor(props) {
@@ -11,7 +9,7 @@ class AdminNav extends React.Component {
         this.state = {
             quizBttnState: false,
             descriptionBttnState: false
-            
+
         }
     }
     descbtnStyleActive = {
@@ -30,41 +28,44 @@ class AdminNav extends React.Component {
         backgroundColor: '#696969',
         color: 'white'
     }
-
-  
     componentDidUpdate() {
-    
-    }
-   handleDescription = () => {
-       this.setState({
-           descriptionBttnState: !this.state.descriptionBttnState
-       })
-   }
 
-   handleQuiz = () => {
-    this.setState({
-        quizBttnState: !this.state.quizBttnState
-    })
-}
-   
+    }
+    handleDescription = () => {
+        this.setState({
+            descriptionBttnState: false,
+            quizBttnState: true
+        })
+    }
+
+    handleQuiz = () => {
+        this.setState({
+            quizBttnState: false,
+            descriptionBttnState: true
+        })
+    }
+
     render() {
         return (
 
             <div className="admin-nav">
                 <ButtonToolbar>
-               
-                    <Button  to="/admin/editeaza-descrieri" variant="secondary" size="lg" onClick={this.handleDescription}
-                    style={this.state.descriptionBttnState ? this.descbtnStyleActive : this.descbtnStyleInactive} className="admin-desc-bttn" onClick={this.handleDescription}>
-                    Descrieri
-                </Button>
-                
-              
-                <Button variant="secondary" to="/admin/editeaza-chestionar" onClick={this.handleQuiz} 
-                style={this.state.quizBttnState ? this.quizbtnStyleActive : this.quizbtnStyleInactive}
-                size="lg" className="admin-quiz-bttn" >
-                    Chestionar
+                    <Link to="/admin/editeaza-descrieri">
+                        <Button variant="secondary" size="lg"
+                            style={this.state.descriptionBttnState ? this.descbtnStyleActive : this.descbtnStyleInactive}
+                            className="admin-desc-bttn"
+                            onClick={this.handleDescription}
+                        >
+                            Descrieri
+                        </Button>
+                    </Link>
+                    <Link to="/admin/editeaza-chestionar">
+                        <Button variant="secondary" onClick={this.handleQuiz}
+                            style={this.state.quizBttnState ? this.quizbtnStyleActive : this.quizbtnStyleInactive}
+                            size="lg" className="admin-quiz-bttn" >
+                            Chestionar
                     </Button>
-              
+                    </Link>
                 </ButtonToolbar>
             </div>
         )

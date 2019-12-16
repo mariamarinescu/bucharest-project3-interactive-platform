@@ -5,6 +5,15 @@ import { Card, ListGroup, ListGroupItem, InputGroup, FormControl } from 'react-b
 class QCard extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            category: "",
+            Qno: "",
+            question: "",
+            answers: [],
+            image: ""
+
+
+        }
     }
 
 
@@ -17,8 +26,9 @@ class QCard extends React.Component {
                         <Card.Text>
                             <FormControl
                                 placeholder={this.props.question}
-                                aria-label="Username"
+                                aria-label="Question"
                                 aria-describedby="basic-addon1"
+                                value={}
                             />
                         </Card.Text>
                     </Card.Body>

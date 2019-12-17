@@ -1,5 +1,6 @@
-import React from 'react'
-import * as data from './my_fake_db.json'
+import React from 'react';
+import * as data from './my_fake_db.json';
+import './Parteners.css'
 
 class Parteners extends React.Component {
     constructor(props) {

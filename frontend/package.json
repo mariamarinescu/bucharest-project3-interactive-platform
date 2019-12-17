@@ -12,11 +12,12 @@
     "react-google-maps": "^9.4.5",
     "react-navbar": "^3.0.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
+    "react-scripts": "^3.3.0",
     "styled-components": "^4.4.1",
     "classnames": "2.2.6",
     "email-validator": "2.0.4",
     "node-pre-gyp": "0.14.0"
+
   },
   "scripts": {
     "start": "react-scripts start",

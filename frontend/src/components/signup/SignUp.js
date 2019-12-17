@@ -1,9 +1,9 @@
 import React from 'react';
-import './style.css'
 import FormErrors from './FormErrors.js';
 import {Button} from 'react-bootstrap';
+import { withRouter } from 'react-router-dom';
 
-export default class extends React.Component {
+class SignUp extends React.Component {
 
     constructor(props) {
         super(props);
@@ -66,6 +66,10 @@ export default class extends React.Component {
             passwordValid: passwordValid
         }, this.validateForm);
     }
+    routeChange = () => {
+        let path = `/`;
+        this.props.history.push(path);
+      }
 
     validateForm() {
         this.setState({ formValid: this.state.emailValid && this.state.passwordValid });
@@ -100,8 +104,8 @@ export default class extends React.Component {
                             onChange={(event) => this.handleUserInput(event)} />
                     </div>
                     <Button variant="outline-dark" className="mySignUp-bttn" type="submit"
-                     disabled={!this.state.formValid}>
-                         Logare
+                     disabled={!this.state.formValid} onClick={this.routeChange}>
+                         Creeare cont
                     </Button>
                 </form>
                 <div className="panel panel-default">
@@ -111,3 +115,6 @@ export default class extends React.Component {
         )
     }
 }
+
+export default withRouter(SignUp)
+

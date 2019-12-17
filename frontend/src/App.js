@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import NavBar from "./components/navbar/NavBar";
@@ -19,9 +19,7 @@ class App extends React.Component {
           <NavBar />
           <Footer />
           <Switch>
-            <Route path="/sign-up">
-                <SingUp/>
-            </Route>
+            <Route path="/sign-up" component={SingUp}/>
           </Switch>
         </BrowserRouter>
       </div>

@@ -7,7 +7,6 @@ import SingUp from './components/signup/SignUp'
 import Login from './components/login/Login';
 import GirlModel from './components/Gurl/GirlModel'
 
-import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './components/info_modal/Info.css'

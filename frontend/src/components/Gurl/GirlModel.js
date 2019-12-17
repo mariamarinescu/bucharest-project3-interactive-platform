@@ -62,7 +62,7 @@ export default class GirlModel extends Component {
             this.setState({
                 isHovered: false
             })
-        }, 1000)
+        }, 390000)
     }
 
     render() {

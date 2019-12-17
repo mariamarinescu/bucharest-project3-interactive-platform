@@ -8,11 +8,14 @@ import Login from './components/login/Login';
 import GirlModel from './components/Gurl/GirlModel';
 import Maps from './components/maps/Maps';
 import Parteners from './components/parteners/Parteners';
+import Quiz from './components/quiz//Quiz'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import './components/info_modal/Info.css'
+import'./components/quiz/scss/quiz.css'
+
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -96,6 +99,9 @@ class App extends React.Component {
           <Switch>
           <Route path="/log-in" component={Login}/>
           </Switch>
+       <Switch>
+          <Route path="/quiz" component={Quiz}/>
+          </Switch>
         </BrowserRouter>
 
       </div>
@@ -106,4 +112,5 @@ class App extends React.Component {
 
 
 export default App;
+
 

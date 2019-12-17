@@ -1,5 +1,7 @@
 import React from 'react'
-import { Button, ButtonToolbar } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import './AdminNav.css';
 import { Link } from 'react-router-dom';
 
@@ -9,7 +11,6 @@ class AdminNav extends React.Component {
         this.state = {
             quizBttnState: false,
             descriptionBttnState: false
-
         }
     }
     descbtnStyleActive = {
@@ -29,7 +30,6 @@ class AdminNav extends React.Component {
         color: 'white'
     }
     componentDidUpdate() {
-
     }
     handleDescription = () => {
         this.setState({
@@ -37,7 +37,6 @@ class AdminNav extends React.Component {
             quizBttnState: true
         })
     }
-
     handleQuiz = () => {
         this.setState({
             quizBttnState: false,
@@ -47,30 +46,30 @@ class AdminNav extends React.Component {
 
     render() {
         return (
-
-            <div className="admin-nav">
-                <ButtonToolbar>
-                    <Link to="/admin/editeaza-descrieri">
+            <Row className="admin-nav">
+                <Col className='nav-container'>
+                    <Link to="/admin/editeaza-descrieri" className='nav-button-container'>
                         <Button variant="secondary" size="lg"
                             style={this.state.descriptionBttnState ? this.descbtnStyleActive : this.descbtnStyleInactive}
-                            className="admin-desc-bttn"
+                            className="admin-desc-bttn custom-btn"
                             onClick={this.handleDescription}
                         >
                             Descrieri
                         </Button>
                     </Link>
+
                     <Link to="/admin/editeaza-chestionar">
                         <Button variant="secondary" onClick={this.handleQuiz}
                             style={this.state.quizBttnState ? this.quizbtnStyleActive : this.quizbtnStyleInactive}
-                            size="lg" className="admin-quiz-bttn" >
+                            size="lg" className="admin-quiz-bttn custom-btn"
+                        >
                             Chestionar
-                    </Button>
+                        </Button>
                     </Link>
-                </ButtonToolbar>
-            </div>
+                </Col >
+            </Row >
         )
     }
-
 }
 
 export default AdminNav;

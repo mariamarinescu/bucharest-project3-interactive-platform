@@ -1,6 +1,8 @@
 import React from 'react';
 import * as data from './my_fake_db.json';
 import QCard from './quiz-card/QCard';
+import './quiz-card/QCards.css';
+import Row from 'react-bootstrap/Row'
 
 
 
@@ -74,14 +76,12 @@ class QCards extends React.Component {
 
     render() {
         return(
-            <div className="quiz-admin-cards-container">
+            <Row className="quiz-admin-cards-container">
                 <QCard id="qcard-f-card" question={this.state.face.firstQ.question} answers={this.state.face.firstQ.answers} category={"Fata"}  image={this.state.face.firstQ.image}/>
                 <QCard clasName="qcard-s-card" question={this.state.hair.firstQ.question} answers={this.state.hair.firstQ.answers} category={"Par"}  image={this.state.hair.firstQ.image}/>
                 <QCard clasName="qcard-t-card" question={this.state.massage.firstQ.question} answers={this.state.massage.firstQ.answers} category={"Par"}  image={this.state.massage.firstQ.image}/>
                 <QCard clasName="qcard-fo-card" question={this.state.anticelulitis.firstQ.question} answers={this.state.anticelulitis.firstQ.answers} category={"Par"}  image={this.state.anticelulitis.firstQ.image}/>
-
-
-            </div>
+            </Row>
         )
     }
 }

@@ -1,4 +1,13 @@
-.InfoCard {
+/* .InfoCard {
  display: inline-block;
 }
-
+ */
+ .info-cards{
+    text-align: center;
+ 
+    /* width: fit-content; */
+ }
+ .card{
+     
+     margin: 3%;
+ }

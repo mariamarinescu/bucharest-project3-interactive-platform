@@ -29,7 +29,7 @@ class QCard extends React.Component {
     render() {
         return (
             <div className="q-card">
-                <Card style={{ width: '23rem', height: '29rem' }}>
+                <Card style={{ width: '23rem', height: '29rem', margin: 'solid white 50px' }}>
                     <Card.Body>
                         <Card.Title>Categoria aleasa: {this.props.category}.</Card.Title>
                             <FormControl

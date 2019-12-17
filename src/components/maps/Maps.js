@@ -33,7 +33,7 @@ class GMap extends React.Component {
         return (
             <div className='map'>
                 <Map google={this.props.google}
-                    zoom={3}
+                    zoom={3} style={{width: "80vw", height: "90vh", top:"800px", left: "10%"}}
                 // initialCenter={coord}  !!!SET DEFAULT CENTER!!!
                 >
                     {this.props.locationData.map((e, i) => {

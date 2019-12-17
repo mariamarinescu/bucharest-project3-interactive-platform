@@ -1,1 +1,11 @@
-/* No CSS *//*# sourceMappingURL=App.css.map */
+.g-map {
+  width: 400px;
+  height: 500px;
+  position: relative;
+}
+.map {
+  width: 400px;
+  height: 500px;
+  position: relative;
+}
+/*# sourceMappingURL=App.css.map */

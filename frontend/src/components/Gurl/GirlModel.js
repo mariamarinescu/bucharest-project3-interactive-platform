@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import img from '../../Kool_Gurl.jpg'
+import img from '../../static/img/Kool_Gurl.jpg'
 import * as data from '../info_modal/my_fake_db.json'
 import { Button } from 'react-bootstrap';
 import * as check from './../../static/img/hook-1425312.png'

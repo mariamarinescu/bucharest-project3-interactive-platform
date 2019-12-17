@@ -58,12 +58,10 @@
 
 
 /*SIGNUP*/
-#signup-form {
-    width: 370px!important;
-    height: 360px!important;
-    position: relative;
-    top: -250px;
-    left: 80%;
+.signup-form {
+    position: relative!important;
+    top: -50px!important;
+    left: 4%!important;
 }
 
 .modal-content {

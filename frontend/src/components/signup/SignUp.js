@@ -1,6 +1,6 @@
 import React from 'react';
 import FormErrors from './FormErrors.js';
-import {Button} from 'react-bootstrap';
+import {Button, Row, Col} from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 
 class SignUp extends React.Component {
@@ -77,8 +77,8 @@ class SignUp extends React.Component {
 
     render() {
         return (
-            <div id="signup-form">
-                <form className="">
+            <Row className="signup-form">
+            <Col className = 'py-3' md={{ offset: 8, span: 3 }} xs={{offset: 4, span: 7}}>                <form className="">
                     <div className="form-group">
                         <input type="text" className="form-control mySignUp-input"
                             name="name" value={this.state.name}
@@ -103,15 +103,16 @@ class SignUp extends React.Component {
                             placeholder="Confirma parola"
                             onChange={(event) => this.handleUserInput(event)} />
                     </div>
+                    <Col>
                     <Button variant="outline-dark" className="mySignUp-bttn" type="submit"
                      disabled={!this.state.formValid} onClick={this.routeChange}>
                          Creeare cont
-                    </Button>
+                    </Button></Col>
                 </form>
                 <div className="panel panel-default">
                     <FormErrors formErrors={this.state.formErrors} />
                 </div>
-            </div>
+                </Col></Row>
         )
     }
 }

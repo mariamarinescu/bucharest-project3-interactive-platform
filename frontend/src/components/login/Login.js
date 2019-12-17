@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { withRouter } from 'react-router-dom';
+import './login.css'
 
-export class login extends Component {
+
+class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -23,13 +26,18 @@ export class login extends Component {
         // console.log(this.state.pass)
     }
 
+    routeChange = () => {
+        let path = `/`;
+        this.props.history.push(path);
+      }
+
 
     render() {
         return (
             <div className='login'>
-                {this.props.isActive ?
+                {/* {this.props.isActive ? */}
                     <Row>
-                        <Col className = 'py-3' md={{ offset: 8, span: 3 }}>
+                       <Col className = 'py-3' md={{ offset: 8, span: 3 }} xs={{offset: 4, span: 7}} >
                             <Form>
                                 <Form.Group controlId="formBasicEmail">
                                     <Form.Control onChange={this.onChangeEmail()} type="email" placeholder="Email" size='sm' />
@@ -38,16 +46,17 @@ export class login extends Component {
                                     <Form.Control onChange={this.onChangePass()} type="password" placeholder="Parola" size='sm' />
                                 </Form.Group>
                                 <Col md={{ offset: 4, span: 1 }}>
-                                    <Button className='login-btn' variant="outline-secondary" type="submit">
+                                    <Button className='login-btn' variant="outline-secondary" type="submit" onClick={this.routeChange}>
                                         <div className='login-text'>Logare</div>
                                     </Button>
                                 </Col>
                             </Form>
                         </Col>
-                    </Row> : null}
+                    </Row> 
+                    {/* // : null} */}
             </div>
         );
     }
 }
 
-export default login;
+export default withRouter(Login);

@@ -10,4 +10,10 @@
   margin-left: 18px;
   margin-right: 18px;
 }
+
+.login {
+  position: relative;
+  top: -50px;
+  left: 4%;
+}
 /*# sourceMappingURL=login.css.map */

@@ -1,27 +1,5 @@
-/* <<<<<<< feature/signup
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
-======= */
+/*FOOTER*/
 .footer {
     text-align: center;
     color: #6b6b6b;
@@ -76,7 +54,10 @@
 .anpc.brand-romanesc a:link {
     color: #6b6b6b;
 }
+/*END-FOOTER*/
 
+
+/*SIGNUP*/
 #signup-form {
     width: 370px!important;
     height: 360px!important;
@@ -141,6 +122,25 @@
 .inputError {
     border: #ce1313;
 }
+/*END*SIGNUP*/
+
+
+/*LOGIN*/
+
+.form-control {
+  border-radius: 10px;
+}
+
+.login-btn {
+  border-radius: 15px;
+}
+
+.login-text {
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+/*END*LOGIN*/
 
 
 /*# sourceMappingURL=App.css.map */

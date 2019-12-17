@@ -34,7 +34,7 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div className='login'>
+            <div id='login' >
                 {/* {this.props.isActive ? */}
                     <Row>
                        <Col className = 'py-3' md={{ offset: 8, span: 3 }} xs={{offset: 4, span: 7}} >

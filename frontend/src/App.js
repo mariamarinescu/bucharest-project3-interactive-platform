@@ -89,7 +89,7 @@ class App extends React.Component {
           <Maps locationData={markerData} />
         </div>
         <Parteners/>
-          {/* <Footer /> */}
+          <Footer />
           <Switch>
             <Route path="/sign-up" component={SingUp}/>
           </Switch>

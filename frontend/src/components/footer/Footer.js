@@ -6,7 +6,7 @@ import './Footer.css';
 export default class Footer extends Component {
     render() {
         return (
-            <div className='footer'>
+            <div id='footer'>
                 <div className='contact'>
                     <div>SC TECHIRGHIOL FARMA COSMETICS SRL</div>
                     <div>Nr. ord. Reg. com./aut.: J13-1885-2012</div>

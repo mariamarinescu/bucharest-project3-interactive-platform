@@ -60,7 +60,7 @@
 /*SIGNUP*/
 .signup-form {
     position: relative!important;
-    top: -50px!important;
+    top: -1455px!important;
     left: 4%!important;
 }
 
@@ -136,6 +136,11 @@
 .login-text {
   margin-left: 18px;
   margin-right: 18px;
+}
+#login {
+  position: relative;
+  top: -1455px;
+  left: 4%;
 }
 
 /*END*LOGIN*/

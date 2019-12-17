@@ -80,6 +80,7 @@ export default class GirlModel extends Component {
                                 onMouseLeave={this.handleLeaveHover}
                             // onClick={() => this.handleClick(e)}
                             >
+                                
                                 <div className="multi-ripple">
                                     <div></div>
                                     <div></div>

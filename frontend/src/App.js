@@ -7,9 +7,11 @@ import SingUp from './components/signup/SignUp'
 import Login from './components/login/Login';
 import GirlModel from './components/Gurl/GirlModel';
 import Maps from './components/maps/Maps';
+import Parteners from './components/parteners/Parteners';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
 import './components/info_modal/Info.css'
 
 
@@ -86,6 +88,7 @@ class App extends React.Component {
           <div style={{ height: '60vh' }}>
           <Maps locationData={markerData} />
         </div>
+        <Parteners/>
           {/* <Footer /> */}
           <Switch>
             <Route path="/sign-up" component={SingUp}/>
@@ -98,6 +101,7 @@ class App extends React.Component {
       </div>
     );
   }
+
 }
 
 

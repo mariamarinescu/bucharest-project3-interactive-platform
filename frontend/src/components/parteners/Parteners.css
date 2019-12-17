@@ -1,0 +1,318 @@
+/*START OF feature/parteners*/
+@import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
+/*END OF feature/parteners*/
+
+
+/*START OF feature/parteners*/
+
+.parteners-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 100px;
+}
+
+.logo-container {
+  top: 100px;
+}
+
+.p-mega, .p-carturesti,.p-vital,
+.p-enatural, .p-camara,.p-stam-de-vorba, 
+.p-allboutique, .p-tastingRO, .p-icosmetice, 
+.p-ela,.p-bya,.p-flora, 
+.p-pixie, .p-get-well, .p-natura, .p-avalon {
+  position: absolute;
+}
+
+.p-title {
+  font-family: 'PT Serif', serif;
+  position: absolute;
+}
+/*END OF feature/parteners*/
+
+
+
+/*START OF feature/parteners*/
+
+@media (max-width: 767px) {
+
+  .p-title {
+    left: 21%;
+    font-size: 30px;
+  }
+
+  .p-mega {
+    left: 10%;
+    top: 100px;
+  }
+
+  .p-carturesti{
+    left: 38%;
+    top: 110px;
+  }
+
+  .p-vital{
+    left: 18%;
+    top: 200px;
+  }
+
+  .p-enatural{
+    left: 15%;
+    top: 310px;
+  }
+
+  .p-camara{
+    left: 55%;
+    top: 280px;
+  }
+
+  .p-stam-de-vorba{
+    left: 22%;
+    top: 410px;
+  }
+
+  .p-allboutique{
+    left: 17%;
+    top: 555px;
+  }
+
+  .p-icosmetice{
+    left: 17%;
+    top: 644px;
+  }
+
+  .p-tastingRO{
+    left: 17%;
+    top: 733px;
+  }
+
+  .p-ela {
+    left: 17%;
+    top:900px;
+  }
+
+  .p-bya {
+    left: 21%;
+    top:1000px;
+  }
+
+  .p-flora {
+    left: 48%;
+    top: 760px;
+  }
+
+  .p-pixie {
+    left: 24%;
+    top:1090px;
+  }
+  .p-get-well {
+    left: 23%;
+    top:1190px;
+  }
+
+  .p-natura {
+    left: 21%;
+    top:1310px;
+  }
+
+  .p-avalon {
+    left: 32%;
+    top:1370px;
+    padding-bottom: 70px;
+  }
+
+}
+/*END OF feature/parteners*/
+
+
+/*START OF feature/parteners*/
+
+@media  (min-width: 768px) and (max-width: 1024px) {
+
+  .p-title {
+    left: 28%;
+    font-size: 40px;
+    top: 0px;
+  }
+
+    .p-mega {
+         left: 8%;
+      top: 100px;
+   }
+
+   .p-carturesti{
+       left: 25%;
+     top: 110px;
+   }
+
+   .p-vital{
+       left: 57%;
+     top: 100px;
+   }
+
+   .p-enatural{
+       left: 8%;
+     top: 250px;
+     
+   }
+
+   .p-camara{
+       left: 33%;
+     top: 210px;
+   }
+
+   .p-stam-de-vorba{
+       left: 58%;
+     top: 210px;
+   }
+
+   .p-allboutique{
+       left: 8%;
+     top: 380px;
+   }
+   .p-icosmetice{
+       left: 50%;
+     top: 370px;
+   }
+
+   .p-tastingRO{
+       left: 16%;
+     top: 477px;
+   }
+
+   .p-ela {
+       left: 44%;
+     top:499px;
+   }
+   .p-bya {
+       left: 8%;
+     top:640px;
+   }
+
+   .p-flora {
+       left: 40%;
+     top: 640px;
+   }
+
+   .p-pixie {
+       left: 62%;
+     top:620px;
+   }
+   
+   .p-get-well {
+       left: 13%;
+     top:740px;
+   }
+
+   .p-natura {
+       left: 49%;
+     top:770px;
+   }
+
+   .p-avalon {
+       left: 38%;
+     top:873px;
+     padding-bottom: 70px;
+   }
+
+}
+/*END OF feature/parteners*/
+
+
+/*START OF feature/parteners*/
+
+@media  (min-width: 1025px) {
+
+  .p-title {
+    left: 35%;
+    font-size: 48px;
+    top: 0px;
+  }
+  
+  .p-mega {
+     left: 15%;
+    top: 133px;
+  }
+
+ .p-carturesti{
+   left: 25%;
+   top: 143px;
+  }
+
+ .p-vital{
+   left: 43%;
+   top: 130px;
+  }
+
+ .p-enatural{
+   left: 14%;
+   top: 280px; 
+  }
+
+ .p-camara{
+   left: 29%;
+   top: 240px;
+  }
+
+ .p-stam-de-vorba{
+   left: 67%;
+   top: 120px;
+  }
+
+ .p-allboutique{
+   left: 42%;
+   top: 270px;
+  }
+
+ .p-icosmetice{
+   left: 66%;
+   top: 270px;
+  }
+
+ .p-tastingRO{
+   left: 14%;
+   top: 377px;
+  }
+
+ .p-ela {
+   left: 25%;
+   top:399px;
+  }
+
+ .p-bya {
+   left: 47%;
+   top:399px;
+  }
+
+ .p-flora {
+   left: 32.5%;
+   top: 560px;
+  }
+
+ .p-pixie {
+   left: 67%;
+   top:380px;
+  }
+
+ .p-get-well {
+   left: 13.5%;
+   top:540px;
+  }
+
+ .p-natura {
+   left: 48%;
+   top:560px;
+  }
+
+ .p-avalon {
+   left: 69%;
+   top:544px;
+  }
+
+}
+
+/*END OF feature/parteners*/
+
+

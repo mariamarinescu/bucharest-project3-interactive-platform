@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import brand_romanesc from './brand-romanesc.png'
-import produse_romanesti from './produse-romanesti.png';
-import './Footer.css';
+import produse_romanesti from './produse-romanesti.png'
 
 export default class Footer extends Component {
     render() {
@@ -12,7 +11,7 @@ export default class Footer extends Component {
                     <div>Nr. ord. Reg. com./aut.: J13-1885-2012</div>
                     <div>Cod inregistrare fiscala: RO30601045</div>
                     <div>Techir © Copyright 2020</div>
-                    <hr id="f-line"/>
+                    <hr />
                     <div className='footer-links'>
                         <a href="https://anpc.ro/" className='anpc'>ANPC</a>
                         <a href="#" className='politica-de-confidentialitate'>Politica de Confidentialitate</a>

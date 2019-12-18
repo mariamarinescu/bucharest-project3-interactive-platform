@@ -2,6 +2,11 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Homepage from './components/homepage/Homepage';
+import SignUp from './components/homepage/Homepage';
+import Login from './components/homepage/Homepage';
+import Quiz from './components/homepage/Homepage';
+
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -26,7 +31,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <BrowserRouter>
-          <Homepage/>
+          <Homepage />
+         
         </BrowserRouter>
 
       </div>

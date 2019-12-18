@@ -1,18 +1,18 @@
-import React,{ useState } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route, withRouter, NavLink, Link } from 'react-router-dom';
 import { Button, Modal, Row, Col, Form } from 'react-bootstrap';
-import { Map, Marker, GoogleApiWrapper, InfoWindow } from 'google-maps-react';
 
 
 import data from '../info_modal/my_fake_db.json';
 import * as check from './../../static/img/hook-1425312.png';
+import Maps from '../maps/Maps'
 
 
 import '../parteners/Parteners.css'
 
 import logo from "../../static/img/logo_techir.png";
-import brand_romanesc from '../footer/brand-romanesc.png'
-import produse_romanesti from '../footer/produse-romanesti.png';
+import brand_romanesc from '../../static/img//brand-romanesc.png'
+import produse_romanesti from '../../static/img//produse-romanesti.png';
 import img from '../../static/img/Kool_Gurl.jpg'
 
 
@@ -21,36 +21,35 @@ import '../navbar/NavBar.css';
 import '..//info_modal/Info.css';
 import '../footer/Footer.css';
 import '../login/login.css';
-import'../quiz/quiz.css'
+import '../quiz/quiz.css'
 
 
-import markerData from '../dummy_db/pinpoint';
 
 const points = ['arm', 'leg', 'hair', 'face', 'hand', 'neck'];
 
-const FormErrors = ({formErrors}) =>
-  <div className='formErrors'>
-    {Object.keys(formErrors).map((fieldName, i) => {
-      if(formErrors[fieldName].length > 0){
-          if(fieldName === 'email') {
-            return (
-                <p key={i}>{'Email-ul'} {formErrors[fieldName]}</p>
-              ) 
-          } else if(fieldName === 'password') {
-            return (
-                <p key={i}>{'Parola'} {formErrors[fieldName]}</p>
-              ) 
-          } else  if(fieldName === 'confirmPassword') {
-            return (
-                <p key={i}>{'Parolele'} {formErrors[fieldName]}</p>
-              ) 
-          }
-               
-      } else {
-        return '';
-      }
-    })}
-  </div>;
+const FormErrors = ({ formErrors }) =>
+    <div className='formErrors'>
+        {Object.keys(formErrors).map((fieldName, i) => {
+            if (formErrors[fieldName].length > 0) {
+                if (fieldName === 'email') {
+                    return (
+                        <p key={i}>{'Email-ul'} {formErrors[fieldName]}</p>
+                    )
+                } else if (fieldName === 'password') {
+                    return (
+                        <p key={i}>{'Parola'} {formErrors[fieldName]}</p>
+                    )
+                } else if (fieldName === 'confirmPassword') {
+                    return (
+                        <p key={i}>{'Parolele'} {formErrors[fieldName]}</p>
+                    )
+                }
+
+            } else {
+                return '';
+            }
+        })}
+    </div>;
 
 
 // const QuizModal = () => {
@@ -58,7 +57,7 @@ const FormErrors = ({formErrors}) =>
 //     <div class="before"></div>
 //     <div class="after"></div>
 //   </div>;
-  
+
 //   return(
 //     <div>
 //   <Modal
@@ -66,17 +65,17 @@ const FormErrors = ({formErrors}) =>
 //       onHide={this.props.handleClose}
 //     >
 //       <Modal.Header closeButton>
-  
+
 //         <Modal.Title>
 //          {this.props.title}
 //         </Modal.Title>
-  
+
 //       </Modal.Header>
-  
+
 //       <Modal.Body>
-  
+
 //         {this.props.description}
-  
+
 //         <p className="red-quiz-modal-message">
 //           {this.props.lastMessage}
 //         </p>
@@ -85,20 +84,71 @@ const FormErrors = ({formErrors}) =>
 //           <div class="before"></div>
 //           <div class="after"></div>
 //         </div> */}
-  
+
 //       </Modal.Body>
-  
+
 //       <Modal.Footer>
 //         <img
 //           src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png"
 //           alt="logo"
 //         />
 //       </Modal.Footer>
-  
+
 //     </Modal>
 //     </div>
-  
+
 // )}
+const markerData = [
+    {
+        title: 'marker1_title',
+        name: 'Kathmandu City',
+        position: {
+            lat: 27.708259611420385,
+            lng: 85.31940732779083
+        }
+    }, {
+        title: 'marker2_title',
+        name: 'Salta City',
+        position: {
+            lat: -24.795283873195597,
+            lng: -65.42829136976184
+        }
+    }, {
+        title: 'marker3_title',
+        name: 'Oracoke Lighthouse',
+        position: {
+            lat: 35.1096357,
+            lng: -75.9863747
+        }
+    }, {
+        title: 'marker4_title',
+        name: 'Antananarivo City',
+        position: {
+            lat: -18.915194943870617,
+            lng: 47.53313308528492
+        }
+    }, {
+        title: 'marker5_title',
+        name: 'Esports',
+        position: {
+            lat: 37.5246642275535,
+            lng: 126.94545210259305
+        }
+    }, {
+        title: 'marker6_title',
+        name: 'Neo-Tokyo',
+        position: {
+            lat: 35.675784883832065,
+            lng: 139.7688509481294
+        }
+    }, {
+        title: 'marker7_title',
+        name: 'Boring',
+        position: {
+            lat: 47.44931986261183,
+            lng: 12.154022557394521
+        }
+    }];
 
 class Nav extends React.Component {
     constructor(props) {
@@ -152,8 +202,6 @@ class GirlModel extends React.Component {
         super(props);
         this.state = {
             isHidden: this.props.hidden,
-
-
             chosenCategory: "",
             activeLink: "",
             faceActive: false,
@@ -235,7 +283,7 @@ class GirlModel extends React.Component {
                 <div className={contentClass}>
                     <img src={check} width="50px" height="50px" className="check" alt='check_img' />
                     <p className="hover-text">{this.state.info}</p>
-                    <Button className="onhover-quiz-bttn" variant="outline-danger" href={this.state.blogLink}>Participa si castiga</Button>
+                    <Button className="onhover-quiz-bttn" variant="outline-danger" href="/quiz">Participa si castiga</Button>
                     <Button className="onhover-findoutMore-bttn" variant="outline-secondary" href={this.state.blogLink}>Afla detalii</Button>
                 </div>
                 {/* <Content info={this.state.info}/> */}
@@ -324,7 +372,7 @@ class Footer extends React.Component {
     }
 }
 
-class Login extends React.Component {
+ class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -376,7 +424,7 @@ class Login extends React.Component {
     }
 }
 
-class SignUp extends React.Component {
+ class SignUp extends React.Component {
 
     constructor(props) {
         super(props);
@@ -531,39 +579,39 @@ class Question extends React.Component {
 
     render() {
         return (
-            <div className = "quiz-q-container">
-                <h3 className = "q-question">
+            <div className="quiz-q-container">
+                <h3 className="q-question">
                     {this.props.question}
                 </h3>
 
-                <img 
-                    className = "q-img" 
-                    src = {this.props.image} 
-                    alt = "question"
-                    width = "250px" 
-                    height = "250px" 
+                <img
+                    className="q-img"
+                    src={this.props.image}
+                    alt="question"
+                    width="250px"
+                    height="250px"
                 >
                 </img>
 
                 <div className="questions-container">
-                    <Button 
-                        variant = { this.state.showSuccess ? "success" : "outline-dark" } 
-                        className = "q-first-ans" 
-                        onClick = { this.handleSuccessShow } 
-                        size = "lg" 
-                        block 
-                    > 
-                        { this.props.answers[0] } 
-                    </Button>
-
-                    <Button 
-                        variant = { this.state.showFailure ? "danger" : "outline-dark" }
-                        onClick = { this.handleFailureShow } 
-                        className = "q-second-ans" 
-                        size = "lg" 
+                    <Button
+                        variant={this.state.showSuccess ? "success" : "outline-dark"}
+                        className="q-first-ans"
+                        onClick={this.handleSuccessShow}
+                        size="lg"
                         block
                     >
-                        {this.props.answers[1]} 
+                        {this.props.answers[0]}
+                    </Button>
+
+                    <Button
+                        variant={this.state.showFailure ? "danger" : "outline-dark"}
+                        onClick={this.handleFailureShow}
+                        className="q-second-ans"
+                        size="lg"
+                        block
+                    >
+                        {this.props.answers[1]}
                     </Button>
                     {/* <QuizModal show={this.state.showSuccess} handleClose={this.handleSuccessClose}
                     title={this.props.modalSuccessTitle}  description={this.props.modalSuccessDescription}
@@ -573,9 +621,9 @@ class Question extends React.Component {
                     title={this.props.modalFailureTitle}  description={this.props.modalFailureDescription}
                     lastMessage={this.props.modalFailureLastMessage} 
                     /> */}
-                    <Modal 
-                        show = { this.state.showSuccess } 
-                        onHide = { this.handleSuccessClose }
+                    <Modal
+                        show={this.state.showSuccess}
+                        onHide={this.handleSuccessClose}
                     >
                         <Modal.Header closeButton>
                             <Modal.Title>
@@ -583,11 +631,11 @@ class Question extends React.Component {
                             </Modal.Title>
                         </Modal.Header>
 
-                        <Modal.Body> 
-                            { this.props.modalSuccessDescription }
+                        <Modal.Body>
+                            {this.props.modalSuccessDescription}
 
                             <p className="red-quiz-modal-message">
-                                { this.props.modalSuccessLastMessage }
+                                {this.props.modalSuccessLastMessage}
                             </p>
                             <div class="yeey">
                                 <div class="before"></div>
@@ -596,17 +644,17 @@ class Question extends React.Component {
                         </Modal.Body>
 
                         <Modal.Footer>
-                            <img 
-                                src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" 
-                                alt="logo" 
+                            <img
+                                src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png"
+                                alt="logo"
                             />
                         </Modal.Footer>
 
                     </Modal>
 
-                    <Modal 
-                        show = {this.state.showFailure} 
-                        onHide = {this.handleFailureClose} 
+                    <Modal
+                        show={this.state.showFailure}
+                        onHide={this.handleFailureClose}
                     >
                         <Modal.Header closeButton>
                             <Modal.Title>
@@ -614,14 +662,14 @@ class Question extends React.Component {
                             </Modal.Title>
                         </Modal.Header>
 
-                        <Modal.Body> 
-                            { this.props.modalFailureDescription }
+                        <Modal.Body>
+                            {this.props.modalFailureDescription}
 
                             <p className="red-quiz-modal-message">
-                                { this.props.modalFailureLastMessage }
+                                {this.props.modalFailureLastMessage}
                             </p>
                         </Modal.Body>
-                        
+
                         <Modal.Footer>
                             <img src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" alt="logo" />
                         </Modal.Footer>
@@ -651,7 +699,7 @@ class Quiz extends React.Component {
             secondQuestionCorrect: false
         }
 
-        
+
     }
 
     // questionOne = () => {
@@ -677,72 +725,20 @@ class Quiz extends React.Component {
 
 
     render() {
-        return(
+        return (
             <div className="quiz-container">
                 <h1 className="quiz-title">Concurs Techir</h1>
                 <h6 className="quiz-desc">Participa, raspunzand la doua intrebari si poti castiga reduceri la produsele tale favorite.</h6>
-                <Question 
+                <Question
                     question={this.state.question} image={this.state.image} answers={this.state.answers} discount={this.state.discount}
-                    modalSuccessDescription={this.state.modalSuccessDescription} modalSuccessLastMessage={this.state.modalSuccessLastMessage} 
-                    modalFailureDescription={this.state.modalFailureDescription} modalFailureLastMessage={this.state.modalFailureLastMessage} 
+                    modalSuccessDescription={this.state.modalSuccessDescription} modalSuccessLastMessage={this.state.modalSuccessLastMessage}
+                    modalFailureDescription={this.state.modalFailureDescription} modalFailureLastMessage={this.state.modalFailureLastMessage}
                 />
             </div>
         )
     }
 }
 
-class GMap extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            showingInfoWindow: false,
-            activeMarker: {},
-            selectedPlace: {},
-        };
-        this.onMarkerClick = this.onMarkerClick.bind(this)
-        this.onMapClicked = this.onMapClicked.bind(this)
-    }
-    onMarkerClick = (props, marker, e) =>
-        this.setState({
-            selectedPlace: props,
-            activeMarker: marker,
-            showingInfoWindow: true
-        });
-    onMapClicked = (props) => {
-        if (this.state.showingInfoWindow) {
-            this.setState({
-                showingInfoWindow: false,
-                activeMarker: null
-            })
-        }
-    };
-    render() {
-        return (
-            <div className='map'>
-                <Map google={this.props.google}
-                    zoom={3} style={{width: "80vw", height: "90vh", top:"200px", left: "10%"}}
-                // initialCenter={coord}  !!!SET DEFAULT CENTER!!!
-                >
-                    {this.props.locationData.map((e, i) => {
-                        return <Marker
-                            title={e.title}
-                            name={e.name}
-                            position={e.position}
-                            onClick={this.onMarkerClick}
-                        />
-                    })}
-                    <InfoWindow
-                        marker={this.state.activeMarker}
-                        visible={this.state.showingInfoWindow}>
-                        <div>
-                            <h1>{this.state.selectedPlace.name}</h1>
-                        </div>
-                    </InfoWindow>
-                </Map>
-            </div>
-        )
-    }
-}
 
 class Homepage extends React.Component {
     render() {
@@ -752,8 +748,7 @@ class Homepage extends React.Component {
                     <Nav />
                     <GirlModel />
                     <div style={{ height: '60vh' }}>
-                        <GMap locationData={markerData} />
-                    </div>
+                        <Maps locationData={markerData} />                    </div>
                     <Parteners />
                     <Footer />
                     <Switch>

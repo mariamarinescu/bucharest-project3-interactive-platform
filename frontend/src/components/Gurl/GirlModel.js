@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import img from '../../static/img/Kool_Gurl.jpg'
-import * as data from '../info_modal/my_fake_db.json'
+import * as data from '../info_modal/my_fake_db.js/index.js'
 import { Button } from 'react-bootstrap';
-import * as check from './../../static/img/hook-1425312.png'
+import * as check from './../../static/img/hook-1425312.png';
 
 
 const points = ['arm', 'leg', 'hair', 'face', 'hand', 'neck']

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
+import { Row, Col } from 'react-bootstrap';
 import logo from "../../static/img/logo_techir.png";
 import './NavBar.css'
 // const Navigation = styled.header
-  
+
 
 class Nav extends Component {
     constructor(props) {
@@ -22,32 +23,19 @@ class Nav extends Component {
         const { isExpanded } = this.state;
 
         return (
-            <div className='Navigation'>
-                <div className="logo">
+            <Row className='NavBar'>
+                <Col className="logo-container">
                     <Link to="/">
-                        <img src={logo} alt="Logo" with="350px;" height="150px"/>
-                        <em>
-                            <div className="letterhead">
-                            </div>
-                        </em>
+                        <img src={logo} className='logo' alt="Logo" />
                     </Link>
-                </div>
-                <nav className="nav">
-                    <i
-                        className="fa-bars fa "
-                        aria-hidden="true"
-                        onClick={e => this.handleToggle(e)}
-                    />
-                    <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
-                        <NavLink className="nav-link"activeClassName="active" to="/log-in">
-                            <li>Conectare</li>
-                        </NavLink>
-                        <NavLink className="nav-link" activeClassName="active" to="/sign-Up">
-                            <li>Creeaza cont</li>
-                        </NavLink>
-                    </ul>
-                </nav>
-            </div>
+                </Col>
+                <Col className='logare nav-text' md={{offset: 3}}>
+                    <div>Logare</div>
+                </Col>
+                <Col className='creeare-cont nav-text'>
+                    <div>Creare Cont</div>
+                </Col>
+            </Row>
         );
     }
 }

@@ -2,6 +2,7 @@
     border-bottom: 1px solid #a8a5a3;
     background: #f8f8f8;
     text-align: center;
+    height: fit-content;
 }
 
 .logo {
@@ -11,4 +12,7 @@
 
 .nav-text{
     font-size: 2em;
+    padding: 4vh;
+    font-weight: 700;
+
 }

@@ -29,7 +29,7 @@ export default class App extends Component {
             </Route>
             <Route path='/admin'>
               <NavBar />
-              <div style={{        
+              <div style={{
                 textAlign: 'center',
                 paddingTop: '3vh',
                 fontSize: '1.5em'

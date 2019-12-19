@@ -13,7 +13,7 @@
       lng: -65.42829136976184
     }
   }, {
-    title: 'marker3_title',
+    title: 'marker3_\itle',
     name: 'Oracoke Lighthouse',
     position: {
       lat: 35.1096357,

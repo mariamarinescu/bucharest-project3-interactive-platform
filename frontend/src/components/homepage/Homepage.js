@@ -5,7 +5,12 @@ import { Button, Modal, Row, Col, Form } from 'react-bootstrap';
 
 import data from '../info_modal/my_fake_db.json';
 import * as check from './../../static/img/hook-1425312.png';
-import Maps from '../maps/Maps'
+import Maps from '../maps/Maps';
+import Login from '../login/Login';
+import Nav from '../navbar/NavBar';
+import Quiz from '../quiz/Quiz';
+import Footer from '../footer/Footer';
+
 
 
 import '../parteners/Parteners.css'
@@ -150,52 +155,7 @@ const markerData = [
         }
     }];
 
-class Nav extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isExpanded: false
-        };
-    }
-    handleToggle(e) {
-        e.preventDefault();
-        this.setState({
-            isExpanded: !this.state.isExpanded
-        });
-    }
-    render() {
-        const { isExpanded } = this.state;
 
-        return (
-            <div className='Navigation'>
-                <div className="logo">
-                    <Link to="/">
-                        <img src={logo} alt="Logo" with="350px;" height="150px" />
-                        <em>
-                            <div className="letterhead">
-                            </div>
-                        </em>
-                    </Link>
-                </div>
-                <nav className="nav">
-                    <i
-                        className="fa-bars fa "
-                        aria-hidden="true"
-                        onClick={e => this.handleToggle(e)}
-                    />
-                    <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
-                        <NavLink className="nav-link" activeClassName="active" to="/log-in">
-                            <li>Conectare</li>
-                        </NavLink>
-                        <NavLink className="nav-link" activeClassName="active" to="/sign-Up">
-                            <li>Creeaza cont</li>
-                        </NavLink>
-                    </ul>
-                </nav>
-            </div>
-        );
-    }
-}
 
 class GirlModel extends React.Component {
     constructor(props) {
@@ -350,79 +310,8 @@ class Parteners extends React.Component {
     }
 }
 
-class Footer extends React.Component {
-    render() {
-        return (
-            <div id='footer'>
-                <div className='contact'>
-                    <div>SC TECHIRGHIOL FARMA COSMETICS SRL</div>
-                    <div>Nr. ord. Reg. com./aut.: J13-1885-2012</div>
-                    <div>Cod inregistrare fiscala: RO30601045</div>
-                    <div>Techir © Copyright 2020</div>
-                    <hr id="f-line" />
-                    <div className='footer-links'>
-                        <a href="https://anpc.ro/" className='anpc'>ANPC</a>
-                        <a href="#" className='politica-de-confidentialitate'>Politica de Confidentialitate</a>
-                    </div>
-                </div>
-                <img src={brand_romanesc} className='brand-romanesc' alt="brand_romanesc" />
-                <img src={produse_romanesti} className='produse-romanesti' alt="produse_romanesti" />
-            </div>
-        );
-    }
-}
-
- class Login extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            email: '',
-            pass: ''
-        }
-        this.onChangeEmail = this.onChangeEmail.bind(this)
-        this.onChangePass = this.onChangePass.bind(this)
-    }
-    onChangeEmail(event) {
-        //  this.setState({email: event.target.value})
-        //  console.log(this.state.email)
-    }
-    onChangePass(event) {
-        // this.setState({pass: event.target.value})
-        // console.log(this.state.pass)
-    }
-
-    routeChange = () => {
-        let path = `/`;
-        this.props.history.push(path);
-    }
 
 
-    render() {
-        return (
-            <div id='login' >
-                {/* {this.props.isActive ? */}
-                <Row>
-                    <Col className='py-3' md={{ offset: 8, span: 3 }} xs={{ offset: 4, span: 7 }} >
-                        <Form>
-                            <Form.Group controlId="formBasicEmail">
-                                <Form.Control onChange={this.onChangeEmail()} type="email" placeholder="Email" size='sm' />
-                            </Form.Group>
-                            <Form.Group controlId="formBasicPassword">
-                                <Form.Control onChange={this.onChangePass()} type="password" placeholder="Parola" size='sm' />
-                            </Form.Group>
-                            <Col md={{ offset: 4, span: 1 }}>
-                                <Button className='login-btn' variant="outline-secondary" type="submit" onClick={this.routeChange}>
-                                    <div className='login-text'>Logare</div>
-                                </Button>
-                            </Col>
-                        </Form>
-                    </Col>
-                </Row>
-                {/* // : null} */}
-            </div>
-        );
-    }
-}
 
  class SignUp extends React.Component {
 
@@ -538,206 +427,8 @@ class Footer extends React.Component {
     }
 }
 
-class Question extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            showSuccess: false,
-            showFailure: false
-        }
-    }
-
-    setShowSuccess(bool) {
-        this.setState({
-            showSuccess: bool
-        })
-    }
-
-    handleSuccessClose = () => {
-        this.setShowSuccess(false)
-    }
 
 
-    handleSuccessShow = () => {
-        this.setShowSuccess(true)
-    }
-
-    setShowFailure(bool) {
-        this.setState({
-            showFailure: bool
-        })
-    }
-
-    handleFailureClose = () => {
-        this.setShowFailure(false)
-    }
-
-
-    handleFailureShow = () => {
-        this.setShowFailure(true)
-    }
-
-    render() {
-        return (
-            <div className="quiz-q-container">
-                <h3 className="q-question">
-                    {this.props.question}
-                </h3>
-
-                <img
-                    className="q-img"
-                    src={this.props.image}
-                    alt="question"
-                    width="250px"
-                    height="250px"
-                >
-                </img>
-
-                <div className="questions-container">
-                    <Button
-                        variant={this.state.showSuccess ? "success" : "outline-dark"}
-                        className="q-first-ans"
-                        onClick={this.handleSuccessShow}
-                        size="lg"
-                        block
-                    >
-                        {this.props.answers[0]}
-                    </Button>
-
-                    <Button
-                        variant={this.state.showFailure ? "danger" : "outline-dark"}
-                        onClick={this.handleFailureShow}
-                        className="q-second-ans"
-                        size="lg"
-                        block
-                    >
-                        {this.props.answers[1]}
-                    </Button>
-                    {/* <QuizModal show={this.state.showSuccess} handleClose={this.handleSuccessClose}
-                    title={this.props.modalSuccessTitle}  description={this.props.modalSuccessDescription}
-                    lastMessage={this.props.modalSuccessLastMessage} 
-                    />
-                     <QuizModal show={this.state.showFailure} handleClose={this.handleFailureClose}
-                    title={this.props.modalFailureTitle}  description={this.props.modalFailureDescription}
-                    lastMessage={this.props.modalFailureLastMessage} 
-                    /> */}
-                    <Modal
-                        show={this.state.showSuccess}
-                        onHide={this.handleSuccessClose}
-                    >
-                        <Modal.Header closeButton>
-                            <Modal.Title>
-                                Felicitari! Tocmai ai castigat un cupon de reducere  pe <a href='http://www.techir.ro'>Techir.ro</a>
-                            </Modal.Title>
-                        </Modal.Header>
-
-                        <Modal.Body>
-                            {this.props.modalSuccessDescription}
-
-                            <p className="red-quiz-modal-message">
-                                {this.props.modalSuccessLastMessage}
-                            </p>
-                            <div class="yeey">
-                                <div class="before"></div>
-                                <div class="after"></div>
-                            </div>
-                        </Modal.Body>
-
-                        <Modal.Footer>
-                            <img
-                                src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png"
-                                alt="logo"
-                            />
-                        </Modal.Footer>
-
-                    </Modal>
-
-                    <Modal
-                        show={this.state.showFailure}
-                        onHide={this.handleFailureClose}
-                    >
-                        <Modal.Header closeButton>
-                            <Modal.Title>
-                                Aww, mai mult noroc data viitoare!
-                            </Modal.Title>
-                        </Modal.Header>
-
-                        <Modal.Body>
-                            {this.props.modalFailureDescription}
-
-                            <p className="red-quiz-modal-message">
-                                {this.props.modalFailureLastMessage}
-                            </p>
-                        </Modal.Body>
-
-                        <Modal.Footer>
-                            <img src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" alt="logo" />
-                        </Modal.Footer>
-                    </Modal>
-                </div>
-
-            </div>
-
-        )
-    }
-}
-
-class Quiz extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            modalSuccessTitle: ' Felicitari! Tocmai ai castigat un cupon de reducere!',
-            modalSuccessDescription: 'Intra pe www.techir.ro si adauga in cos produsele tale preferate, iar la checkout-ul comenzii ai un loc special unde trebuie sa introduci codul de reducere, pentru a scadea valoarea voucher-ului din suma totala a cosului dvs.',
-            modalSuccessLastMessage: 'Codul dvs. a fost trimis pe email.Va asteptam saptamana viitoare!',
-            modalFailureTitle: ' Aww, mai mult noroc data viitoare!',
-            modalFailureDescription: 'De data aceasta, nu a fost sa fie dar te asteptam saptamana viitoare sa mai incercam odata!',
-            modalFailureLastMessage: 'Iti multumim ca iei parte parte impreuna cu noi in aceasta minunta experiata, cea de a cunoaste mama natura <3',
-            question: data.quiz.face.firstQuestion.question,
-            image: data.quiz.face.firstQuestion.firstQuestionImg,
-            answers: [data.quiz.face.firstQuestion.answers[0], data.quiz.face.firstQuestion.answers[1]],
-            firstQuestionCorrect: false,
-            secondQuestionCorrect: false
-        }
-
-
-    }
-
-    // questionOne = () => {
-    //     getQuestion()
-    // }
-
-    // questionTwo = () => {
-    //     getQuestion()
-    // }
-
-    // getQuestion() {
-    //     // GET /api/question
-
-    //     //Response:
-    //     // {
-    //     //     text: "",
-    //     //     answer: "",
-    //     //     discount: "",
-    //     //     image: "",
-    //     //     correct: 0
-    //     // }
-    // }
-
-
-    render() {
-        return (
-            <div className="quiz-container">
-                <h1 className="quiz-title">Concurs Techir</h1>
-                <h6 className="quiz-desc">Participa, raspunzand la doua intrebari si poti castiga reduceri la produsele tale favorite.</h6>
-                <Question
-                    question={this.state.question} image={this.state.image} answers={this.state.answers} discount={this.state.discount}
-                    modalSuccessDescription={this.state.modalSuccessDescription} modalSuccessLastMessage={this.state.modalSuccessLastMessage}
-                    modalFailureDescription={this.state.modalFailureDescription} modalFailureLastMessage={this.state.modalFailureLastMessage}
-                />
-            </div>
-        )
-    }
-}
 
 
 class Homepage extends React.Component {

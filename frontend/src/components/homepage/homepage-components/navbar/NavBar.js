@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
-import logo from "../../static/img/logo_techir.png";
+import logo from "../../../../static/img/logo_techir.png";
 import './NavBar.css'
 // const Navigation = styled.header
   

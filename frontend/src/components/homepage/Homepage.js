@@ -1,36 +1,23 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Switch, Route, withRouter, NavLink, Link } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Switch, Route, withRouter} from 'react-router-dom';
 
 
-import data from '../info_modal/my_fake_db.json';
-import * as check from './../../static/img/hook-1425312.png';
-import Maps from '../maps/Maps';
-import Login from '../login/Login';
-import Nav from '../navbar/NavBar';
-import Quiz from '../quiz/Quiz';
-import Footer from '../footer/Footer';
-import GirlModel from '../Gurl/GirlModel';
-import Parteners from '../parteners/Parteners';
-import SignUp from '../signup/SignUp';
-
-import '../parteners/Parteners.css'
-
-import logo from "../../static/img/logo_techir.png";
-import brand_romanesc from '../../static/img//brand-romanesc.png'
-import produse_romanesti from '../../static/img//produse-romanesti.png';
-import img from '../../static/img/Kool_Gurl.jpg'
-
+import Maps from './homepage-components/maps/Maps';
+import Login from './homepage-components/login/Login';
+import Nav from './homepage-components/navbar/NavBar';
+import Quiz from './homepage-components/quiz/Quiz';
+import Footer from './homepage-components/footer/Footer';
+import GirlModel from './homepage-components/Gurl/GirlModel';
+import Parteners from './homepage-components/parteners/Parteners';
+import SignUp from './homepage-components/signup/SignUp';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../navbar/NavBar.css';
-import '..//info_modal/Info.css';
-import '../footer/Footer.css';
-import '../login/login.css';
-import '../quiz/quiz.css'
-
-
-
-
+import './homepage-components/navbar/NavBar.css';
+import './homepage-components/info_modal/Info.css';
+import './homepage-components/footer/Footer.css';
+import './homepage-components/login/login.css';
+import './homepage-components/quiz/quiz.css'
+import './homepage-components/parteners/Parteners.css'
 
 
 const markerData = [
@@ -83,7 +70,7 @@ const markerData = [
             lat: 47.44931986261183,
             lng: 12.154022557394521
         }
-    }];
+}];
 
 class Homepage extends React.Component {
     render() {
@@ -107,7 +94,6 @@ class Homepage extends React.Component {
                         <Route path="/quiz" component={Quiz} />
                     </Switch>
                 </BrowserRouter>
-
             </div>
         )
     }

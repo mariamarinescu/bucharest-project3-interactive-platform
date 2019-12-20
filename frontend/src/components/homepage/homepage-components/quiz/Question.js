@@ -38,6 +38,7 @@ class Question extends React.Component {
 
     handleFailureClose = () => {
         this.setShowFailure(false)
+        this.props.history.push('/');
     }
 
 

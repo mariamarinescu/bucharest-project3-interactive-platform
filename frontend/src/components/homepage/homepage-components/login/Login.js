@@ -15,9 +15,10 @@ class Login extends React.Component {
         this.onChangeEmail = this.onChangeEmail.bind(this)
         this.onChangePass = this.onChangePass.bind(this)
     }
-    onChangeEmail(event) {
-         this.setState({email: event.target.value})
-         console.log(this.state.email)
+    onChangeEmail(e) {
+        const email = e.target.value;
+         this.setState({email: email})
+        
     }
     onChangePass(event) {
         // this.setState({pass: event.target.value})
@@ -28,13 +29,14 @@ class Login extends React.Component {
         let userPath = `/`;
         let adminPath = '/admin'
         if(this.state.email === 'admin@admin.com') {
-            this.props.historyt.push(adminPath)
+            this.props.history.push(adminPath)
         } else this.props.history.push(userPath);
         
     }
 
 
     render() {
+        console.log(this.state.email)
         return (
             <div id='login' >
                 {/* {this.props.isActive ? */}
@@ -42,10 +44,10 @@ class Login extends React.Component {
                     <Col className='py-3' md={{ offset: 8, span: 3 }} xs={{ offset: 4, span: 7 }} >
                         <Form>
                             <Form.Group controlId="formBasicEmail">
-                                <Form.Control onChange={this.onChangeEmail()} type="email" placeholder="Email" size='sm' />
+                                <Form.Control onChange={this.onChangeEmail} type="email" placeholder="Email" size='sm' />
                             </Form.Group>
                             <Form.Group controlId="formBasicPassword">
-                                <Form.Control onChange={this.onChangePass()} type="password" placeholder="Parola" size='sm' />
+                                <Form.Control onChange={this.onChangePass} type="password" placeholder="Parola" size='sm' />
                             </Form.Group>
                             <Col md={{ offset: 4, span: 1 }}>
                                 <Button className='login-btn' variant="outline-secondary" type="submit" onClick={this.routeChange}>

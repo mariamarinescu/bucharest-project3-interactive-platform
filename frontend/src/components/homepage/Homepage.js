@@ -13,7 +13,7 @@ import SignUp from './homepage-components/signup/SignUp';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './homepage-components/navbar/NavBar.css';
-import './homepage-components/info_modal/Info.css';
+// import './homepage-components/info_modal/Info.css';
 import './homepage-components/footer/Footer.css';
 import './homepage-components/login/login.css';
 import './homepage-components/quiz/quiz.css'

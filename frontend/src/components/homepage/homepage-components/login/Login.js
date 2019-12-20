@@ -16,8 +16,8 @@ class Login extends React.Component {
         this.onChangePass = this.onChangePass.bind(this)
     }
     onChangeEmail(event) {
-        //  this.setState({email: event.target.value})
-        //  console.log(this.state.email)
+         this.setState({email: event.target.value})
+         console.log(this.state.email)
     }
     onChangePass(event) {
         // this.setState({pass: event.target.value})
@@ -25,8 +25,12 @@ class Login extends React.Component {
     }
 
     routeChange = () => {
-        let path = `/`;
-        this.props.history.push(path);
+        let userPath = `/`;
+        let adminPath = '/admin'
+        if(this.state.email === 'admin@admin.com') {
+            this.props.historyt.push(adminPath)
+        } else this.props.history.push(userPath);
+        
     }
 
 

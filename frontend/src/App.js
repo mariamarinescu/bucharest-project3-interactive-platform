@@ -25,7 +25,9 @@ class App extends React.Component {
       <div className="App">
         <BrowserRouter>
           <Homepage />
-         
+          <Switch>
+              <Route path="/admin" component={Admin} />
+                    </Switch>
         </BrowserRouter>
 
       </div>

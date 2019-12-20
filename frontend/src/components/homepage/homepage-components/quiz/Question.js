@@ -1,4 +1,5 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 import { Button, Modal } from 'react-bootstrap';
 
 
@@ -19,7 +20,9 @@ class Question extends React.Component {
     }
 
     handleSuccessClose = () => {
-        this.setShowSuccess(false)
+        this.setShowSuccess(false);
+        this.props.history.push('/');
+         
     }
 
 
@@ -148,4 +151,4 @@ class Question extends React.Component {
 }
 
 
-export default Question;
+export default withRouter(Question);

@@ -55,6 +55,8 @@ class Info extends React.Component {
 
     }, 10000)
   }
+
+  
   render() {
     const contentClass = this.state.isHovered ? "hover-question" : "not-hovered-question";
     return (

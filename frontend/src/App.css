@@ -489,8 +489,7 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
 
 
-.quiz-container,
-.quiz-q-container {
+.quiz-container {
   position: relative;
   height: 100%;
   margin: 0;
@@ -499,8 +498,16 @@
   /* display: none; */
 }
 
+
+
 .quiz-q-container {
-  top: -1600px;
+  top: 0px;
+ position: absolute;
+  top: -1550px;
+  background-color:white; 
+  width: 1000px;
+ height: 800px;
+
   /* display: none!important; */
 }
 
@@ -513,7 +520,7 @@
 }
 
 .quiz-title {
-  top: 150px;
+  top: -1660px;
   left: 38%;
   z-index: 10;
   text-decoration: underline;
@@ -521,9 +528,9 @@
 }
 
 .quiz-desc {
-  top: 266px;
+  top: -1560px;
   z-index: 10;
-  left: 15%;
+  left: 12%;
   font-size: 22px;
 }
 
@@ -558,7 +565,7 @@
  {
   width: 800px;
   position: absolute;
-  left: 44%;
+  left: 77%;
   height: 77px;
   font-family: 'PT Serif', serif;
   color: #878787;

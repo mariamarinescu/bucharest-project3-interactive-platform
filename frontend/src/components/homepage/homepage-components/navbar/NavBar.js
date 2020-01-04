@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, withRouter } from "react-router-dom";
 import logo from "../../../../static/img/logo_techir.png";
 import './NavBar.css'
 // const Navigation = styled.header
@@ -39,12 +39,12 @@ class Nav extends Component {
                         onClick={e => this.handleToggle(e)}
                     />
                     <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
-                        <NavLink className="nav-link"activeClassName="active" to="/log-in">
+                        <Link className="nav-link"activeClassName="active" to="/log-in">
                             <li>Conectare</li>
-                        </NavLink>
-                        <NavLink className="nav-link" activeClassName="active" to="/sign-Up">
+                        </Link>
+                        <Link className="nav-link" activeClassName="active" to="/sign-Up">
                             <li>Creeaza cont</li>
-                        </NavLink>
+                        </Link>
                     </ul>
                 </nav>
             </div>
@@ -52,4 +52,4 @@ class Nav extends Component {
     }
 }
 
-export default Nav;
+export default withRouter(Nav);

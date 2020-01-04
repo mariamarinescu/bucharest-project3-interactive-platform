@@ -3,7 +3,10 @@ import { Button } from 'react-bootstrap';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import './AdminNav.css';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
+import NavBar from '../../../homepage/homepage-components/navbar/NavBar';
+import Footer from '../../../homepage/homepage-components/footer/Footer';
 
 class AdminNav extends React.Component {
     constructor(props) {
@@ -31,12 +34,17 @@ class AdminNav extends React.Component {
     }
     componentDidUpdate() {
     }
+
     handleDescription = () => {
         this.setState({
             descriptionBttnState: false,
             quizBttnState: true
         })
-    }
+            let adminPath = '/admin'
+            this.props.history.push(adminPath)
+            
+        }
+    
     handleQuiz = () => {
         this.setState({
             quizBttnState: false,
@@ -45,7 +53,10 @@ class AdminNav extends React.Component {
     }
 
     render() {
+        
         return (
+            <div>
+            <NavBar/>
             <Row className="admin-nav">
                 <Col className='nav-container'>
                     <Link to="/admin/editeaza-descrieri" className='nav-button-container'>
@@ -68,6 +79,8 @@ class AdminNav extends React.Component {
                     </Link>
                 </Col >
             </Row >
+            <Footer/>
+            </div>
         )
     }
 }

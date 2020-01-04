@@ -77,7 +77,7 @@ class Homepage extends React.Component {
         return (
             <div className="App">
                 <BrowserRouter>
-                    <Nav />
+                <Nav />
                     <GirlModel />
                     <div style={{ height: '60vh' }}>
                         <Maps locationData={markerData} />                    
@@ -93,6 +93,7 @@ class Homepage extends React.Component {
                     <Switch>
                         <Route path="/quiz" component={Quiz} />
                     </Switch>
+
                 </BrowserRouter>
             </div>
         )

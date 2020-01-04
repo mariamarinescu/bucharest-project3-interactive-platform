@@ -26,7 +26,7 @@ class Login extends React.Component {
     }
 
     routeChange = () => {
-        let userPath = `/`;
+        let userPath = `/quiz`;
         let adminPath = '/admin'
         if(this.state.email === 'admin@admin.com') {
             this.props.history.push(adminPath)

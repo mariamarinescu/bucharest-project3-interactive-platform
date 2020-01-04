@@ -90,12 +90,13 @@ class SignUp extends React.Component {
         }, this.validateForm);
     }
     routeChange = () => {
-        let path = `/`;
+        let path = `/quiz`;
         this.props.history.push(path);
     }
 
     validateForm() {
         this.setState({ formValid: this.state.emailValid && this.state.passwordValid });
+        console.log(`email: ${this.state.name}; emai: ${this.state.email}; password: ${this.state.password};`)
     }
 
     render() {

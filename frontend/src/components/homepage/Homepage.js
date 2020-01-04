@@ -90,9 +90,7 @@ class Homepage extends React.Component {
                     <Switch>
                         <Route path="/log-in" component={Login} />
                     </Switch>
-                    <Switch>
                         <Route path="/quiz" component={Quiz} />
-                    </Switch>
 
                 </BrowserRouter>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import * as img from '../../../../static/img/Kool_Gurl.jpg';
+import {Link} from 'react-router-dom'
 import { Button } from 'react-bootstrap';
 import data from '../info_modal/my_fake_db';
 
@@ -93,7 +94,7 @@ class GirlModel extends React.Component {
                 <div className={contentClass}>
                     <img src={check} width="50px" height="50px" className="check" alt='check_img' />
                     <p className="hover-text">{this.state.info}</p>
-                    <Button className="onhover-quiz-bttn" variant="outline-danger" href="/quiz">Participa si castiga</Button>
+                    <Link className="onhover-quiz-bttn" variant="outline-danger" to="/quiz">Participa si castiga</Link>
                     <Button className="onhover-findoutMore-bttn" variant="outline-secondary" href={this.state.blogLink}>Afla detalii</Button>
                 </div>
                 {/* <Content info={this.state.info}/> */}

@@ -1,4 +1,5 @@
 import React from 'react'
+import {withRouter} from 'react-router-dom';
 // import Content from './Content'
 import * as data from './my_fake_db.json'
 import { Button } from 'react-bootstrap';
@@ -75,4 +76,4 @@ class Info extends React.Component {
     )
   }
 }
-export default Info;
+export default withRouter(Info);

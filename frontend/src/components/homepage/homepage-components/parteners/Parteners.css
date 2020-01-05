@@ -37,7 +37,7 @@
 
 /*START OF feature/parteners*/
 
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation : portrait) {
 
   .p-title {
     left: 21%;
@@ -45,17 +45,17 @@
   }
 
   .p-mega {
-    left: 10%;
+    left: 6%;
     top: 100px;
   }
 
   .p-carturesti{
-    left: 38%;
+    left: 35%;
     top: 110px;
   }
 
   .p-vital{
-    left: 18%;
+    left: 14%;
     top: 200px;
   }
 
@@ -70,27 +70,27 @@
   }
 
   .p-stam-de-vorba{
-    left: 22%;
+    left: 18%;
     top: 410px;
   }
 
   .p-allboutique{
-    left: 17%;
+    left: 14%;
     top: 555px;
   }
 
   .p-icosmetice{
-    left: 17%;
+    left: 15%;
     top: 644px;
   }
 
   .p-tastingRO{
-    left: 17%;
+    left: 13%;
     top: 733px;
   }
 
   .p-ela {
-    left: 17%;
+    left: 13%;
     top:900px;
   }
 
@@ -100,7 +100,7 @@
   }
 
   .p-flora {
-    left: 48%;
+    left: 45%;
     top: 760px;
   }
 
@@ -121,6 +121,93 @@
   .p-avalon {
     left: 32%;
     top:1370px;
+    padding-bottom: 70px;
+  }
+
+}
+@media (max-width: 767px) and (orientation : landscape) {
+
+  .p-title {
+    left: 32%;
+    font-size: 30px;
+  }
+
+  .p-mega {
+    left: 5%;
+    top: 100px;
+  }
+
+  .p-carturesti{
+    left: 28%;
+    top: 110px;
+  }
+
+  .p-vital{
+    left: 5%;
+    top: 230px;
+  }
+
+  .p-enatural{
+    left: 66%;
+    top: 120px;
+  }
+
+  .p-camara{
+    left: 5%;
+    top: 340px;
+  }
+
+  .p-stam-de-vorba{
+    left: 53%;
+    top: 210px;
+  }
+
+  .p-allboutique{
+    left: 24%;
+    top: 365px;
+  }
+  .p-flora {
+    left: 65%;
+    top: 360px;
+  }
+
+  .p-icosmetice{
+    left: 5%;
+    top: 474px;
+  }
+
+  .p-tastingRO{
+    left: 43%;
+    top: 433px;
+  }
+  .p-pixie {
+    left: 62%;
+    top:456px;
+  }
+
+  .p-ela {
+    left: 9%;
+    top:590px;
+  }
+
+  .p-bya {
+    left: 53%;
+    top:590px;
+  }
+
+  .p-get-well {
+    left: 9%;
+    top:690px;
+  }
+
+  .p-natura {
+    left: 48%;
+    top:720px;
+  }
+
+  .p-avalon {
+    left: 32%;
+    top:830px;
     padding-bottom: 70px;
   }
 

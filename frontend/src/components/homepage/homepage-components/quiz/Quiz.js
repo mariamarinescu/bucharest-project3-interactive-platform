@@ -32,6 +32,7 @@ class Quiz extends React.Component {
     componentWillUnmount() {
         document.getElementsByClassName('model')[0].style.display = 'inline-block';
         document.getElementsByClassName('gMap')[0].style.display = 'inline-block';
+
     }
 
     render() {

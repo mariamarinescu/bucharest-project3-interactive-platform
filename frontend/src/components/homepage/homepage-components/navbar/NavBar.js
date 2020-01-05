@@ -27,7 +27,7 @@ class Nav extends Component {
             <div className='Navigation'>
                 <div className="logo">
                     <Link to="/">
-                        <img src={logo} alt="Logo" with="350px;" height="150px"/>
+                        <img src={logo} alt="Logo" className="logo"/>
                         <em>
                             <div className="letterhead">
                             </div>

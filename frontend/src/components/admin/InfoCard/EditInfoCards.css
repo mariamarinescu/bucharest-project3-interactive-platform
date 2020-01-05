@@ -4,8 +4,13 @@
  */
  .info-cards{
     text-align: center;
+  
  
     /* width: fit-content; */
+ }
+ .desc-cards-container {
+     position: relative;
+     top: -100px!important;
  }
  .card{
      

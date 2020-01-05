@@ -47,7 +47,7 @@ class InfoCard extends Component {
                             />
                         </Form.Group>
                     </Form>
-                    <Button variant="primary">Save</Button>
+                    <Button variant="outline-dark">Save</Button>
                 </Card.Body>
             </Card>
         )

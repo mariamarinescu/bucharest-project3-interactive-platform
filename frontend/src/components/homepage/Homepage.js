@@ -84,9 +84,7 @@ class Homepage extends React.Component {
                         </div>
                     <Parteners />
                     <Footer />
-                    <Switch>
                         <Route path="/sign-up" component={SignUp} />
-                    </Switch>
                     <Switch>
                         <Route path="/log-in" component={Login} />
                     </Switch>

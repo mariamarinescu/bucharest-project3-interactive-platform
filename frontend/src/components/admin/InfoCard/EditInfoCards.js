@@ -7,33 +7,28 @@ import './EditInfoCards.css'
 const nume = [
     {
         categ: "Fata",
-        descOne: "BlaBlaBla",
-        descTwo: "LALALALLAA"
+        descOne: "Se intampla ca zi de zi sa purtam machiaj care ne incarca tenul din ce in ce mai mult. Afla solutiile gasite de noi si produsele Techir din ingrediente naturale cu efecte terapeutice, care iti vor lumina si hidrata tenul zi de zi.",
+        descTwo: "Se intampla ca zi de zi sa purtam machiaj care ne incarca tenul din ce in ce mai mult. Afla solutiile gasite de noi si produsele Techir din ingrediente naturale cu efecte terapeutice, care iti vor lumina si hidrata tenul zi de zi"
     },
     {
         categ: "Par",
-        descOne: "Esti tunsa",
-        descTwo: "Ce bine1"
+        descOne: "Se intampla ca zi de zi sa purtam machiaj care ne incarca tenul din ce in ce mai mult. Afla solutiile gasite de noi si produsele Techir din ingrediente naturale cu efecte terapeutice, care iti vor lumina si hidrata tenul zi de zi",
+        descTwo: "Se intampla ca zi de zi sa purtam machiaj care ne incarca tenul din ce in ce mai mult. Afla solutiile gasite de noi si produsele Techir din ingrediente naturale cu efecte terapeutice, care iti vor lumina si hidrata tenul zi de zi"
     },
     {
-        categ: "Coapsa",
-        descOne: "E forta",
-        descTwo: "Ce bine2"
+        categ: "Masaj",
+        descOne: "Se intampla ca zi de zi sa purtam machiaj care ne incarca tenul din ce in ce mai mult. Afla solutiile gasite de noi si produsele Techir din ingrediente naturale cu efecte terapeutice, care iti vor lumina si hidrata tenul zi de zi",
+        descTwo: "Se intampla ca zi de zi sa purtam machiaj care ne incarca tenul din ce in ce mai mult. Afla solutiile gasite de noi si produsele Techir din ingrediente naturale cu efecte terapeutice, care iti vor lumina si hidrata tenul zi de zi"
     },
     {
         categ: "Piele",
-        descOne: "E fina",
-        descTwo: "Ce bine3"
+        descOne: "Se intampla ca zi de zi sa purtam machiaj care ne incarca tenul din ce in ce mai mult. Afla solutiile gasite de noi si produsele Techir din ingrediente naturale cu efecte terapeutice, care iti vor lumina si hidrata tenul zi de zi",
+        descTwo: "Se intampla ca zi de zi sa purtam machiaj care ne incarca tenul din ce in ce mai mult. Afla solutiile gasite de noi si produsele Techir din ingrediente naturale cu efecte terapeutice, care iti vor lumina si hidrata tenul zi de zi"
     },
     {
         categ: "Corp",
-        descOne: "E fina",
-        descTwo: "Ce bine3"
-    },
-    {
-        categ: "Fata",
-        descOne: "E fina",
-        descTwo: "Ce bine3"
+        descOne: "Se intampla ca zi de zi sa purtam machiaj care ne incarca tenul din ce in ce mai mult. Afla solutiile gasite de noi si produsele Techir din ingrediente naturale cu efecte terapeutice, care iti vor lumina si hidrata tenul zi de zi",
+        descTwo: "Se intampla ca zi de zi sa purtam machiaj care ne incarca tenul din ce in ce mai mult. Afla solutiile gasite de noi si produsele Techir din ingrediente naturale cu efecte terapeutice, care iti vor lumina si hidrata tenul zi de zi"
     }
 ]
 
@@ -48,6 +43,7 @@ class EditInfoCards extends Component {
     }
     render() {
         return (
+            <div className="desc-cards-container">
             <Row className='info-cards'>
                 {nume.map((valueOfElement, index) => {
                     return (
@@ -56,7 +52,7 @@ class EditInfoCards extends Component {
                         </Col>
                     )
                 })}
-            </Row>
+            </Row></div>
         )
     }
 }

@@ -44,7 +44,7 @@ class Nav extends Component {
                         <Link className="nav-link"activeClassName="active" to="/log-in">
                             <li>Conectare</li>
                         </Link>
-                        <Link className="nav-link" activeClassName="active" to="/sign-Up">
+                        <Link className="nav-link" activeClassName="active" to="/sign-up">
                             <li>Creeaza cont</li>
                         </Link>
                     </ul>

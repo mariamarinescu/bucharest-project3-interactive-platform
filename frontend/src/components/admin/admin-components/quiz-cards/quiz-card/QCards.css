@@ -6,38 +6,32 @@
 }
 .card{
 }
-.card-container{
-    /* width: '23rem';
-    height: '29rem'; */
-    /* width: 30vw; */
-    /* width: fit-content; */
-    /* margin:; */
-}
 
 .ac-question {
     position: absolute;
-    width: 90%;
+    width: 320px;
     top: 77px;
+    left: 9px;
 }
 
 .ac-f-ans {
     position: absolute;
     top: 200px;
-    width: 350px!important;
+    width: 330px!important;
     left: 8px;
 }
 
 .ac-s-ans {
     position: absolute;
     top: 260px;
-    width: 350px!important;
+    width: 330px!important;
     left: 8px;
 }
 
 .q-c-img-title {
     position: absolute;
     top: 310px;
-    width: 350px!important;
+    width: 330px!important;
     left: 19px;
     font-family: 6px;
 }
@@ -45,7 +39,7 @@
 .ac-img-src {
     position: absolute;
     top: 340px;
-    width: 350px!important;
+    width: 330px!important;
     left: 8px;
 }
 

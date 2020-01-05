@@ -29,7 +29,7 @@ class QCard extends React.Component {
     render() {
         return (
             <Col className='card-container'>
-                <Card style={{ width: '23rem', height: '29rem' }}>
+                <Card style={{ width: '24rem', height: '29rem' }}>
                     <Card.Body>
                         <Card.Title>Categoria aleasa: {this.props.category}.</Card.Title>
                         <FormControl

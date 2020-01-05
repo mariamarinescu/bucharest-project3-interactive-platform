@@ -61,7 +61,7 @@ class GirlModel extends React.Component {
             this.setState({
                 isHovered: false
             })
-        }, 390000)
+        }, 19000)
     }
 
     render() {

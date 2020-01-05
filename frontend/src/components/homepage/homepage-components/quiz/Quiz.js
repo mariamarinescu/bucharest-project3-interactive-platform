@@ -25,30 +25,14 @@ class Quiz extends React.Component {
     }
 
     componentWillMount() {
-   document.getElementsByClassName('model')[0].style.display = 'none';
+       document.getElementsByClassName('model')[0].style.display = 'none';
+       document.getElementsByClassName('gMap')[0].style.display = 'none';
     }
 
-    // questionOne = () => {
-    //     getQuestion()
-    // }
-
-    // questionTwo = () => {
-    //     getQuestion()
-    // }
-
-    // getQuestion() {
-    //     // GET /api/question
-
-    //     //Response:
-    //     // {
-    //     //     text: "",
-    //     //     answer: "",
-    //     //     discount: "",
-    //     //     image: "",
-    //     //     correct: 0
-    //     // }
-    // }
-
+    componentWillUnmount() {
+        document.getElementsByClassName('model')[0].style.display = 'inline-block';
+        document.getElementsByClassName('gMap')[0].style.display = 'inline-block';
+    }
 
     render() {
         return (

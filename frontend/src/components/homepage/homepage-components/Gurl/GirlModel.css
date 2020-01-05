@@ -1,6 +1,7 @@
 @media only screen and (max-height: 850px) {
   .model {
     padding-top: 9vh;
+   
   }
   .gurlContainer {
     left: -50%;
@@ -13,8 +14,10 @@
   }
   .gurlContainer {
     left: 120%;
+    height: 300px!important;
   }
 }
+
 
 .model {
   width: -webkit-fit-content;

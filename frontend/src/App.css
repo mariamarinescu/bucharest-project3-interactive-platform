@@ -363,20 +363,7 @@
   }
   
   @import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
-  .hover-question {
-    position: absolute;
-    height: 220px;
-    width: 400px;
-    left: 50%;
-    top: 30%;
-    margin: 0;
-    padding: 0;
-    -webkit-box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
-    -moz-box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
-    box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
-    display: block;
-  }
-  
+
   #building-line-1 {
     position: absolute;
     height: 50px;
@@ -439,6 +426,7 @@
   margin: 0;
   padding: 0;
   width: 100%;
+  top: -400px;
   /* display: none; */
 }
 
@@ -446,11 +434,9 @@
 
 .quiz-q-container {
   top: 0px;
- position: absolute;
-  top: -1550px;
-  background-color:white; 
+  position: absolute; 
   width: 1330px;
- height: 800px;
+  height: 800px;
 
   /* display: none!important; */
 }
@@ -464,7 +450,7 @@
 }
 
 .quiz-title {
-  top: -1660px;
+  top: -160px;
   left: 38%;
   z-index: 10;
   text-decoration: underline;
@@ -472,9 +458,9 @@
 }
 
 .quiz-desc {
-  top: -1560px;
+  top: -50px;
   z-index: 10;
-  left: 12%;
+  left: 8%;
   font-size: 22px;
 }
 
@@ -558,11 +544,25 @@
 }
 /*END-QUIZ*/
 
-/*START MAP*/
+/*START MAP & INFO MODAL*/
 .gMap {
   position: relative;
 }
+  .hover-question {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    -webkit-box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
+    display: block;
+    z-index: 100;
 
+  }
+  .hover-text,  .onhover-quiz-bttn, .onhover-findoutMore-bttn {
+    position: absolute;
+  }
+  
 @media (max-width: 567px)  {
  
   .gMap {
@@ -572,6 +572,33 @@
     left: 1%;
 
   }
+  
+}
+@media (max-width: 567px ) {
+
+  .hover-question {
+    height: 320px!important;
+    width: 340px!important;
+    left: 2%;
+    top: 190px!important;
+    background-color: white;
+
+   
+  }
+  .hover-text {
+    width: 260px;
+  }
+  .onhover-quiz-bttn {
+    top: 210px;
+    left: 5%;
+    width: 140px;
+    height: 60px;
+    color: black!important;
+  }
+    .onhover-findoutMore-bttn {
+      top:225px;
+      left: 49%
+    }
 }
 
 
@@ -583,6 +610,7 @@
     left: 4%;
 
   }
+
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
@@ -593,25 +621,89 @@
     left: 4%;
 
   }
+  .hover-question {
+    height: 290px!important;
+    width: 440px!important;
+    left: 15%;
+    top: 190px!important;
+    background-color: white;
+   
+  }
+  .hover-text {
+    width: 46vw;
+  }
+  .onhover-quiz-bttn {
+    top: 180px;
+    left: 9%;
+    width: 140px;
+    height: 60px;
+    }
+    .onhover-findoutMore-bttn {
+      top:192px;
+      left: 53%
+    }
 }
 @media (min-width: 768px) and (orientation: portrait) {
   .gMap {
     width: 90vw!important;
-    height: 50vh!important;
-    top:1360px!important;
+    height: 60vh!important;
+    top:100vh;
     left: 4%;
 
   }
+  .hover-question {
+    height: 290px!important;
+    width: 440px!important;
+    left: 35%;
+    top: 190px!important;
+    background-color: white;
+   
+  }
+  .hover-text {
+    width: 370px;
+    top: 19px;
+  }
+  .onhover-quiz-bttn {
+    top: 180px;
+    left: 9%;
+    width: 140px;
+    height: 60px;
+    }
+    .onhover-findoutMore-bttn {
+      top:192px;
+      left: 53%
+    }
 }
 
 @media (min-width: 768px) and (orientation: landscape) {
   .gMap {
     width: 90vw!important;
     height: 80vh!important;
-    top:1060px!important;
+    top:115vh;
     left: 5%;
 
   }
+  .hover-question {
+    height: 240px!important;
+    width: 490px!important;
+    left: 38%;
+    top: 190px!important;
+    background-color: white;
+   
+  }
+  .hover-text {
+    width: 440px;
+  }
+  .onhover-quiz-bttn {
+    top: 160px;
+    left: 12%;
+    width: 190px;
+    height: 40px;
+    }
+    .onhover-findoutMore-bttn {
+      top:162px;
+      left: 59%
+    }
 }
 
 

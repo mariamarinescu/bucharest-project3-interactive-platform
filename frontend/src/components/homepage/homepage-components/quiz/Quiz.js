@@ -24,9 +24,9 @@ class Quiz extends React.Component {
 
     }
 
-//     componentWillMount() {
-//    document.getElementsByClassName('model').style.display = 'none';
-//     }
+    componentWillMount() {
+   document.getElementsByClassName('model')[0].style.display = 'none';
+    }
 
     // questionOne = () => {
     //     getQuestion()

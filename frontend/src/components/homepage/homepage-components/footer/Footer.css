@@ -67,7 +67,7 @@
 @media (max-width: 540px)  {
   #footer {
     height: 200px;
-    top: 2200px!important;
+    top: 2000px!important;
   }
   
   .contact {
@@ -116,11 +116,16 @@
   }
   
 }
+@media (max-width: 767px) and (orientation: landscape) {
+  #footer {
+    top: 1300px!important;
+  }
+}
 
-@media  (min-width: 768px) and (max-width: 1024px) {
+@media  (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   #footer {
     height: 180px;
-    top: 1600px;
+    top: 1300px;
   }
   
   .contact {
@@ -131,23 +136,48 @@
   
   .brand-romanesc {
     height: 100px;
-    right: 1%;
+    right: 3%;
+    top: 33px;
+    /* top: 820%; */
+  }
+  
+  .produse-romanesti {
+    height:80px;
+    right: 31%;
+    top: 43px;
+  }
+}
+@media  (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #footer {
+    height: 180px;
+    top: 1300px;
+  }
+  
+  .contact {
+    left: 10px;
+    border-right: 2px solid grey;
+    border-right: 3px solid grey;
+  }
+  
+  .brand-romanesc {
+    height: 100px;
+    right: 3%;
     top: 33px;
     /* top: 820%; */
   }
   
   .produse-romanesti {
     height:100px;
-    right: 28%;
+    right: 29%;
     top: 30px;
   }
 }
 
-@media  (min-width: 1025px) {
+@media  (min-width: 1025px) and (orientation: portrait){
   #footer {
-    height: 380px;
-    top: 1300px;
-    padding-bottom: 0px;
+    top: 1350px!important;
+    padding-bottom: 0px!important;
+    margin-bottom: 0px!important;
   }
   
   .contact {
@@ -166,6 +196,32 @@
   .produse-romanesti {
     height:150px;
     right: 38%;
+    top: 20px;
+  }
+}
+@media  (min-width: 1025px) and (orientation: landscape){
+  #footer {
+    top: 1050px!important;
+    padding-bottom: 0px!important;
+    margin-bottom: 0px!important;
+  }
+  
+  .contact {
+    left: 10px;
+    border-right: 2px solid grey;
+    border-right: 3px solid grey;
+  }
+  
+  .brand-romanesc {
+    height: 130px;
+    right: 18%;
+    top: 20px;
+    /* top: 820%; */
+  }
+  
+  .produse-romanesti {
+    height:150px;
+    right: 43%;
     top: 20px;
   }
 }

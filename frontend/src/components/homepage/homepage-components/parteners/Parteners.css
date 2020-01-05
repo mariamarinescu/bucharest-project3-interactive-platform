@@ -11,7 +11,7 @@
   height: 100%;
   margin: 0;
   padding: 0;
-  top: 580px;
+  top: 280px;
   left: 3%
 }
 
@@ -311,7 +311,7 @@
 
 /*START OF feature/parteners*/
 
-@media  (min-width: 1025px) {
+@media  (min-width: 1025px)  {
 
   .p-title {
     left: 35%;
@@ -400,7 +400,96 @@
   }
 
 }
+/* 
+@media  (min-width: 1025px) and (orientation: landscape) {
 
+  .p-title {
+    left: 25%;
+    font-size: 48px;
+    top: 0px;
+  }
+  
+  .p-mega {
+     left: 5%;
+    top: 133px;
+  }
+
+ .p-carturesti{
+   left: 15%;
+   top: 143px;
+  }
+
+ .p-vital{
+   left: 33%;
+   top: 130px;
+  }
+
+ .p-enatural{
+   left: 4%;
+   top: 280px; 
+  }
+
+ .p-camara{
+   left: 19%;
+   top: 240px;
+  }
+
+ .p-stam-de-vorba{
+   left: 57%;
+   top: 120px;
+  }
+
+ .p-allboutique{
+   left: 32%;
+   top: 270px;
+  }
+
+ .p-icosmetice{
+   left: 56%;
+   top: 270px;
+  }
+
+ .p-tastingRO{
+   left: 4%;
+   top: 377px;
+  }
+
+ .p-ela {
+   left: 15%;
+   top:399px;
+  }
+
+ .p-bya {
+   left: 37%;
+   top:399px;
+  }
+
+ .p-flora {
+   left: 22.5%;
+   top: 560px;
+  }
+
+ .p-pixie {
+   left: 57%;
+   top:380px;
+  }
+
+ .p-get-well {
+   left: 3.5%;
+   top:540px;
+  }
+
+ .p-natura {
+   left: 38%;
+   top:560px;
+  }
+
+ .p-avalon {
+   left: 59%;
+   top:544px;
+  }
+
+} */
 /*END OF feature/parteners*/
 
 

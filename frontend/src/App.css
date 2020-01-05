@@ -428,6 +428,8 @@
   }
 /*END-GIRLMODEL*/
 
+/*START QUIZ*/
+
 @import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
 
 
@@ -555,6 +557,65 @@
   color: red;
 }
 /*END-QUIZ*/
+
+/*START MAP*/
+.gMap {
+  position: relative;
+}
+
+@media (max-width: 567px)  {
+ 
+  .gMap {
+    width: 90vw!important;
+    height: 70vh!important;
+    top: 860px!important;
+    left: 1%;
+
+  }
+}
+
+
+@media (max-width: 767px) and (orientation: portrait) {
+  .gMap {
+    width: 680px;
+    height: 50vh;
+    top:660px;
+    left: 4%;
+
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .gMap {
+    width: 90vw!important;
+    height: 50vh;
+    top:590px;
+    left: 4%;
+
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  .gMap {
+    width: 90vw!important;
+    height: 50vh!important;
+    top:1360px!important;
+    left: 4%;
+
+  }
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  .gMap {
+    width: 90vw!important;
+    height: 80vh!important;
+    top:1000px!important;
+    left: 5%;
+
+  }
+}
+
+
+/*END MAP*/
 
 
 /*# sourceMappingURL=App.css.map */

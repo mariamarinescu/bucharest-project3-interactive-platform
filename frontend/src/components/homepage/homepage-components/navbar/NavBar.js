@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { NavLink, Link, withRouter } from "react-router-dom";
+import {Navbar} from 'react-bootstrap';
 import logo from "../../../../static/img/logo_techir.png";
 import './NavBar.css'
 // const Navigation = styled.header
-  
+
 
 class Nav extends Component {
     constructor(props) {
@@ -22,6 +23,7 @@ class Nav extends Component {
         const { isExpanded } = this.state;
 
         return (
+
             <div className='Navigation'>
                 <div className="logo">
                     <Link to="/">

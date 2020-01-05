@@ -505,7 +505,7 @@
  position: absolute;
   top: -1550px;
   background-color:white; 
-  width: 1000px;
+  width: 1330px;
  height: 800px;
 
   /* display: none!important; */
@@ -565,7 +565,7 @@
  {
   width: 800px;
   position: absolute;
-  left: 77%;
+  left: 70%;
   height: 77px;
   font-family: 'PT Serif', serif;
   color: #878787;

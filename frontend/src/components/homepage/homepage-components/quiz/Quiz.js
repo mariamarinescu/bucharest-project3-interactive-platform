@@ -39,7 +39,7 @@ class Quiz extends React.Component {
         return (
             <div className="quiz-container">
                 <h1 className="quiz-title">Concurs Techir</h1>
-                <h6 className="quiz-desc">Participa, raspunzand la doua intrebari si poti castiga reduceri la produsele tale favorite.</h6>
+                <h6 className="quiz-desc">Participa, raspunzand la intrebare si poti castiga reduceri la produsele tale favorite.</h6>
                 <Question
                     question={this.state.question} image={this.state.image} answers={this.state.answers} discount={this.state.discount}
                     modalSuccessDescription={this.state.modalSuccessDescription} modalSuccessLastMessage={this.state.modalSuccessLastMessage}

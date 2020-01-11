@@ -12,6 +12,20 @@
     background: #f8f8f8;
     position: relative;
 }
+@media (min-width: 992px) {
+
+.nav-items {
+    position: absolute;
+    right: 60px
+}
+}
+
+
+
+.logo-t {
+    width: 150px;
+    height: 70px;
+}
 
 .logo a {
     /* padding-top: 1px; */
@@ -111,6 +125,9 @@ em {
     }
     a {
         padding: 20px 0px;
+    }
+    .nav {
+        height: 80px;
     }
 
 .fa-bars {

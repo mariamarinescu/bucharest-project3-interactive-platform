@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route, withRouter} from 'react-router-dom';
 
 import Maps from './homepage-components/maps/Maps';
 import Login from './homepage-components/login/Login';
-import Nav from './homepage-components/navbar/NavBar';
+import Navigation from './homepage-components/navbar/NavBar';
 import Quiz from './homepage-components/quiz/Quiz';
 import Footer from './homepage-components/footer/Footer';
 import GirlModel from './homepage-components/Gurl/GirlModel';
@@ -77,7 +77,7 @@ class Homepage extends React.Component {
         return (
             <div className="App">
                 <BrowserRouter>
-                <Nav />
+                <Navigation />
                     <GirlModel />
                     <div style={{ height: '60vh' }}>
                         <Maps locationData={markerData} />                    

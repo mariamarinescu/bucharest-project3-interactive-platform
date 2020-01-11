@@ -8,27 +8,35 @@ import Signup from '../signup/SignUp';
 
 
 class Navigation extends React.Component  {
+    counter = 0;
     constructor(props) {
         super(props)
         this.state = {
-            isShownLogin: true
+            isShownLogin: true,
+            isShownSignup: true
         }
     }
 
     toggleLogin = () => {
-        this.props.onClickLogin();
-        this.setState({
-            isShownLogin: !this.state.isShownLogin
-        })
-        console.log("loggging" + this.state.isShownLogin)
+        this.counter += 1;
+        if(this.counter % 2 === 0) {
+            this.props.onClickLogin(false);
+        } else if(this.counter % 2 !== 0) {
+            this.props.onClickLogin(true);
+        }
+        // this.props.onClickLogin(true);
+        // this.setState({
+        //     isShownLogin: !this.state.isShownLogin
+        // })
+        // console.log("loggging" + this.state.isShownLogin)
     }
-    toggleSignup = () => {
-        this.props.onClickSignup();
-        this.setState({
-            isShownLogin: !this.state.isShownLogin
-        })
-        console.log("loggging" + this.state.isShownLogin)
-    }
+    // toggleSignup = () => {
+    //     this.props.onClickLogin();
+    //     this.setState({
+    //         isShownSignup: !this.state.isShownSignup
+    //     })
+    //     // console.log("sigggin" + this.state.isShownLogin)
+    // }
     
   
     render() {
@@ -39,7 +47,7 @@ class Navigation extends React.Component  {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto nav-items" pullLeft>
                         <Link className="nav-link" onClick={this.toggleLogin} to="log-in">Conectare</Link>
-                        <Link className="nav-link" onClick={this.toggleSignup} to="sign-up">Creeaza cont</Link>
+                        <Link className="nav-link" onClick={this.toggleLogin} to="sign-up">Creeaza cont</Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

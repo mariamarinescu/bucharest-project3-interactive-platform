@@ -1,196 +1,202 @@
-@media only screen and (max-height: 850px) {
-    .model {
-      padding-top: 9vh;
-    }
-    .gurlContainer {
-      left: -50%;
-    }
-  }
-  @media only screen and (min-width: 1000px) {
-    .model {
-      padding-top: 9vh;
-    }
-    .gurlContainer {
-      left: 120%;
-    }
-  }
-.model {
-  width: fit-content;
-  vertical-align: middle;
-}
-.gurlContainer {
-  position: relative;
-  width: fit-content;
-}
-.gurl {
-  height: 80vh;
-  transform: scaleX(-1);
-}
-.spinner {
-  display: block;
-  position: absolute;
-  width: fit-content;
-  height: fit-content;
-  cursor: pointer;
-}
-.arm {
-  top: 48%;
-  left: 75%;
-}
-.leg {
-  top: 93%;
-  left: 54%;
-}
-.hair {
-  top: 4%;
-  left: 60%;
-}
-.face {
-  top: 15%;
-  left: 57%;
-}
-.hand {
-  top: 78%;
-  left: 51%;
-}
-.neck {
-  top: 24%;
-  left: 49%;
-}
+// @media only screen and (max-height: 850px) {
+//     // .model {
+//     //   padding-top: 9vh;
+//     // }
+//     // .gurlContainer {
+//     //   left: -50%;
+//     // }
+//   }
+//   @media only screen and (min-width: 1000px) {
+//     .model {
+//       padding-top: 9vh;
+//     }
+//     // .gurlContainer {
+//     //   left: 120%;
+//     // }
+//   }
 
-$charade: #282930;
-$bluebell: #000000;
+//   .move-Gurl {
+//     left: -50%;
+//     position: relative;
+//   }
 
-.loading {
-  display: flex;
-  justify-content: center;
+// // .model {
+// //   width: fit-content;
+// //   vertical-align: middle;
+// // }
+// .gurlContainer {
+//   // position: relative;
+//   width: fit-content;
+// }
+// .gurl {
+//   height: 80vh;
+//   transform: scaleX(-1);
+// }
+// .spinner {
+//   display: block;
+//   position: absolute;
+//   width: fit-content;
+//   height: fit-content;
+//   cursor: pointer;
+// }
+// .arm {
+//   top: 48%;
+//   left: 75%;
+// }
+// .leg {
+//   top: 93%;
+//   left: 54%;
+// }
+// .hair {
+//   top: 4%;
+//   left: 60%;
+// }
+// .face {
+//   top: 15%;
+//   left: 57%;
+// }
+// .hand {
+//   top: 78%;
+//   left: 51%;
+// }
+// .neck {
+//   top: 24%;
+//   left: 49%;
+// }
 
-  div {
-    width: 1rem;
-    height: 1rem;
-    margin: 0;
-    background: $bluebell;
-    border-radius: 50%;
-    animation: 0.9s bounce infinite alternate;
+// $charade: #282930;
+// $bluebell: #000000;
 
-    &:nth-child(2) {
-      animation-delay: 0.3s;
-    }
+// .loading {
+//   display: flex;
+//   justify-content: center;
 
-    &:nth-child(3) {
-      animation-delay: 0.6s;
-    }
-  }
-}
+//   div {
+//     width: 1rem;
+//     height: 1rem;
+//     margin: 0;
+//     background: $bluebell;
+//     border-radius: 50%;
+//     animation: 0.9s bounce infinite alternate;
 
-@keyframes bounce {
-  to {
-    opacity: 0.3;
-    transform: translate3d(0, -1rem, 0);
-  }
-}
+//     &:nth-child(2) {
+//       animation-delay: 0.3s;
+//     }
 
-.donut {
-  width: 2rem;
-  height: 2rem;
-  margin: 2rem;
-  border-radius: 50%;
-  border: 0.3rem solid rgba($bluebell, 0.3);
-  border-top-color: $bluebell;
-  animation: 1.5s spin infinite linear;
+//     &:nth-child(3) {
+//       animation-delay: 0.6s;
+//     }
+//   }
+// }
 
-  &.multi {
-    border-bottom-color: $bluebell;
-  }
-}
+// @keyframes bounce {
+//   to {
+//     opacity: 0.3;
+//     transform: translate3d(0, -1rem, 0);
+//   }
+// }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
+// .donut {
+//   width: 2rem;
+//   height: 2rem;
+//   margin: 2rem;
+//   border-radius: 50%;
+//   border: 0.3rem solid rgba($bluebell, 0.3);
+//   border-top-color: $bluebell;
+//   animation: 1.5s spin infinite linear;
 
-.ripple {
-  width: 2rem;
-  height: 2rem;
-  margin: 0;
-  border-radius: 50%;
-  border: 0.3rem solid $bluebell;
-  transform: translate(50%);
-  animation: 1s ripple ease-out infinite;
-}
+//   &.multi {
+//     border-bottom-color: $bluebell;
+//   }
+// }
 
-@keyframes ripple {
-  from {
-    transform: scale(0);
-    opacity: 1;
-  }
+// @keyframes spin {
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
 
-  to {
-    transform: scale(1);
-    opacity: 0;
-  }
-}
+// .ripple {
+//   width: 2rem;
+//   height: 2rem;
+//   margin: 0;
+//   border-radius: 50%;
+//   border: 0.3rem solid $bluebell;
+//   transform: translate(50%);
+//   animation: 1s ripple ease-out infinite;
+// }
 
-.multi-ripple {
-  width: 2.6rem;
-  height: 2.6rem;
-  margin: 0;
+// @keyframes ripple {
+//   from {
+//     transform: scale(0);
+//     opacity: 1;
+//   }
 
-  div {
-    position: absolute;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    border: 0.3rem solid $bluebell;
-    animation: 1.5s ripple infinite;
+//   to {
+//     transform: scale(1);
+//     opacity: 0;
+//   }
+// }
 
-    &:nth-child(2) {
-      animation-delay: 0.5s;
-    }
-  }
-}
+// .multi-ripple {
+//   width: 2.6rem;
+//   height: 2.6rem;
+//   margin: 0;
 
-.fancy-spinner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 5rem;
-  height: 5rem;
+//   div {
+//     position: absolute;
+//     width: 2rem;
+//     height: 2rem;
+//     border-radius: 50%;
+//     border: 0.3rem solid $bluebell;
+//     animation: 1.5s ripple infinite;
 
-  div {
-    position: absolute;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
+//     &:nth-child(2) {
+//       animation-delay: 0.5s;
+//     }
+//   }
+// }
 
-    &.ring {
-      border-width: 0.5rem;
-      border-style: solid;
-      border-color: transparent;
-      animation: 2s fancy infinite alternate;
+// .fancy-spinner {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 5rem;
+//   height: 5rem;
 
-      &:nth-child(1) {
-        border-left-color: $bluebell;
-        border-right-color: $bluebell;
-      }
-      &:nth-child(2) {
-        border-top-color: $bluebell;
-        border-bottom-color: $bluebell;
-        animation-delay: 1s;
-      }
-    }
+//   div {
+//     position: absolute;
+//     width: 4rem;
+//     height: 4rem;
+//     border-radius: 50%;
 
-    &.dot {
-      width: 1rem;
-      height: 1rem;
-      background: $bluebell;
-    }
-  }
-}
+//     &.ring {
+//       border-width: 0.5rem;
+//       border-style: solid;
+//       border-color: transparent;
+//       animation: 2s fancy infinite alternate;
 
-@keyframes fancy {
-  to {
-    transform: rotate(360deg) scale(0.5);
-  }
-}
+//       &:nth-child(1) {
+//         border-left-color: $bluebell;
+//         border-right-color: $bluebell;
+//       }
+//       &:nth-child(2) {
+//         border-top-color: $bluebell;
+//         border-bottom-color: $bluebell;
+//         animation-delay: 1s;
+//       }
+//     }
+
+//     &.dot {
+//       width: 1rem;
+//       height: 1rem;
+//       background: $bluebell;
+//     }
+//   }
+// }
+
+// @keyframes fancy {
+//   to {
+//     transform: rotate(360deg) scale(0.5);
+//   }
+// }

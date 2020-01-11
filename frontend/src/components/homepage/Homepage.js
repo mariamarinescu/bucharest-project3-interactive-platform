@@ -18,6 +18,7 @@ import './homepage-components/footer/Footer.css';
 import './homepage-components/login/login.css';
 import './homepage-components/quiz/quiz.css';
 import './homepage-components/parteners/Parteners.css';
+import './homepage-components/Gurl/GirlModel.css'
 
 
 const markerData = [
@@ -76,25 +77,25 @@ class Homepage extends React.Component {
     constructor(props) {
         super(props)
         this.state= {
-            isShowLogin: true,
-            isShowSignup: true
+            moveToTheRight: true
         }
     }
 
-    toggleShowLogin = () => {
-        this.setState(state => ({ isShowLogin: !state.isShowLogin}))
-        console.log("login: " + this.state.isShowLogin)
+    toggleMoving= (param) => {
+        if(param === true) {
+            this.setState({moveToTheRight: true});
+        } else if (param === false) {
+            this.setState({moveToTheRight: false});
+        } 
+        console.log("homepage: " + this.state.moveToTheRight)
     }
-    toggleShowSignup = () => {
-        this.setState(state => ({ isShowSignup: !state.isShowSignup}))
-        console.log("Signup: " + this.state.isShowSignup)
-    }
+   
     render() {
         return (
             <div className="App">
                 <BrowserRouter>
-                <Navigation onClickLogin={this.toggleShowLogin} onClickSignup={this.toggleShowSignup} />
-                    <GirlModel />
+                <Navigation onClickLogin={this.toggleMoving} onClickSignup={this.toggleMoving} />
+                    <GirlModel moveGirl={this.state.moveToTheRight}/>
                     <div style={{ height: '60vh' }}>
                         <Maps locationData={markerData} />                    
                         </div>

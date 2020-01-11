@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Homepage from './components/homepage/Homepage';
-import Nav from './components/homepage/homepage-components/navbar/NavBar';
+import Navigation from './components/homepage/homepage-components/navbar/NavBar';
 import Footer from './components/homepage/homepage-components/footer/Footer'
 import AdminPlatform from './components/admin/AdminPlatform';
 import SignUp from './components/homepage/homepage-components/signup/SignUp';

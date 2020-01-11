@@ -21,7 +21,8 @@ class GirlModel extends React.Component {
             massage: false,
             category: "",
             info: "",
-            blogLink: ""
+            blogLink: "",
+            move: false
         }
     }
 
@@ -64,14 +65,29 @@ class GirlModel extends React.Component {
         }, 19000)
     }
 
+    toggleGirl = () => {
+        const active = this.props.moveGirl
+        if(active === true) {
+            this.setState({
+                move: true
+            })
+        } else this.setState({move: false})
+    }
+
+    componentWillReceiveProps() {
+            this.toggleGirl();
+        
+    }
+
     render() {
 
         const contentClass = this.state.isHovered ? "hover-question" : "not-hovered-question";
+        const moveOrNot = this.state.move === true ? "gurlContainer move-Gurl" : "gurlContainer stay-Gurl";
 
         return (
             <div className='model'>
                 {!this.state.isHidden ?
-                    <div className='gurlContainer'>
+                    <div className={moveOrNot}>
                         <img src={img} alt='model' className='gurl' />
                         {points.map((e, i) => {
                             return <div className={'spinner ' + e} key={i}

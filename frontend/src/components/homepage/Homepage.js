@@ -18,6 +18,7 @@ import './homepage-components/footer/Footer.css';
 import './homepage-components/login/login.css';
 import './homepage-components/quiz/quiz.css';
 import './homepage-components/parteners/Parteners.css';
+import './homepage-components/Gurl/GirlModel.css'
 
 
 const markerData = [
@@ -73,12 +74,28 @@ const markerData = [
 }];
 
 class Homepage extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state= {
+            moveToTheRight: true
+        }
+    }
+
+    toggleMoving= (param) => {
+        if(param === true) {
+            this.setState({moveToTheRight: true});
+        } else if (param === false) {
+            this.setState({moveToTheRight: false});
+        } 
+        console.log("homepage: " + this.state.moveToTheRight)
+    }
+   
     render() {
         return (
             <div className="App">
                 <BrowserRouter>
-                <Navigation />
-                    <GirlModel />
+                <Navigation onClickLogin={this.toggleMoving} onClickSignup={this.toggleMoving} />
+                    <GirlModel moveGirl={this.state.moveToTheRight}/>
                     <div style={{ height: '60vh' }}>
                         <Maps locationData={markerData} />                    
                         </div>

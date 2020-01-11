@@ -3,62 +3,49 @@ import { withRouter, Link } from "react-router-dom";
 import { Navbar, Nav } from 'react-bootstrap';
 import logo from "../../../../static/img/logo_techir.png";
 import './NavBar.css'
-// const Navigation = styled.header
+import Login from '../login/Login';
+import Signup from '../signup/SignUp';
 
 
-class Navigation extends Component {
+class Navigation extends React.Component  {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
-        };
+            isShownLogin: true
+        }
     }
-    // handleToggle(e) {
-    //     e.preventDefault();
-    //     this.setState({
-    //         isExpanded: !this.state.isExpanded
-    //     });
-    // }
-    render() {
 
+    toggleLogin = () => {
+        this.props.onClickLogin();
+        this.setState({
+            isShownLogin: !this.state.isShownLogin
+        })
+        console.log("loggging" + this.state.isShownLogin)
+    }
+    toggleSignup = () => {
+        this.props.onClickSignup();
+        this.setState({
+            isShownLogin: !this.state.isShownLogin
+        })
+        console.log("loggging" + this.state.isShownLogin)
+    }
+    
+  
+    render() {
         return (
             <Navbar bg="light" expand="lg">
                 <Navbar.Brand ><img src={logo} alt="techir-logo" className="logo-t"></img></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto nav-items" pullLeft>
-                        <Link className="nav-link" to="log-in">Conectare</Link>
-                        <Link className="nav-link" to="sign-up">Creeaza cont</Link>
+                        <Link className="nav-link" onClick={this.toggleLogin} to="log-in">Conectare</Link>
+                        <Link className="nav-link" onClick={this.toggleSignup} to="sign-up">Creeaza cont</Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-            // <div className='Navigation'>
-            //     <div className="logo">
-            //         <Link to="/">
-            //             <img src={logo} alt="Logo" className="logo"/>
-            //             <em>
-            //                 <div className="letterhead">
-            //                 </div>
-            //             </em>
-            //         </Link>
-            //     </div>
-            //     <nav className="nav">
-            //         <i
-            //             className="fa-bars fa "
-            //             aria-hidden="true"
-            //             onClick={e => this.handleToggle(e)}
-            //         />
-            //         <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
-            //             <Link className="nav-link"activeClassName="active" to="/log-in">
-            //                 <li>Conectare</li>
-            //             </Link>
-            //             <Link className="nav-link" activeClassName="active" to="/sign-up">
-            //                 <li>Creeaza cont</li>
-            //             </Link>
-            //         </ul>
-            //     </nav>
-            // </div>
         );
     }
 }
+
 
 export default withRouter(Navigation);

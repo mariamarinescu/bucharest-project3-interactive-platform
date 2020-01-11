@@ -73,11 +73,27 @@ const markerData = [
 }];
 
 class Homepage extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state= {
+            isShowLogin: true,
+            isShowSignup: true
+        }
+    }
+
+    toggleShowLogin = () => {
+        this.setState(state => ({ isShowLogin: !state.isShowLogin}))
+        console.log("login: " + this.state.isShowLogin)
+    }
+    toggleShowSignup = () => {
+        this.setState(state => ({ isShowSignup: !state.isShowSignup}))
+        console.log("Signup: " + this.state.isShowSignup)
+    }
     render() {
         return (
             <div className="App">
                 <BrowserRouter>
-                <Navigation />
+                <Navigation onClickLogin={this.toggleShowLogin} onClickSignup={this.toggleShowSignup} />
                     <GirlModel />
                     <div style={{ height: '60vh' }}>
                         <Maps locationData={markerData} />                    

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Card, FormControl, Button } from 'react-bootstrap';
+import { Col, Card, FormControl, Button, InputGroup } from 'react-bootstrap';
 
 
 class QCard extends React.Component {
@@ -44,24 +44,31 @@ class QCard extends React.Component {
                         />
                     </Card.Body>
 
-                    <FormControl
-                        className="ac-f-ans"
-                        placeholder={this.props.answers[0]}
-                        aria-label="Username"
-                        aria-describedby="basic-addon1"
-                        name="firstAns"
-                        value={this.state.firstAns}
-                        onChange={(event) => this.handleAdminInput(event)}
-                    />
-                    <FormControl
-                        className="ac-s-ans"
-                        placeholder={this.props.answers[1]}
-                        aria-label="Username"
-                        aria-describedby="basic-addon1"
-                        name="secondAns"
-                        value={this.state.secondAns}
-                        onChange={(event) => this.handleAdminInput(event)}
-                    />
+                    <InputGroup className="mb-3  ac-f-ans">
+                        <InputGroup.Prepend>
+                            <InputGroup.Checkbox aria-label="Checkbox for following text input" />
+                        </InputGroup.Prepend>
+                        <FormControl
+                            placeholder={this.props.answers[0]}
+                            aria-label="Username"
+                            aria-describedby="basic-addon1"
+                            name="firstAns"
+                            value={this.state.firstAns}
+                            onChange={(event) => this.handleAdminInput(event)}
+                        />  </InputGroup>
+                    <InputGroup className="mb-3  ac-s-ans">
+                        <InputGroup.Prepend>
+                            <InputGroup.Checkbox aria-label="Checkbox for following text input" />
+                        </InputGroup.Prepend>
+                        <FormControl
+
+                            placeholder={this.props.answers[1]}
+                            aria-label="Username"
+                            aria-describedby="basic-addon1"
+                            name="secondAns"
+                            value={this.state.secondAns}
+                            onChange={(event) => this.handleAdminInput(event)}
+                        /></InputGroup>
                     <Card.Title className="q-c-img-title">Link imagine:</Card.Title>
                     <FormControl
                         className="ac-img-src"

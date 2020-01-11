@@ -10,7 +10,8 @@ class InfoCard extends Component {
         this.state = {
             categ: "",
             descOne: "Se intampla ca zi de zi sa purtam machiaj care ne incarca tenul din ce in ce mai mult. Afla solutiile gasite de noi si produsele din ingrediente narurale care te vor ajuta!",
-            descTwo: "Se intampla ca zi de zi sa purtam machiaj care ne incarca tenul din ce in ce mai mult. Afla solutiile gasite de noi si produsele din ingrediente narurale care te vor ajuta!"
+            // descTwo: "Se intampla ca zi de zi sa purtam machiaj care ne incarca tenul din ce in ce mai mult. Afla solutiile gasite de noi si produsele din ingrediente narurale care te vor ajuta!"
+            link: "http://www.techir.ro/blog-techir/proprietatile-miraculoase-ale-apei-si-namolului-din-lacul-techirghol/"
         }
 
     }
@@ -19,9 +20,9 @@ class InfoCard extends Component {
             descOne: event.target.value
         })
     }
-    handleDescTwo = (event) => {
+    handleLink= (event) => {
         this.setState({
-            descTwo: event.target.value
+            link: event.target.value
         })
     }
     render() {
@@ -41,9 +42,9 @@ class InfoCard extends Component {
                         <Form.Group controlId="exampleForm.ControlTextarea1">
                             <Form.Label>Link</Form.Label>
                             <Form.Control as="textarea" rows="3"
-                                placeholder={this.props.descTwo}
-                                value={this.props.descTwo}
-                                onChange={(event) => this.handleDescTwo(event)}
+                                placeholder={this.props.link}
+                                value={this.props.link}
+                                onChange={(event) => this.handleLink(event)}
                             />
                         </Form.Group>
                     </Form>

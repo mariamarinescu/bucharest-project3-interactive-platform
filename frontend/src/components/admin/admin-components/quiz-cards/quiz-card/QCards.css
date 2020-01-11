@@ -30,7 +30,7 @@
 
 .q-c-img-title {
     position: absolute;
-    top: 310px;
+    top: 319px;
     width: 330px!important;
     left: 19px;
     font-family: 6px;
@@ -38,14 +38,14 @@
 
 .ac-img-src {
     position: absolute;
-    top: 340px;
+    top: 350px;
     width: 330px!important;
     left: 8px;
 }
 
 .mySaveCardQuiz-bttn {
     position: absolute;
-    top: 399px;
+    top: 401px;
     left: 35%;
 }
 

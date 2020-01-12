@@ -1,87 +1,10 @@
 
 /*SIGNUP*/
-.signup-form {
-    position: relative!important;
-  
-}
 
-.modal-content {
-    border: 1px solid white!important;
-}
-
-.input:hover {
-    border: 1px solid purple;
-}
-
-.mySignUp-input {
-    width: 100%;
-    font-size: 12px;
-    margin: 5px;
-    padding: 10px;
-    border-radius: 25px;
-    border: 1px solid grey;
-    height: 30px;
-}
-
-.mySignUp-bttn{ 
-    text-transform: uppercase;
-    padding: 5px;
-    border-radius: 10px; 
-    cursor: pointer; 
-    background-color: transparent;
-    color: darkgray;
-    font-size: 12px;
-    border-color:darkgray;
-    height: 35px;
-    width: 130px;
-}
-
-.button:hover {
-    background-color: lightgray;
-    color: white;
-    font-weight: 700;
-    border-color:darkgray;
-}
-
-.errorMessage {
-    color: #ce1313;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    font-size: 14px;
-}
-
-.message {
-    color: darkgrey;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    font-size: 10px;
-    width: 100%;
-}
-
-.inputError {
-    border: #ce1313;
-}
-/*END*SIGNUP*/
 
 
 /*LOGIN*/
 
-.form-control {
-  border-radius: 10px;
-}
-
-.login-btn {
-  border-radius: 15px;
-}
-
-.login-text {
-  margin-left: 18px;
-  margin-right: 18px;
-}
-#login {
-  position: relative;
-  left: 4%;
-}
 
 /*END*LOGIN*/
 
@@ -319,14 +242,7 @@
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
-  .signup-form {
-    top: -799px;
-    left: 4%!important;
-}
-#login {
-  top: -799px;
-  left: 4%;
-}
+
   .logo {
     width: 250px;
   }
@@ -423,17 +339,9 @@
     top: -1667px;
     left: -80px;
 }
-#login {
-  top: -1667px;
-  left: -80px;
-}
-.login-btn {
-  width: 110px;
-  left: -10px;
-}
-.form-control {
-  width: 300px;
-}
+
+
+
   .gMap {
     width: 90vw!important;
     height: 60vh!important;

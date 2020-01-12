@@ -1,9 +1,3 @@
-.login {
-  position: relative;
-  top: 190px;
-  left: 4%;
-}
-
 .form-control {
   border-radius: 10px;
 }
@@ -16,4 +10,33 @@
   margin-left: 18px;
   margin-right: 18px;
 }
-/*# sourceMappingURL=login.css.map */
+#login {
+  position: relative;
+  left: 4%;
+}
+@media (max-width: 767px) and (orientation: landscape) {
+  
+#login {
+  top: -1099px;
+  left: 4%;
+}
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  
+  .signup-form {
+    top: -1667px;
+    left: -80px;
+}
+#login {
+  top: -1667px;
+  left: -80px;
+}
+.login-btn {
+  width: 110px;
+  left: -10px;
+}
+.form-control {
+  width: 300px;
+}
+}
+

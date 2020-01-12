@@ -73,15 +73,8 @@ class AdminPlatform extends React.Component {
 
     render() {
         return(
-         <BrowserRouter>
       <AdminNav/>
-          <Switch>
-          <Route path="/admin/editeaza-descrieri" component={EditInfoCards} />
-          </Switch>
-          <Switch>
-          <Route path="/admin/editeaza-chestionar" component={QCards} />
-          </Switch>
-          </BrowserRouter>
+          
         )
     }
 }

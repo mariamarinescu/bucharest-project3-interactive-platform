@@ -8,6 +8,8 @@ import AdminPlatform from './components/admin/AdminPlatform';
 import SignUp from './components/homepage/homepage-components/signup/SignUp';
 import Login from './components/homepage/homepage-components/login/Login';
 import Quiz from './components/homepage/homepage-components/quiz/Quiz';
+import EditInfoCards from "./components/admin/admin-components/InfoCard/EditInfoCards";
+import QCards from './components/admin/admin-components/quiz-cards/QCards';
 
 
 
@@ -30,15 +32,21 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-      <BrowserRouter>
-      <Switch>
-      <Route exact path="/" component={Homepage}/>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={Homepage} />
+          </Switch>
+          <Switch>
+            <Route path="/admin" exact component={AdminPlatform} />
+          </Switch>
+          <Switch>
+          <Route path="/admin/editeaza-descrieri" component={EditInfoCards} />
+          </Switch>
+          <Switch>
+          <Route path="/admin/editeaza-chestionar" component={QCards} />
+          </Switch>
 
-      </Switch>
-      <Switch>
-        <Route path="/admin" component={AdminPlatform}/>
-      </Switch>
-        
+
 
           {/* <Switch>
             <Route exact path="/" component={Homepage} />
@@ -56,8 +64,8 @@ class App extends React.Component {
           <Switch>
             <Route path="/admin" component={AdminPlatform}/>
           </Switch> */}
-      </BrowserRouter>
-        </div>
+        </BrowserRouter>
+      </div>
     );
   }
 

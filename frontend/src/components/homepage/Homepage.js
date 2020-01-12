@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, withRouter} from 'react-router-dom';
+import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom';
 
 
 import Maps from './homepage-components/maps/Maps';
@@ -18,7 +18,8 @@ import './homepage-components/footer/Footer.css';
 import './homepage-components/login/login.css';
 import './homepage-components/quiz/quiz.css';
 import './homepage-components/parteners/Parteners.css';
-import './homepage-components/Gurl/GirlModel.css'
+import './homepage-components/Gurl/GirlModel.css';
+import './homepage-components/signup/SignUp.css';
 
 
 const markerData = [
@@ -71,41 +72,43 @@ const markerData = [
             lat: 47.44931986261183,
             lng: 12.154022557394521
         }
-}];
+    }];
 
 class Homepage extends React.Component {
     constructor(props) {
         super(props)
-        this.state= {
+        this.state = {
             moveToTheRight: true
         }
     }
 
-    toggleMoving= (param) => {
-        if(param === true) {
-            this.setState({moveToTheRight: true});
+    toggleMoving = (param) => {
+        if (param === true) {
+            this.setState({ moveToTheRight: true });
         } else if (param === false) {
-            this.setState({moveToTheRight: false});
-        } 
+            this.setState({ moveToTheRight: false });
+        }
         console.log("homepage: " + this.state.moveToTheRight)
     }
-   
+
     render() {
         return (
             <div className="App">
                 <BrowserRouter>
-                <Navigation onClickLogin={this.toggleMoving} onClickSignup={this.toggleMoving} />
-                    <GirlModel moveGirl={this.state.moveToTheRight}/>
+                    <Navigation onClickLogin={this.toggleMoving} onClickSignup={this.toggleMoving} />
+                    <GirlModel moveGirl={this.state.moveToTheRight} />
                     <div style={{ height: '60vh' }}>
-                        <Maps locationData={markerData} />                    
-                        </div>
+                        <Maps locationData={markerData} />
+                    </div>
                     <Parteners />
                     <Footer />
+                    <Switch>
                         <Route path="/sign-up" component={SignUp} />
+                    </Switch>
                     <Switch>
                         <Route path="/log-in" component={Login} />
                     </Switch>
-                        <Route path="/quiz" component={Quiz} />
+                    <Route path="/quiz" component={Quiz} />
 
                 </BrowserRouter>
             </div>

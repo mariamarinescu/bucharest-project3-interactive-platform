@@ -20,6 +20,9 @@ import './homepage-components/quiz/quiz.css';
 import './homepage-components/parteners/Parteners.css';
 import './homepage-components/Gurl/GirlModel.css';
 import './homepage-components/signup/SignUp.css';
+import AdminPlatform from '../admin/AdminPlatform';
+import QCards from '../admin/admin-components/quiz-cards/QCards';
+import EditInfoCards from '../admin/admin-components/InfoCard/EditInfoCards';
 
 
 const markerData = [
@@ -78,7 +81,7 @@ class Homepage extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            moveToTheRight: true
+            moveToTheRight: false
         }
     }
 
@@ -103,13 +106,14 @@ class Homepage extends React.Component {
                     <Parteners />
                     <Footer />
                     <Switch>
-                        <Route path="/sign-up" component={SignUp} />
+                    <Route path="/sign-up"><SignUp/></Route>
+                    <Route path="/log-in" component={Login} />
+                    <Route path="/quiz" component={Quiz} />
                     </Switch>
                     <Switch>
-                        <Route path="/log-in" component={Login} />
+                        <Route exact path="/admin" component={AdminPlatform} />
                     </Switch>
-                    <Route path="/quiz" component={Quiz} />
-
+                    
                 </BrowserRouter>
             </div>
         )

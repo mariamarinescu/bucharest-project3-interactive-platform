@@ -1,5 +1,13 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin:0;
+    padding:0;
+}
+
 .signup-form {
-    position: relative!important;
+    position: absolute!important;
+    left: 4%;
   
 }
 
@@ -8,7 +16,7 @@
 }
 
 .input:hover {
-    border: 1px solid purple;
+    border: 1px solid rgb(177, 118, 177);
 }
 
 .mySignUp-input {
@@ -60,7 +68,29 @@
     border: #ce1313;
 }
 
-@media (max-width: 767px) and (orientation: landscape) {
+@media (max-width: 560px) {
+    .signup-form {
+        top:  190px;
+        left:4%;  
+        width: 320px;     
+        position: absolute!important;
+
+    }
+}
+
+@media (max-width: 768px) {
+  
+.signup-form {
+  top:166px;
+  left:440px;
+  width: 260px;
+  position: absolute!important;
+
+}
+
+}
+
+/* @media (max-width: 767px) and (orientation: landscape) {
     .signup-form {
       top: -799px;
       left: 4%!important;
@@ -72,4 +102,4 @@
       top: -1667px;
       left: -80px;
   }
-}
+} */

@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Modal, Row, Col, Form } from 'react-bootstrap';
+import Quiz from '../quiz/Quiz';
+import {Switch, Route, withRouter} from 'react-router-dom';
+import Adminplatform from '../../../admin/AdminPlatform';
 
 
 
@@ -17,8 +20,8 @@ class Login extends React.Component {
     }
     onChangeEmail(e) {
         const email = e.target.value;
-         this.setState({email: email})
-        
+        this.setState({ email: email })
+
     }
     onChangePass(event) {
         // this.setState({pass: event.target.value})
@@ -28,10 +31,10 @@ class Login extends React.Component {
     routeChange = () => {
         let userPath = `/quiz`;
         let adminPath = '/admin'
-        if(this.state.email === 'admin@admin.com') {
+        if (this.state.email === 'admin@admin.com') {
             this.props.history.push(adminPath)
         } else this.props.history.push(userPath);
-        
+
     }
 
 
@@ -57,10 +60,11 @@ class Login extends React.Component {
                         </Form>
                     </Col>
                 </Row>
+                
                 {/* // : null} */}
             </div>
         );
     }
 }
 
-export default Login;
+export default withRouter(Login);

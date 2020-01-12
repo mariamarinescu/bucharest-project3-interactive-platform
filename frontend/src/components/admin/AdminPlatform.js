@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter, Route, Switch , withRouter} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
 import EditInfoCards from "./admin-components/InfoCard/EditInfoCards";
 import QCards from './admin-components/quiz-cards/QCards';
 import AdminNav from './admin-components/admin_nav/AdminNav';
@@ -63,20 +63,27 @@ const markerData = [
             lat: 47.44931986261183,
             lng: 12.154022557394521
         }
-}];
+    }];
 
 class AdminPlatform extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
     }
 
-
+    // componentDidMount() {
+    //     window.location.reload(false)
+    // }
     render() {
-        return(
-      <AdminNav/>
-          
+        return (
+            <div>
+                <Router>
+                    <AdminNav />
+                    <Route path="/admin/editeaza-descrieri" component={EditInfoCards} />
+                    <Route path="/admin/editeaza-chestionar" component={QCards} />
+                </Router>
+            </div>
         )
     }
 }
 
-export default withRouter(AdminPlatform);
+export default AdminPlatform;

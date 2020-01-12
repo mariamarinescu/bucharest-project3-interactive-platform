@@ -33,37 +33,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <BrowserRouter>
-          <Switch>
+        <Switch>
             <Route exact path="/" component={Homepage} />
-          </Switch>
-          <Switch>
-            <Route path="/admin" exact component={AdminPlatform} />
-          </Switch>
-          <Switch>
-          <Route path="/admin/editeaza-descrieri" component={EditInfoCards} />
-          </Switch>
-          <Switch>
-          <Route path="/admin/editeaza-chestionar" component={QCards} />
-          </Switch>
-
-
-
-          {/* <Switch>
-            <Route exact path="/" component={Homepage} />
-            <Switch>
-                        <Route path="/sign-up" component={SignUp} />
-                    </Switch>
-                    <Switch>
-                        <Route path="/log-in" component={Login} />
-                    </Switch>
-                    <Switch>
-                        <Route path="/quiz" component={Quiz} />
-                    </Switch>
-          </Switch>
-
-          <Switch>
-            <Route path="/admin" component={AdminPlatform}/>
-          </Switch> */}
+            </Switch>
+        <Switch>
+            <Route exact path="/admin" component={AdminPlatform}/>
+              </Switch>
         </BrowserRouter>
       </div>
     );

@@ -1,9 +1,14 @@
 .form-control {
   border-radius: 10px;
 }
-
+body {
+  height: 100%;
+  width: 100%;
+  margin:0;
+  padding:0;
+}
 .login-btn {
-  border-radius: 15px;
+  border-radius: 14px;
 }
 
 .login-text {
@@ -11,32 +16,27 @@
   margin-right: 18px;
 }
 #login {
-  position: relative;
+  position: absolute!important;
   left: 4%;
 }
-@media (max-width: 767px) and (orientation: landscape) {
+@media (max-width: 560px)  {
   
 #login {
-  top: -1099px;
-  left: 4%;
+  top:  190px;
+  left: -155px;
+  width: 540px;
+  position: absolute!important;
 }
 }
-@media (min-width: 768px) and (orientation: portrait) {
+@media (max-width: 768px) {
   
-  .signup-form {
-    top: -1667px;
-    left: -80px;
-}
 #login {
-  top: -1667px;
-  left: -80px;
+  top:166px;
+  left: 240px;
+  width: 520px;
+  position: absolute!important;
+
 }
-.login-btn {
-  width: 110px;
-  left: -10px;
-}
-.form-control {
-  width: 300px;
-}
+
 }
 

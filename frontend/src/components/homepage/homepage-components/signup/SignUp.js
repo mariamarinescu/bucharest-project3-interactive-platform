@@ -101,8 +101,10 @@ class SignUp extends React.Component {
 
     render() {
         return (
-            <Row className="signup-form">
-                <Col className='py-3' md={{ offset: 8, span: 3 }} xs={{ offset: 4, span: 7 }}>                <form className="">
+            <div className="signup-form">
+            <Row >
+                <Col className='py-3'>                
+                <form >
                     <div className="form-group">
                         <input type="text" className="form-control mySignUp-input"
                             name="name" value={this.state.name}
@@ -137,6 +139,7 @@ class SignUp extends React.Component {
                         <FormErrors formErrors={this.state.formErrors} />
                     </div>
                 </Col></Row>
+                </div>
         )
     }
 }

@@ -20,6 +20,7 @@ import './homepage-components/quiz/quiz.css';
 import './homepage-components/parteners/Parteners.css';
 import './homepage-components/Gurl/GirlModel.css';
 import './homepage-components/signup/SignUp.css';
+import './homepage-components/maps/Maps.css';
 import AdminPlatform from '../admin/AdminPlatform';
 import QCards from '../admin/admin-components/quiz-cards/QCards';
 import EditInfoCards from '../admin/admin-components/InfoCard/EditInfoCards';
@@ -95,6 +96,7 @@ class Homepage extends React.Component {
     }
 
     render() {
+        console.log("homepage: " + this.state.moveToTheRight)
         return (
             <div className="App">
                 <BrowserRouter>

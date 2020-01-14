@@ -40,3 +40,14 @@ body {
 
 }
 
+@media (min-width: 768px) {
+  
+  #login {
+    top:-266px;
+    left:-155px;
+    width: 520px;
+    position: absolute!important;
+  
+  }
+  
+  }

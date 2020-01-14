@@ -14,7 +14,6 @@ class Navigation extends React.Component  {
     
     constructor(props) {
         super(props)
-        
         this.state = {
             isShownLogin: false,
             isShownSignup: false
@@ -23,15 +22,6 @@ class Navigation extends React.Component  {
         this.showSignUp = this.showSignUp.bind(this);
     }
 
-    // toggleLogin = () => {
-    //     this.loginCounter += 1;
-    //     if(this.loginCounter % 2 === 0) {
-    //         this.props.onClickLogin(false);
-    //     } else if(this.counter % 2 !== 0) {
-    //         this.props.onClickLogin(true);
-    //     }
-       
-    // }
 
     showLogIn(event) {
         event.preventDefault();
@@ -96,3 +86,14 @@ class Navigation extends React.Component  {
 
 
 export default withRouter(Navigation);
+
+
+
+    // toggleLogin = () => {
+    //     this.loginCounter += 1;
+    //     if(this.loginCounter % 2 === 0) {
+    //         this.props.onClickLogin(false);
+    //     } else if(this.counter % 2 !== 0) {
+    //         this.props.onClickLogin(true);
+    //     }
+    // }

@@ -90,16 +90,20 @@ body {
 
 }
 
-/* @media (max-width: 767px) and (orientation: landscape) {
-    .signup-form {
-      top: -799px;
-      left: 4%!important;
-  }
-}
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 768px) {
   
     .signup-form {
       top: -1667px;
       left: -80px;
-  }
-} */
+  }}
+
+
+
+
+/* @media (min-width: 768px) and (orientation: landscape) {
+    .signup-form {
+      top: -1399px;
+      left: 4%!important;
+  } */
+
+

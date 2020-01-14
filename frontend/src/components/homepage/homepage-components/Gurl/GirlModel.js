@@ -83,6 +83,7 @@ class GirlModel extends React.Component {
 
         const contentClass = this.state.isHovered ? "hover-question" : "not-hovered-question";
         const moveOrNot = this.state.move === true ? "gurlContainer move-Gurl" : "gurlContainer stay-Gurl";
+     
 
         return (
             <div className='model'>
@@ -100,13 +101,16 @@ class GirlModel extends React.Component {
                                     <div></div>
                                     <div></div>
                                 </div>
+
                             </div>
+                          
                         })}
                     </div>
                     : null}
 
                 {/* <div id="bulding-line-1"></div> */}
-
+                <div className= 'info-g-first-bttn' variant="outline-secondary">Pozitioneaza cursorul pe punctele de pe model pentru mai multe detalii</div>
+                <div className= 'info-g-second-bttn' variant="outline-secondary">Atinge punctele de pe model pentru mai multe detalii</div>
                 <div className={contentClass}>
                     <img src={check} width="50px" height="50px" className="check" alt='check_img' />
                     <p className="hover-text">{this.state.info}</p>

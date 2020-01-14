@@ -1,71 +1,12 @@
-@media(max-width: 550px) {
-  .model {
-    padding-top: 9vh;
-  }
-  .gurlContainer {
-    left: -30%!important;
-  }
-  .move-Gurl {
-    top: 300px!important;
-  }
-}
-
-@media(max-width: 768px) {
-  .model {
-    padding-top: 9vh;
-  }
-  .gurlContainer {
-    left: 50%
-  }
- 
-  .move-Gurl {
-    left: -33%;
-  }
-}
-  .move-Gurl {
-    position: relative;
-  }
-  .stay-Gurl {
-    position: relative;
-  }
-@media (max-width: 1026px) {
-  .model {
-    padding-top: 9vh;
-  }
- 
-  .move-Gurl {
-    left: -50%!important;
-  }
-  .gurlContainer {
-    left: 10%;
-  }
-}
-@media (min-width: 1027px) {
-  .model {
-    padding-top: 9vh;
-  }
- 
-  .move-Gurl {
-    left: -50%!important;
-  }
-  .gurlContainer {
-    left: 110%;
-  }
-}
-/* @media (min-width: 1300px) {
-  .model {
-    padding-top: 9vh;
-  }
-  .move-Gurl {
-    left: -50%!important;
- 
-  }
-  .gurlContainer {
-    left: 140%;
-  }
-} */
+@import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
 
 
+.move-Gurl {
+  position: relative;
+}
+.stay-Gurl {
+  position: relative;
+}
 
 .model {
   width: -webkit-fit-content;
@@ -322,9 +263,30 @@
     transform: rotate(360deg) scale(0.5);
   }
 }
+.info-g-first-bttn, 
+.info-g-second-bttn {
+  position: absolute;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 9px;
+  width: 250px;
+  text-align: center;
+  opacity: 0.7;
+}
 
-@import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
 
+/*modal*/
+.hover-question {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  -webkit-box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
+  display: block;
+  z-index: 100;
+
+}
 #building-line-1 {
   position: absolute;
   height: 50px;
@@ -373,4 +335,153 @@
   top: 155px;
   left: 238px;
   width: 140px;
+}
+
+/* @media(max-width: 600px) {
+  .info-g-first-bttn {
+    display: none;
+  }
+  .info-g-second-bttn {
+    left: 34%;
+    top: 650px;
+  }
+  .model {
+    padding-top: 9vh;
+  }
+  .gurlContainer {
+    left: -50%!important;
+  }
+  .move-Gurl {
+    top: 180px!important;
+  }
+} */
+@media(max-width: 600px) and (max-height: 800px) {
+  .info-g-first-bttn {
+    display: none;
+  }
+  .info-g-second-bttn {
+    left: 10%;
+    top: 200px;
+  }
+  .model {
+    padding-top: 9vh;
+  }
+  .gurlContainer {
+    left: -50%!important;
+  }
+  .move-Gurl {
+    top: 180px!important;
+  }
+}
+@media(max-width: 600px) and (min-height: 801px) {
+  .info-g-first-bttn {
+    display: none;
+  }
+  .info-g-second-bttn {
+    left: 30%;
+    top: 700px;
+  }
+  .model {
+    padding-top: 9vh;
+  }
+  .gurlContainer {
+    left: -50%!important;
+  }
+  .move-Gurl {
+    top: 180px!important;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 768px) and (max-height: 600px){
+  .info-g-first-bttn {
+    display: none;
+  }
+  .info-g-second-bttn {
+    left: 60%;
+    top: 280px;
+  }
+  .model {
+    padding-top: 9vh;
+  }
+  .gurlContainer {
+    left: 50%
+  }
+ 
+  .move-Gurl {
+    left: -33%;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) and (min-height: 601px){
+  .info-g-first-bttn {
+    display: none;
+  }
+  .info-g-second-bttn {
+    left: 60%;
+    top: 925px;
+  }
+  .model {
+    padding-top: 9vh;
+  }
+  .gurlContainer {
+    left: 50%
+  }
+ 
+  .move-Gurl {
+    left: -33%;
+  }
+}
+
+@media (max-width: 1026px) and (max-height: 600px){
+  .info-g-first-bttn {
+    left: 60%;
+    top: 925px;
+  }
+  .info-g-second-bttn {
+   display: none;
+  }
+
+}
+
+@media (max-width: 1026px) {
+  .info-g-first-bttn {
+    left: 53%;
+    top: 795px;
+    width: 370px;
+  }
+  .info-g-second-bttn {
+    display: none;
+
+  }
+  .model {
+    padding-top: 9vh;
+  }
+ 
+  .move-Gurl {
+    left: -50%!important;
+  }
+  .gurlContainer {
+    left: 10%;
+  }
+}
+
+@media (min-width: 1027px) {
+  .info-g-first-bttn {
+    left: 60%;
+    top: 725px;
+    width: 450px!important;
+  }
+  .info-g-second-bttn {
+    display: none;
+    
+  }
+  .model {
+    padding-top: 9vh;
+  }
+ 
+  .move-Gurl {
+    left: -50%!important;
+  }
+  .gurlContainer {
+    left: 110%;
+  }
 }

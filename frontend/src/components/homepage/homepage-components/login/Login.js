@@ -44,7 +44,7 @@ class Login extends React.Component {
             <div id='login' >
                 {/* {this.props.isActive ? */}
                 <Row>
-                    <Col className='py-3' md={{ offset: 8, span: 3 }} xs={{ offset: 4, span: 7 }} >
+                    <Col className='py-3' md={{ offset: 8, span: 7 }} xs={{ offset: 4, span: 7 }} >
                         <Form>
                             <Form.Group controlId="formBasicEmail">
                                 <Form.Control onChange={this.onChangeEmail} type="email" placeholder="Email" size='sm' />

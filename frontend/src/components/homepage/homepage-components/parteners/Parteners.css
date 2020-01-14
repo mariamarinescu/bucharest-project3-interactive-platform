@@ -11,7 +11,7 @@
   height: 100%;
   margin: 0;
   padding: 0;
-  top: 280px;
+
   left: 3%
 }
 
@@ -36,9 +36,10 @@
 
 
 /*START OF feature/parteners*/
-
-@media (max-width: 767px) and (orientation : portrait) {
-
+@media (max-width: 600px) {
+  .parteners-container{
+    top:440px;
+  }
   .p-title {
     left: 21%;
     font-size: 30px;
@@ -124,95 +125,107 @@
     top:1370px;
     padding-bottom: 70px;
   }
+ }
 
-}
-@media (max-width: 767px) and (orientation : landscape) {
-
+ 
+@media (min-width: 601px) and (max-width: 767px) {
+  .parteners-container{
+    top:140px;
+  }
   .p-title {
-    left: 32%;
+    left: 29%;
     font-size: 30px;
+    top: 29px;
   }
 
   .p-mega {
-    left: 5%;
+    left: 4%;
     top: 100px;
   }
 
   .p-carturesti{
-    left: 28%;
+    left: 24%;
     top: 110px;
   }
 
   .p-vital{
-    left: 5%;
-    top: 230px;
+    left: 57%;
+    top: 90px;
   }
 
   .p-enatural{
-    left: 66%;
-    top: 120px;
+    left: 5%;
+    top: 250px;
   }
 
   .p-camara{
-    left: 5%;
-    top: 340px;
+    left: 31%;
+    top: 210px;
   }
 
   .p-stam-de-vorba{
-    left: 53%;
+    left: 58%;
     top: 210px;
   }
 
   .p-allboutique{
-    left: 24%;
-    top: 365px;
-  }
-  .p-flora {
-    left: 65%;
-    top: 360px;
+    left: 5%;
+    top: 379px;
   }
 
   .p-icosmetice{
-    left: 5%;
-    top: 474px;
+    left:50%;
+    top: 379px;
   }
 
   .p-tastingRO{
-    left: 43%;
-    top: 433px;
-  }
-  .p-pixie {
-    left: 62%;
-    top:456px;
+    left: 5%;
+    top: 470px;
   }
 
   .p-ela {
-    left: 9%;
-    top:590px;
+    left: 26%;
+    top:490px;
   }
 
   .p-bya {
-    left: 53%;
-    top:590px;
+    left: 5%;
+    top:630px;
   }
 
+  .p-flora {
+    left: 65%;
+    top: 500px;
+  }
+
+  .p-pixie {
+    left: 36%;
+    top:610px
+  }
   .p-get-well {
-    left: 9%;
-    top:690px;
+    left: 63%;
+    top:600px;
   }
 
   .p-natura {
-    left: 48%;
-    top:720px;
+    left: 30%;
+    top:730px;
   }
 
   .p-avalon {
-    left: 32%;
+    left: 37%;
     top:830px;
     padding-bottom: 70px;
   }
 
 }
+
+@media  (min-width: 767px) and (min-height: 900px){
+  .parteners-container{
+    top:440px!important;
+  } 
+}
+
 /*END OF feature/parteners*/
 
 

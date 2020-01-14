@@ -1,6 +1,5 @@
 import React from 'react'
 import {withRouter} from 'react-router-dom';
-// import Content from './Content'
 import * as data from './my_fake_db.json'
 import { Button } from 'react-bootstrap';
 import * as check from './../../static/img/hook-1425312.png'
@@ -62,7 +61,7 @@ class Info extends React.Component {
     const contentClass = this.state.isHovered ? "hover-question" : "not-hovered-question";
     return (
       <div className="info">
-        <div id="bulding-line-1"></div>
+        <div id="building-line-1"></div>
         <button className="loading" onMouseEnter={this.handleHover} onMouseLeave={this.handleLeaveHover}></button>
         <div className={contentClass}>
 

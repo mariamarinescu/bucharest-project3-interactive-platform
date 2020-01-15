@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Modal, Row, Col, Form } from 'react-bootstrap';
+import { Button, Modal, Row, Col, Form, Container } from 'react-bootstrap';
 import Quiz from '../quiz/Quiz';
 import {Switch, Route, withRouter} from 'react-router-dom';
 import Adminplatform from '../../../admin/AdminPlatform';
@@ -41,10 +41,13 @@ class Login extends React.Component {
     render() {
         console.log(this.state.email)
         return (
-            <div id='login' >
+            <Container fuild>
+           
                 {/* {this.props.isActive ? */}
                 <Row>
+                
                     <Col className='py-3' md={{ offset: 8, span: 7 }} xs={{ offset: 4, span: 7 }} >
+                    <div id='login' >
                         <Form>
                             <Form.Group controlId="formBasicEmail">
                                 <Form.Control onChange={this.onChangeEmail} type="email" placeholder="Email" size='sm' />
@@ -58,11 +61,14 @@ class Login extends React.Component {
                                 </Button>
                             </Col>
                         </Form>
+                        </div>
                     </Col>
+                    
                 </Row>
                 
                 {/* // : null} */}
-            </div>
+          
+            </Container>
         );
     }
 }

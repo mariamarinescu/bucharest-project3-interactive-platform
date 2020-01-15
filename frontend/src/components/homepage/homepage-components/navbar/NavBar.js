@@ -27,7 +27,7 @@ class Navigation extends React.Component  {
         event.preventDefault();
         this.loginCounter += 1;
         if(this.loginCounter % 2 === 0) {
-            this.props.onClickLogin(true);
+            this.props.onClickLogin('login');
         } else if(this.loginCounter % 2 !== 0) {
             this.props.onClickLogin(false);
         }
@@ -41,7 +41,7 @@ class Navigation extends React.Component  {
         event.preventDefault();
         this.signinCounter += 1;
         if(this.signinCounter % 2 === 0) {
-            this.props.onClickSignup(true);
+            this.props.onClickSignup('signup');
         } else if(this.signinCounter % 2 !== 0) {
             this.props.onClickSignup(false);
         }
@@ -59,12 +59,10 @@ class Navigation extends React.Component  {
 
         if(isLoggedIn) {
             login = <Login/>;
-           ;
-        } 
-        if(isSignedUp) {
-            
+        }else if(isSignedUp) {
             signup =<SignUp/>
         }
+    
         return (
             <div>
             <Navbar bg="light" expand="lg">

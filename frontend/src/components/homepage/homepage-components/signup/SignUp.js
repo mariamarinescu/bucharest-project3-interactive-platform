@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Modal, Row, Col, Form } from 'react-bootstrap';
+import { Button, Modal, Row, Col, Form, Container } from 'react-bootstrap';
 
 const FormErrors = ({ formErrors }) =>
     <div className='formErrors'>
@@ -101,45 +101,49 @@ class SignUp extends React.Component {
 
     render() {
         return (
-            <div className="signup-form">
-            <Row >
-                <Col className='py-3'>                
-                <form >
-                    <div className="form-group">
-                        <input type="text" className="form-control mySignUp-input"
-                            name="name" value={this.state.name}
-                            placeholder="Nume complet"
-                            onChange={(event) => this.handleUserInput(event)} />
-                    </div>
-                    <div className="form-group">
-                        <input type="email" className="form-control mySignUp-input"
-                            name="email" value={this.state.email}
-                            placeholder="Email"
-                            onChange={(event) => this.handleUserInput(event)} />
-                    </div>
-                    <div className="form-group">
-                        <input type="password" className="form-control mySignUp-input"
-                            name="password" value={this.state.password}
-                            placeholder="Parola"
-                            onChange={(event) => this.handleUserInput(event)} />
-                    </div>
-                    <div className="form-group">
-                        <input type="password" className="form-control mySignUp-input"
-                            name="confirmPassword" value={this.state.confirmPassword}
-                            placeholder="Confirma parola"
-                            onChange={(event) => this.handleUserInput(event)} />
-                    </div>
-                    <Col>
-                        <Button variant="outline-dark" className="mySignUp-bttn" type="submit"
-                            disabled={!this.state.formValid} onClick={this.routeChange}>
-                            Creeare cont
+            <Container fuild>
+                <Row >
+                    <Col className='py-3' md={{ offset: 8, span: 7 }} xs={{ offset: 4, span: 7 }} >
+                        <div id='login' >
+                            <Form >
+                                <div className="form-group">
+                                    <input type="text" className="form-control mySignUp-input"
+                                        name="name" value={this.state.name}
+                                        placeholder="Nume complet"
+                                        onChange={(event) => this.handleUserInput(event)} />
+                                </div>
+                                <div className="form-group">
+                                    <input type="email" className="form-control mySignUp-input"
+                                        name="email" value={this.state.email}
+                                        placeholder="Email"
+                                        onChange={(event) => this.handleUserInput(event)} />
+                                </div>
+                                <div className="form-group">
+                                    <input type="password" className="form-control mySignUp-input"
+                                        name="password" value={this.state.password}
+                                        placeholder="Parola"
+                                        onChange={(event) => this.handleUserInput(event)} />
+                                </div>
+                                <div className="form-group">
+                                    <input type="password" className="form-control mySignUp-input"
+                                        name="confirmPassword" value={this.state.confirmPassword}
+                                        placeholder="Confirma parola"
+                                        onChange={(event) => this.handleUserInput(event)} />
+                                </div>
+                                <Col>
+                                    <Button variant="outline-secondary" className="mySignUp-bttn" type="submit"
+                                        disabled={!this.state.formValid} onClick={this.routeChange}>
+                                        Creeare cont
                     </Button></Col>
-                </form>
-                    <div className="panel panel-default">
-                        <FormErrors formErrors={this.state.formErrors} />
-                    </div>
-                </Col></Row>
-                </div>
+                            </Form>
+                            <div className="panel panel-default">
+                                <FormErrors formErrors={this.state.formErrors} />
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+
         )
     }
 }

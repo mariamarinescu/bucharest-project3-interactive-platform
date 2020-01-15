@@ -18,8 +18,8 @@
     font-size: 12px;
     margin: 5px;
     padding: 10px;
-    border-radius: 25px;
-    border: 1px solid grey;
+    border-radius: 14px;
+   
     height: 30px;
 }
 
@@ -29,9 +29,7 @@
     border-radius: 10px; 
     cursor: pointer; 
     background-color: transparent;
-    color: darkgray;
     font-size: 12px;
-    border-color:darkgray;
     height: 35px;
     width: 130px;
 }

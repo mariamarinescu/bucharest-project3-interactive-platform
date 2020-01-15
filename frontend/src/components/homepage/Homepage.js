@@ -82,25 +82,31 @@ class Homepage extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            moveToTheRight: false
+            moveToTheRight: false,
+            showLogin: false,
+            showSignup: false
         }
     }
 
     toggleMoving = (param) => {
-        if (param === true) {
-            this.setState({ moveToTheRight: true });
-        } else if (param === false) {
-            this.setState({ moveToTheRight: false });
+        if (param === 'login') {
+            this.setState({ moveToTheRight: true, showLogin: true, showSignup: false });
+        } else if (param === 'signup') {
+            this.setState({ moveToTheRight: true, showLogin: false, showSignup: true});
+        } else if(param === false) {
+            this.setState({ moveToTheRight: true});
         }
         console.log("homepage: " + this.state.moveToTheRight)
     }
 
     render() {
+        const showLogin = this.state.showLogin;
+        const showSignup = this.state.showSignup;
         console.log("homepage: " + this.state.moveToTheRight)
         return (
             <div className="App">
                 <BrowserRouter>
-                    <Navigation onClickLogin={this.toggleMoving} onClickSignup={this.toggleMoving} />
+                    <Navigation onClickLogin={this.toggleMoving} onClickSignup={this.toggleMoving} loginState={showLogin} signupState={showSignup} />
                     <GirlModel moveGirl={this.state.moveToTheRight} />
                     <div style={{ height: '60vh' }}>
                         <Maps locationData={markerData} />
@@ -108,8 +114,8 @@ class Homepage extends React.Component {
                     <Parteners />
                     <Footer />
                     <Switch>
-                    <Route path="/sign-up"><SignUp/></Route>
-                    <Route path="/log-in" component={Login} />
+                    {/* <Route path="/sign-up"><SignUp/></Route>
+                    <Route path="/log-in" component={Login} /> */}
                     <Route path="/quiz" component={Quiz} />
                     </Switch>
                     <Switch>

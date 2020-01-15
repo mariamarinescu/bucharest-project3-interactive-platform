@@ -24,7 +24,7 @@ body {
 @media  (max-width: 600px) {
   #login {
     top: 200px;
-    left: 255px;
+    left: -155px;
     width: 540px;
   }
 }

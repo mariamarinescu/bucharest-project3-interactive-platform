@@ -25,6 +25,7 @@
 .p-ela,.p-bya,.p-flora, 
 .p-pixie, .p-get-well, .p-natura, .p-avalon {
   position: absolute;
+  padding: 10px;
 }
 
 .p-title {
@@ -38,90 +39,90 @@
 /*START OF feature/parteners*/
 @media (max-width: 600px) {
   .parteners-container{
-    top:440px;
+    top:180px;
   }
   .p-title {
-    left: 21%;
+    left: 19%;
     font-size: 30px;
     top: 29px;
   }
 
   .p-mega {
-    left: 6%;
+    left: -2%;
     top: 100px;
   }
 
   .p-carturesti{
-    left: 35%;
+    left: 29%;
     top: 110px;
   }
 
   .p-vital{
-    left: 14%;
+    left: 5%;
     top: 200px;
   }
 
   .p-enatural{
-    left: 15%;
+    left: 2%;
     top: 310px;
   }
 
   .p-camara{
-    left: 55%;
+    left: 49%;
     top: 280px;
   }
 
   .p-stam-de-vorba{
-    left: 18%;
+    left: 8%;
     top: 410px;
   }
 
   .p-allboutique{
-    left: 14%;
+    left: 4%;
     top: 555px;
   }
 
   .p-icosmetice{
-    left: 15%;
+    left: 6%;
     top: 644px;
   }
 
   .p-tastingRO{
-    left: 13%;
+    left: 2%;
     top: 733px;
   }
 
   .p-ela {
-    left: 13%;
+    left: 4%;
     top:900px;
   }
 
   .p-bya {
-    left: 21%;
+    left: 9%;
     top:1000px;
   }
 
   .p-flora {
-    left: 45%;
+    left: 38%;
     top: 760px;
   }
 
   .p-pixie {
-    left: 24%;
+    left: 12%;
     top:1090px;
   }
   .p-get-well {
-    left: 23%;
+    left: 11%;
     top:1190px;
   }
 
   .p-natura {
-    left: 21%;
+    left: 11%;
     top:1310px;
   }
 
   .p-avalon {
-    left: 32%;
+    left: 25%;
     top:1370px;
     padding-bottom: 70px;
   }
@@ -130,7 +131,7 @@
  
 @media (min-width: 601px) and (max-width: 767px) {
   .parteners-container{
-    top:140px;
+    top:240px;
   }
   .p-title {
     left: 29%;
@@ -221,9 +222,7 @@
 }
 
 @media  (min-width: 767px) and (min-height: 900px){
-  .parteners-container{
-    top:440px!important;
-  } 
+ 
 }
 
 /*END OF feature/parteners*/
@@ -232,6 +231,9 @@
 /*START OF feature/parteners*/
 
 @media  (min-width: 768px) and (max-width: 1024px) {
+  .parteners-container{
+    top:340px!important;
+  } 
 
   .p-title {
     left: 28%;
@@ -326,7 +328,9 @@
 /*START OF feature/parteners*/
 
 @media  (min-width: 1025px)  {
-
+  .parteners-container{
+    top:240px!important;
+  } 
   .p-title {
     left: 35%;
     font-size: 48px;
@@ -405,12 +409,12 @@
 
  .p-natura {
    left: 48%;
-   top:560px;
+   top:860px;
   }
 
  .p-avalon {
    left: 69%;
-   top:544px;
+   top:844px;
   }
 
 }

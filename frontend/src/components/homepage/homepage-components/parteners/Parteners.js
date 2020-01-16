@@ -1,5 +1,7 @@
 import React from 'react';
-import * as data from './my_fake_db.json'
+import * as data from './my_fake_db.json';
+import { Container, Row, Col } from 'react-bootstrap';
+
 
 
 class Parteners extends React.Component {
@@ -35,6 +37,9 @@ class Parteners extends React.Component {
 
     render() {
         return (
+            <Container fuild>
+            <Row noGutters>
+                <Col>
             <div className="parteners-container" >
                 <h1 className="p-title">Parteneri Online</h1>
                 <img className="p-mega" src={this.state.megaImage} alt="Mega" />
@@ -54,6 +59,9 @@ class Parteners extends React.Component {
                 <img className="p-natura" src={this.state.natura4All} alt="Natura4All" />
                 <img className="p-avalon" src={this.state.avalon} alt="Avalon" />
             </div>
+            </Col>
+            </Row>
+           </Container>
         )
     }
 }

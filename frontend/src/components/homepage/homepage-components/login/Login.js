@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal, Row, Col, Form, Container } from 'react-bootstrap';
 import Quiz from '../quiz/Quiz';
-import {Switch, Route, withRouter} from 'react-router-dom';
+import {Switch, Route, withRouter, BrowserRouter as Router } from 'react-router-dom';
 import Adminplatform from '../../../admin/AdminPlatform';
 
 
@@ -29,11 +29,16 @@ class Login extends React.Component {
     }
 
     routeChange = () => {
-        let userPath = `/quiz`;
-        let adminPath = '/admin'
-        if (this.state.email === 'admin@admin.com') {
-            this.props.history.push(adminPath)
-        } else this.props.history.push(userPath);
+        const userPath = 'quiz';
+        const adminPath = '/admin';
+    //    return this.props.history.push(adminPath) ? this.state.email === 'admin@admin.com' : this.props.history.push(userPath);
+
+    if(this.state.email === 'admin@admin.com') {
+        this.props.history.push(adminPath);
+    } 
+    if (this.state.email === 'user@user.com'){
+        this.props.history.push(userPath);
+    }
 
     }
 
@@ -41,6 +46,7 @@ class Login extends React.Component {
     render() {
         console.log(this.state.email)
         return (
+            <Router>
             <Container fuild>
            
                 {/* {this.props.isActive ? */}
@@ -69,8 +75,9 @@ class Login extends React.Component {
                 {/* // : null} */}
           
             </Container>
+            </Router>
         );
     }
 }
 
-export default withRouter(Login);
+export default Login;

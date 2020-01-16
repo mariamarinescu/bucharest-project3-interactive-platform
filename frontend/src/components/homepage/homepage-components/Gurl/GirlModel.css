@@ -355,7 +355,7 @@
     top: 180px!important;
   }
 } */
-@media(max-width: 600px) and (max-height: 800px) {
+@media(max-width: 600px) {
   .info-g-first-bttn {
     display: none;
   }
@@ -370,7 +370,7 @@
     left: -50%!important;
   }
   .move-Gurl {
-    top: 180px!important;
+    top:110px;
   }
 }
 @media(max-width: 600px) and (min-height: 801px) {
@@ -388,7 +388,7 @@
     left: -50%!important;
   }
   .move-Gurl {
-    top: 180px!important;
+    top: 220px!important;
   }
 }
 

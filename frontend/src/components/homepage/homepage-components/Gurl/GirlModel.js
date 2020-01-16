@@ -1,6 +1,7 @@
 import React from 'react';
 import * as img from '../../../../static/img/Kool_Gurl.jpg';
 import {Link} from 'react-router-dom'
+import {Container, Row, Col} from 'react-bootstrap'
 import { Button } from 'react-bootstrap';
 import data from '../info_modal/my_fake_db';
 
@@ -86,6 +87,9 @@ class GirlModel extends React.Component {
      
 
         return (
+            <Container fuild>
+                <Row noGutters>
+                    <Col>
             <div className='model'>
                 {!this.state.isHidden ?
                     <div className={moveOrNot}>
@@ -119,6 +123,9 @@ class GirlModel extends React.Component {
                 </div>
                 {/* <Content info={this.state.info}/> */}
             </div>
+            </Col>
+            </Row>
+            </Container>
 
 
         );

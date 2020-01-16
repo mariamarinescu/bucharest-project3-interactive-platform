@@ -1,4 +1,6 @@
 import React from 'react';
+import {Container, Row, Col} from 'react-bootstrap';
+import {withRouter,  BrowserRouter  as Router} from 'react-router-dom';
 import Question from './Question';
 import data from '../info_modal/my_fake_db';
 
@@ -14,30 +16,37 @@ class Quiz extends React.Component {
             modalFailureTitle: ' Aww, mai mult noroc data viitoare!',
             modalFailureDescription: 'De data aceasta, nu a fost sa fie dar te asteptam saptamana viitoare sa mai incercam odata!',
             modalFailureLastMessage: 'Iti multumim ca iei parte parte impreuna cu noi in aceasta minunta experiata, cea de a cunoaste mama natura <3',
-            question: data.quiz.face.firstQuestion.question,
-            image: data.quiz.face.firstQuestion.firstQuestionImg,
-            answers: [data.quiz.face.firstQuestion.answers[0], data.quiz.face.firstQuestion.answers[1]],
-            firstQuestionCorrect: false,
+            question: "Care sunt proprietatile acestui sapun?",
+            image: "http://www.techir.ro/wp-content/uploads/2016/12/tricolor1.png",
+            answers: ["Actiune hranitoare","Actiune exfolianta"],            
+            firstQuestionCorrect: true,
             secondQuestionCorrect: false
+            // correct: 0
+            // category: "fata"
         }
 
 
     }
 
-    componentWillMount() {
-       document.getElementsByClassName('model')[0].style.display = 'none';
-       document.getElementsByClassName('gMap')[0].style.display = 'none';
-    }
+    // componentWillMount() {
+    //    document.getElementsByClassName('model')[0].style.display = 'none';
+    //    document.getElementsByClassName('gMap')[0].style.display = 'none';
+    // }
 
-    componentWillUnmount() {
-        document.getElementsByClassName('model')[0].style.display = 'inline-block';
-        document.getElementsByClassName('gMap')[0].style.display = 'inline-block';
+    // componentWillUnmount() {
+    //     document.getElementsByClassName('model')[0].style.display = 'inline-block';
+    //     document.getElementsByClassName('gMap')[0].style.display = 'inline-block';
 
-    }
+    // }
 
     render() {
         return (
+            
+            <Container fluid>
+            <Row noGutters>
+            <Col>
             <div className="quiz-container">
+            <Router>
                 <h1 className="quiz-title">Concurs Techir</h1>
                 <h6 className="quiz-desc">Participa, raspunzand la intrebare si poti castiga reduceri la produsele tale favorite.</h6>
                 <Question
@@ -45,7 +54,12 @@ class Quiz extends React.Component {
                     modalSuccessDescription={this.state.modalSuccessDescription} modalSuccessLastMessage={this.state.modalSuccessLastMessage}
                     modalFailureDescription={this.state.modalFailureDescription} modalFailureLastMessage={this.state.modalFailureLastMessage}
                 />
+            </Router>
+
             </div>
+            </Col>
+            </Row>
+            </Container>
         )
     }
 }

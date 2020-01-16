@@ -3,17 +3,14 @@ import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom';
 
 
 import Maps from './homepage-components/maps/Maps';
-import Login from './homepage-components/login/Login';
 import Navigation from './homepage-components/navbar/NavBar';
 import Quiz from './homepage-components/quiz/Quiz';
 import Footer from './homepage-components/footer/Footer';
 import GirlModel from './homepage-components/Gurl/GirlModel';
 import Parteners from './homepage-components/parteners/Parteners';
-import SignUp from './homepage-components/signup/SignUp';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './homepage-components/navbar/NavBar.css';
-// import './homepage-components/info_modal/Info.css';
 import './homepage-components/footer/Footer.css';
 import './homepage-components/login/login.css';
 import './homepage-components/quiz/quiz.css';
@@ -22,8 +19,7 @@ import './homepage-components/Gurl/GirlModel.css';
 import './homepage-components/signup/SignUp.css';
 import './homepage-components/maps/Maps.css';
 import AdminPlatform from '../admin/AdminPlatform';
-import QCards from '../admin/admin-components/quiz-cards/QCards';
-import EditInfoCards from '../admin/admin-components/InfoCard/EditInfoCards';
+
 
 
 const markerData = [
@@ -116,7 +112,7 @@ class Homepage extends React.Component {
                     <Switch>
                     {/* <Route path="/sign-up"><SignUp/></Route>
                     <Route path="/log-in" component={Login} /> */}
-                    <Route path="/quiz" component={Quiz} />
+                    <Route exact path="/quiz" component={Quiz} />
                     </Switch>
                     <Switch>
                         <Route exact path="/admin" component={AdminPlatform} />
@@ -132,4 +128,4 @@ class Homepage extends React.Component {
 
 
 
-export default withRouter(Homepage);
+export default Homepage;

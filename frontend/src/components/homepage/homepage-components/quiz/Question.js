@@ -1,5 +1,5 @@
 import React from 'react';
-import {withRouter} from 'react-router-dom';
+import {withRouter, BrowserRouter} from 'react-router-dom';
 import { Button, Modal } from 'react-bootstrap';
 
 
@@ -49,6 +49,8 @@ class Question extends React.Component {
     render() {
         return (
             <div className="quiz-q-container">
+                        <BrowserRouter>
+
                 <h3 className="q-question">
                     {this.props.question}
                 </h3>
@@ -144,6 +146,7 @@ class Question extends React.Component {
                         </Modal.Footer>
                     </Modal>
                 </div>
+                </BrowserRouter>
 
             </div>
 
@@ -152,4 +155,4 @@ class Question extends React.Component {
 }
 
 
-export default withRouter(Question);
+export default Question;

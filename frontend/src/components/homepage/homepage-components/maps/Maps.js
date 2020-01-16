@@ -1,5 +1,6 @@
 import React from 'react'
 import { Map, Marker, GoogleApiWrapper, InfoWindow } from 'google-maps-react';
+import { Container, Row, Col } from 'react-bootstrap';
 
 // const apiKey = 'AIzaSyBuqivjlUHx_1CzHXli6ft9xLWrI-dOGwo' /* ISS TEAM API KEY */
 const yek = 'AIzaSyBFBgzKEMmLB-LGdSrmFOejutT8m8pOvQk' /* MY BROKEN API KEY */
@@ -31,6 +32,9 @@ class GMap extends React.Component {
     };
     render() {
         return (
+            <Container fuild>
+            <Row noGutters>
+                <Col>
             <div className='map'>
                 <Map google={this.props.google}
                     zoom={3}
@@ -55,6 +59,10 @@ class GMap extends React.Component {
                     </InfoWindow>
                 </Map>
             </div>
+            </Col>
+            </Row>
+            
+            </Container>
         )
     }
 }

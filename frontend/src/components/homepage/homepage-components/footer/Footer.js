@@ -1,6 +1,6 @@
 import React from 'react';
-import * as brand_romanesc from '../../../../static/img/brand-romanesc.png';
-import * as produse_romanesti from '../../../../static/img/produse-romanesti.png';
+import * as brand_romanesc from '../../../../assets/img/brand-romanesc.png';
+import * as produse_romanesti from '../../../../assets/img/produse-romanesti.png';
 
 
 

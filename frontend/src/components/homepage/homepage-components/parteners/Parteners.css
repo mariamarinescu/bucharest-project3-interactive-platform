@@ -1,0 +1,514 @@
+/*START OF feature/parteners*/
+@import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
+/*END OF feature/parteners*/
+
+
+/*START OF feature/parteners*/
+
+.parteners-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  left: 3%
+}
+
+.logo-container {
+  top: 100px;
+}
+
+.p-mega, .p-carturesti,.p-vital,
+.p-enatural, .p-camara,.p-stam-de-vorba, 
+.p-allboutique, .p-tastingRO, .p-icosmetice, 
+.p-ela,.p-bya,.p-flora, 
+.p-pixie, .p-get-well, .p-natura, .p-avalon {
+  position: absolute;
+  padding: 10px;
+}
+
+.p-title {
+  font-family: 'PT Serif', serif;
+  position: absolute;
+}
+/*END OF feature/parteners*/
+
+
+
+/*START OF feature/parteners*/
+@media (max-width: 600px) {
+  .parteners-container{
+    top:180px;
+  }
+  .p-title {
+    left: 19%;
+    font-size: 30px;
+    top: 29px;
+  }
+
+  .p-mega {
+    left: -2%;
+    top: 100px;
+  }
+
+  .p-carturesti{
+    left: 29%;
+    top: 110px;
+  }
+
+  .p-vital{
+    left: 5%;
+    top: 200px;
+  }
+
+  .p-enatural{
+    left: 2%;
+    top: 310px;
+  }
+
+  .p-camara{
+    left: 49%;
+    top: 280px;
+  }
+
+  .p-stam-de-vorba{
+    left: 8%;
+    top: 410px;
+  }
+
+  .p-allboutique{
+    left: 4%;
+    top: 555px;
+  }
+
+  .p-icosmetice{
+    left: 6%;
+    top: 644px;
+  }
+
+  .p-tastingRO{
+    left: 2%;
+    top: 733px;
+  }
+
+  .p-ela {
+    left: 4%;
+    top:900px;
+  }
+
+  .p-bya {
+    left: 9%;
+    top:1000px;
+  }
+
+  .p-flora {
+    left: 38%;
+    top: 760px;
+  }
+
+  .p-pixie {
+    left: 12%;
+    top:1090px;
+  }
+  .p-get-well {
+    left: 11%;
+    top:1190px;
+  }
+
+  .p-natura {
+    left: 11%;
+    top:1310px;
+  }
+
+  .p-avalon {
+    left: 25%;
+    top:1370px;
+    padding-bottom: 70px;
+  }
+ }
+
+ 
+@media (min-width: 601px) and (max-width: 767px) {
+  .parteners-container{
+    top:240px;
+  }
+  .p-title {
+    left: 29%;
+    font-size: 30px;
+    top: 29px;
+  }
+
+  .p-mega {
+    left: 4%;
+    top: 100px;
+  }
+
+  .p-carturesti{
+    left: 24%;
+    top: 110px;
+  }
+
+  .p-vital{
+    left: 57%;
+    top: 90px;
+  }
+
+  .p-enatural{
+    left: 5%;
+    top: 250px;
+  }
+
+  .p-camara{
+    left: 31%;
+    top: 210px;
+  }
+
+  .p-stam-de-vorba{
+    left: 58%;
+    top: 210px;
+  }
+
+  .p-allboutique{
+    left: 5%;
+    top: 379px;
+  }
+
+  .p-icosmetice{
+    left:50%;
+    top: 379px;
+  }
+
+  .p-tastingRO{
+    left: 5%;
+    top: 470px;
+  }
+
+  .p-ela {
+    left: 26%;
+    top:490px;
+  }
+
+  .p-bya {
+    left: 5%;
+    top:630px;
+  }
+
+  .p-flora {
+    left: 65%;
+    top: 500px;
+  }
+
+  .p-pixie {
+    left: 36%;
+    top:610px
+  }
+  .p-get-well {
+    left: 63%;
+    top:600px;
+  }
+
+  .p-natura {
+    left: 30%;
+    top:730px;
+  }
+
+  .p-avalon {
+    left: 37%;
+    top:830px;
+    padding-bottom: 70px;
+  }
+
+}
+
+@media  (min-width: 767px) and (min-height: 900px){
+ 
+}
+
+/*END OF feature/parteners*/
+
+
+/*START OF feature/parteners*/
+
+@media  (min-width: 768px) and (max-width: 1024px) {
+  .parteners-container{
+    top:340px;
+  } 
+
+  .p-title {
+    left: 28%;
+    font-size: 40px;
+    top: 0px;
+  }
+
+    .p-mega {
+         left: 8%;
+      top: 100px;
+   }
+
+   .p-carturesti{
+       left: 25%;
+     top: 110px;
+   }
+
+   .p-vital{
+       left: 57%;
+     top: 100px;
+   }
+
+   .p-enatural{
+       left: 8%;
+     top: 250px;
+     
+   }
+
+   .p-camara{
+       left: 33%;
+     top: 210px;
+   }
+
+   .p-stam-de-vorba{
+       left: 58%;
+     top: 210px;
+   }
+
+   .p-allboutique{
+       left: 8%;
+     top: 380px;
+   }
+   .p-icosmetice{
+       left: 50%;
+     top: 370px;
+   }
+
+   .p-tastingRO{
+       left: 16%;
+     top: 477px;
+   }
+
+   .p-ela {
+       left: 44%;
+     top:499px;
+   }
+   .p-bya {
+       left: 8%;
+     top:640px;
+   }
+
+   .p-flora {
+       left: 40%;
+     top: 640px;
+   }
+
+   .p-pixie {
+       left: 62%;
+     top:620px;
+   }
+   
+   .p-get-well {
+       left: 13%;
+     top:740px;
+   }
+
+   .p-natura {
+       left: 49%;
+     top:770px;
+   }
+
+   .p-avalon {
+       left: 38%;
+     top:873px;
+     padding-bottom: 70px;
+   }
+
+}
+/*END OF feature/parteners*/
+
+
+/*START OF feature/parteners*/
+
+@media  (min-width: 1025px)  {
+  .parteners-container{
+    top:240px;
+    left: -4%;
+  } 
+  .p-title {
+    left: 35%;
+    font-size: 48px;
+    top: 0px;
+  }
+  
+  .p-mega {
+     left: 15%;
+    top: 133px;
+  }
+
+ .p-carturesti{
+   left: 25%;
+   top: 143px;
+  }
+
+ .p-vital{
+   left: 43%;
+   top: 130px;
+  }
+
+ .p-enatural{
+   left: 14%;
+   top: 280px; 
+  }
+
+ .p-camara{
+   left: 29%;
+   top: 240px;
+  }
+
+ .p-stam-de-vorba{
+   left: 67%;
+   top: 120px;
+  }
+
+ .p-allboutique{
+   left: 42%;
+   top: 270px;
+  }
+
+ .p-icosmetice{
+   left: 66%;
+   top: 270px;
+  }
+
+ .p-tastingRO{
+   left: 14%;
+   top: 377px;
+  }
+
+ .p-ela {
+   left: 25%;
+   top:399px;
+  }
+
+ .p-bya {
+   left: 47%;
+   top:399px;
+  }
+
+ .p-flora {
+   left: 32.5%;
+   top: 560px;
+  }
+
+ .p-pixie {
+   left: 67%;
+   top:380px;
+  }
+
+ .p-get-well {
+   left: 13.5%;
+   top:540px;
+  }
+
+ .p-natura {
+   left: 48%;
+   top:560px;
+  }
+
+ .p-avalon {
+   left: 69%;
+   top:564px;
+  }
+
+}
+/* 
+@media  (min-width: 1025px) and (orientation: landscape) {
+
+  .p-title {
+    left: 25%;
+    font-size: 48px;
+    top: 0px;
+  }
+  
+  .p-mega {
+     left: 5%;
+    top: 133px;
+  }
+
+ .p-carturesti{
+   left: 15%;
+   top: 143px;
+  }
+
+ .p-vital{
+   left: 33%;
+   top: 130px;
+  }
+
+ .p-enatural{
+   left: 4%;
+   top: 280px; 
+  }
+
+ .p-camara{
+   left: 19%;
+   top: 240px;
+  }
+
+ .p-stam-de-vorba{
+   left: 57%;
+   top: 120px;
+  }
+
+ .p-allboutique{
+   left: 32%;
+   top: 270px;
+  }
+
+ .p-icosmetice{
+   left: 56%;
+   top: 270px;
+  }
+
+ .p-tastingRO{
+   left: 4%;
+   top: 377px;
+  }
+
+ .p-ela {
+   left: 15%;
+   top:399px;
+  }
+
+ .p-bya {
+   left: 37%;
+   top:399px;
+  }
+
+ .p-flora {
+   left: 22.5%;
+   top: 560px;
+  }
+
+ .p-pixie {
+   left: 57%;
+   top:380px;
+  }
+
+ .p-get-well {
+   left: 3.5%;
+   top:540px;
+  }
+
+ .p-natura {
+   left: 38%;
+   top:560px;
+  }
+
+ .p-avalon {
+   left: 59%;
+   top:544px;
+  }
+
+} */
+/*END OF feature/parteners*/
+
+

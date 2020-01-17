@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/bucharest-project3-interactive-platform/static/css/main.b2a3f16b.chunk.css",
+    "main.js": "/bucharest-project3-interactive-platform/static/js/main.54e6c7ac.chunk.js",
+    "main.js.map": "/bucharest-project3-interactive-platform/static/js/main.54e6c7ac.chunk.js.map",
+    "runtime-main.js": "/bucharest-project3-interactive-platform/static/js/runtime-main.93642916.js",
+    "runtime-main.js.map": "/bucharest-project3-interactive-platform/static/js/runtime-main.93642916.js.map",
+    "static/css/2.17e5ed98.chunk.css": "/bucharest-project3-interactive-platform/static/css/2.17e5ed98.chunk.css",
+    "static/js/2.a486484b.chunk.js": "/bucharest-project3-interactive-platform/static/js/2.a486484b.chunk.js",
+    "static/js/2.a486484b.chunk.js.map": "/bucharest-project3-interactive-platform/static/js/2.a486484b.chunk.js.map",
+    "index.html": "/bucharest-project3-interactive-platform/index.html",
+    "precache-manifest.cb50bd22f99937abf47ebe8a72f0c729.js": "/bucharest-project3-interactive-platform/precache-manifest.cb50bd22f99937abf47ebe8a72f0c729.js",
+    "service-worker.js": "/bucharest-project3-interactive-platform/service-worker.js",
+    "static/css/2.17e5ed98.chunk.css.map": "/bucharest-project3-interactive-platform/static/css/2.17e5ed98.chunk.css.map",
+    "static/css/main.b2a3f16b.chunk.css.map": "/bucharest-project3-interactive-platform/static/css/main.b2a3f16b.chunk.css.map",
+    "static/js/2.a486484b.chunk.js.LICENSE": "/bucharest-project3-interactive-platform/static/js/2.a486484b.chunk.js.LICENSE",
+    "static/media/Kool_Gurl.jpg": "/bucharest-project3-interactive-platform/static/media/Kool_Gurl.945ed563.jpg",
+    "static/media/brand-romanesc.png": "/bucharest-project3-interactive-platform/static/media/brand-romanesc.930c2b0f.png",
+    "static/media/hook-1425312.png": "/bucharest-project3-interactive-platform/static/media/hook-1425312.3c8da878.png",
+    "static/media/logo_techir.png": "/bucharest-project3-interactive-platform/static/media/logo_techir.21b15624.png",
+    "static/media/produse-romanesti.png": "/bucharest-project3-interactive-platform/static/media/produse-romanesti.54e8ba36.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.93642916.js",
+    "static/css/2.17e5ed98.chunk.css",
+    "static/js/2.a486484b.chunk.js",
+    "static/css/main.b2a3f16b.chunk.css",
+    "static/js/main.54e6c7ac.chunk.js"
+  ]
+}

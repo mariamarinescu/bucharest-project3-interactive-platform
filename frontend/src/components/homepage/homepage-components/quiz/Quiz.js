@@ -46,7 +46,6 @@ class Quiz extends React.Component {
             <Row noGutters>
             <Col>
             <div className="quiz-container">
-            <Router>
                 <h1 className="quiz-title">Concurs Techir</h1>
                 <h6 className="quiz-desc">Participa, raspunzand la intrebare si poti castiga reduceri la produsele tale favorite.</h6>
                 <Question
@@ -54,7 +53,6 @@ class Quiz extends React.Component {
                     modalSuccessDescription={this.state.modalSuccessDescription} modalSuccessLastMessage={this.state.modalSuccessLastMessage}
                     modalFailureDescription={this.state.modalFailureDescription} modalFailureLastMessage={this.state.modalFailureLastMessage}
                 />
-            </Router>
 
             </div>
             </Col>

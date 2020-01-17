@@ -83,7 +83,7 @@ class Navigation extends React.Component  {
 }
 
 
-export default withRouter(Navigation);
+export default Navigation;
 
 
 

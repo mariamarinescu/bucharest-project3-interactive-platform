@@ -46,7 +46,6 @@ class Login extends React.Component {
     render() {
         console.log(this.state.email)
         return (
-            <Router>
             <Container fuild>
            
                 {/* {this.props.isActive ? */}
@@ -75,7 +74,6 @@ class Login extends React.Component {
                 {/* // : null} */}
           
             </Container>
-            </Router>
         );
     }
 }

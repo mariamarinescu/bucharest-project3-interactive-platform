@@ -372,6 +372,9 @@
   .move-Gurl {
     top:110px;
   }
+  .hover-question {
+    width: 80vw;
+  }
 }
 @media(max-width: 600px) and (min-height: 801px) {
   .info-g-first-bttn {

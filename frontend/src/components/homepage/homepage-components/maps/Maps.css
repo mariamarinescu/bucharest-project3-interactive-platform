@@ -203,9 +203,9 @@
   @media (min-width: 1267px) {
     .gMap {
       width: 80vw!important;
-      height: 70vh!important;
+      height: 80vh!important;
       top: 28px;
-      left: -18%;
+      left: 4%;
     }
   }
   

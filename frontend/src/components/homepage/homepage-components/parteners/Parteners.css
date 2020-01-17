@@ -232,7 +232,7 @@
 
 @media  (min-width: 768px) and (max-width: 1024px) {
   .parteners-container{
-    top:340px!important;
+    top:340px;
   } 
 
   .p-title {
@@ -329,7 +329,8 @@
 
 @media  (min-width: 1025px)  {
   .parteners-container{
-    top:240px!important;
+    top:240px;
+    left: -4%;
   } 
   .p-title {
     left: 35%;
@@ -409,12 +410,12 @@
 
  .p-natura {
    left: 48%;
-   top:860px;
+   top:560px;
   }
 
  .p-avalon {
    left: 69%;
-   top:844px;
+   top:564px;
   }
 
 }

@@ -12,11 +12,9 @@
 
 
 .quiz-q-container {
-  top: 0px;
   position: absolute; 
   width: 1330px;
   height: 800px;
-
   /* display: none!important; */
 }
 
@@ -101,12 +99,71 @@
 
 
 
+@media  (max-width: 480px) {
+  .quiz-container {
+    height: 100%;
+    width: 100%;
+    top: -410px;
+  }
+  .quiz-q-container {
+    top: 0px;
+    width: 1330px;
+    height: 800px;
+  
+  }
+  .quiz-title {
+    top: -180px;
+    left: 18%;
+    width: 100%;
+    font-size: 33px;
+  }
+  .quiz-desc {
+    top: -120px;
+    left: 6%;
+    font-size: 16px;
+  }
+  
+  .q-question {
+    top: -33px;
+    font-size: 19px;
+    left: 2%;
+
+  }
+  
+  .q-img {
+    margin: 80px;
+    border-radius: 80px;
+    left: -3%;
+    top: -49px;
+    width: 300px;
+    height: 250px;
+  }
+ 
+  
+  .q-first-ans,
+  .q-second-ans
+   {
+    width: 300px;
+    left: 3%;
+    height: 77px;
+  }
+  
+  .q-first-ans{
+    top: 310px;
+  }
+  .q-second-ans {
+    top: 410px;
+  }
+  
+}
+
+@media  (max-width: 600px) {
+}
 
 
 
 
-
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) {
 
   .quiz-container {
     height: 100%;
@@ -167,7 +224,187 @@
 
 }
 
-@media (max-width: 767px) and (orientation: landscape) {
+@media (max-width: 992px) {
+
+  .quiz-container {
+    height: 100%;
+    width: 100%;
+    top: -410px;
+  }
+  .quiz-q-container {
+    top: 0px;
+    width: 1330px;
+    height: 800px;
+  
+  }
+  .quiz-title {
+    top: -180px;
+    left: 18%;
+    width: 100%;
+    font-size: 33px;
+  }
+  .quiz-desc {
+    top: -120px;
+    left: 6%;
+    font-size: 16px;
+  }
+  
+  .q-question {
+    top: -33px;
+    font-size: 19px;
+    left: 2%;
+
+  }
+  
+  .q-img {
+    margin: 80px;
+    border-radius: 80px;
+    left: -3%;
+    top: -49px;
+    width: 300px;
+    height: 250px;
+  }
+ 
+  
+  .q-first-ans,
+  .q-second-ans
+   {
+    width: 300px;
+    left: 3%;
+    height: 77px;
+  }
+  
+  .q-first-ans{
+    top: 310px;
+  }
+  .q-second-ans {
+    top: 410px;
+  }
+  
+  
+
+}
+@media (max-width: 1382px) {
+
+  .quiz-container {
+    height: 100%;
+    width: 100%;
+    top: -410px;
+  }
+  .quiz-q-container {
+    top: 0px;
+    width: 1330px;
+    height: 800px;
+  
+  }
+  .quiz-title {
+    top: -180px;
+    left: 18%;
+    width: 100%;
+    font-size: 33px;
+  }
+  .quiz-desc {
+    top: -120px;
+    left: 6%;
+    font-size: 16px;
+  }
+  
+  .q-question {
+    top: -33px;
+    font-size: 19px;
+    left: 2%;
+
+  }
+  
+  .q-img {
+    margin: 80px;
+    border-radius: 80px;
+    left: -3%;
+    top: -49px;
+    width: 300px;
+    height: 250px;
+  }
+ 
+  
+  .q-first-ans,
+  .q-second-ans
+   {
+    width: 300px;
+    left: 3%;
+    height: 77px;
+  }
+  
+  .q-first-ans{
+    top: 310px;
+  }
+  .q-second-ans {
+    top: 410px;
+  }
+  
+  
+
+}
+/* @media (max-width: 767px) {
+
+  .quiz-container {
+    height: 100%;
+    width: 100%;
+    top: -410px;
+  }
+  .quiz-q-container {
+    top: 0px;
+    width: 1330px;
+    height: 800px;
+  
+  }
+  .quiz-title {
+    top: -180px;
+    left: 18%;
+    width: 100%;
+    font-size: 33px;
+  }
+  .quiz-desc {
+    top: -120px;
+    left: 6%;
+    font-size: 16px;
+  }
+  
+  .q-question {
+    top: -33px;
+    font-size: 19px;
+    left: 2%;
+
+  }
+  
+  .q-img {
+    margin: 80px;
+    border-radius: 80px;
+    left: -3%;
+    top: -49px;
+    width: 300px;
+    height: 250px;
+  }
+ 
+  
+  .q-first-ans,
+  .q-second-ans
+   {
+    width: 300px;
+    left: 3%;
+    height: 77px;
+  }
+  
+  .q-first-ans{
+    top: 310px;
+  }
+  .q-second-ans {
+    top: 410px;
+  }
+  
+  
+
+} */
+/* @media (max-width: 767px) and (orientation: landscape) {
 
     .quiz-container {
       height: 100%;
@@ -225,8 +462,8 @@
     }
     
     
-}
-@media (min-width: 768px) and (orientation: portrait) {
+} */
+/* @media (min-width: 768px) and (orientation: portrait) {
 
     .quiz-container {
       height: 100%;
@@ -284,9 +521,9 @@
       top: 119px;
     }
     
-}
+} */
 
-@media (min-width: 768px) and (orientation: landscape) {
+/* @media (min-width: 768px) and (orientation: landscape) {
 
     .quiz-container {
       height: 100%;
@@ -346,7 +583,7 @@
     .q-second-ans {
       top: 100px;
     }
-}
+} */
 
 
 /*END MAP*/

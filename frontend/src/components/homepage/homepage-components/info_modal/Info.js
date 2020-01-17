@@ -75,4 +75,4 @@ class Info extends React.Component {
     )
   }
 }
-export default Info;
+export default withRouter(Info);

@@ -29,16 +29,17 @@ class Login extends React.Component {
     }
 
     routeChange = () => {
-        const userPath = 'quiz';
+        const userPath = '/quiz';
         const adminPath = '/admin';
     //    return this.props.history.push(adminPath) ? this.state.email === 'admin@admin.com' : this.props.history.push(userPath);
 
     if(this.state.email === 'admin@admin.com') {
         this.props.history.push(adminPath);
-    } 
-    if (this.state.email === 'user@user.com'){
+    } else if (this.state.email === 'user@user.com'){
         this.props.history.push(userPath);
-    }
+    } else this.props.history.push(userPath);
+    
+    
 
     }
 
@@ -78,4 +79,4 @@ class Login extends React.Component {
     }
 }
 
-export default Login;
+export default withRouter(Login);

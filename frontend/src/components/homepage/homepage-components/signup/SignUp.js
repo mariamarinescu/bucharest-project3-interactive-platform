@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Modal, Row, Col, Form, Container } from 'react-bootstrap';
+import {withRouter} from 'react-router-dom';
 
 const FormErrors = ({ formErrors }) =>
     <div className='formErrors'>
@@ -149,4 +150,4 @@ class SignUp extends React.Component {
 }
 
 
-export default SignUp;
+export default withRouter(SignUp);

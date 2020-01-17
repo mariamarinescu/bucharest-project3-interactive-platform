@@ -1,13 +1,23 @@
 
 #footer {
   text-align: center;
-  color: darkgrey!important;
+  color: white!important;
   width: 100%;
   position: relative;
   bottom: 0px;
   left: 0px;
   right: 0px;
   margin-bottom: 0px;
+  z-index: 100;
+  padding: 0;
+  background-color: #404040;
+}
+
+.footer-color {
+  background-color: #343434;
+  position: absolute;
+  margin: 0;
+  padding: 0;
   z-index: 100;
 }
 
@@ -22,9 +32,7 @@
   margin: 3vh 3vw;
   padding-right: 3vw;
   position: absolute;
-  /* padding-bottom: 10px; */
-
-  /* top: 800%; */
+ 
 }
 
 .brand-romanesc {
@@ -69,6 +77,10 @@
     height: 200px;
     top: 2000px!important;
   }
+  .footer-color {
+    width: 540px;
+
+  }
   
   .contact {
     left: 34px!important;
@@ -90,7 +102,7 @@
 }
 
 
-@media (max-width: 767px) {
+@media (min-width: 541px) and (max-width: 767px) {
   #footer {
     height: 200px;
     top: 1600px;
@@ -106,7 +118,6 @@
     height: 80px;
     right: 2%;
     top: 10px;
-    /* top: 820%; */
   }
   
   .produse-romanesti {
@@ -138,7 +149,6 @@
     height: 100px;
     right: 3%;
     top: 33px;
-    /* top: 820%; */
   }
   
   .produse-romanesti {
@@ -163,7 +173,6 @@
     height: 100px;
     right: 3%;
     top: 33px;
-    /* top: 820%; */
   }
   
   .produse-romanesti {
@@ -190,7 +199,6 @@
     height: 130px;
     right: 11%;
     top: 20px;
-    /* top: 820%; */
   }
   
   .produse-romanesti {
@@ -216,7 +224,6 @@
     height: 130px;
     right: 18%;
     top: 20px;
-    /* top: 820%; */
   }
   
   .produse-romanesti {
@@ -227,4 +234,5 @@
 }
 
 
-/*# sourceMappingURL=Footer.css.map */
+
+

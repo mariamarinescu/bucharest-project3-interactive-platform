@@ -76,13 +76,11 @@ class AdminPlatform extends React.Component {
     render() {
         return (
             <div>
-                
                     <AdminNav />
-                   
-            
+
             </div>
         )
     }
 }
 
-export default AdminPlatform;
+export default withRouter(AdminPlatform);

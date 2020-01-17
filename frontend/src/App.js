@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import BrowserRouter from 'react-router-dom/BrowserRouter'
+import HashRouter from 'react-router-dom/HashRouter'
 
 import Homepage from './components/homepage/Homepage';
 import Navigation from './components/homepage/homepage-components/navbar/NavBar';
@@ -33,22 +33,13 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <BrowserRouter >
           <Switch>
             <Route exact path="/" component={Homepage} />
+            <Route path="/quiz" component={Quiz} />
+            <Route path="/admin" component={AdminPlatform} />
+            <Route path="/admin/editeaza-descrieri" component={EditInfoCards} />
+            <Route path="/admin/editeaza-chestionar" component={QCards} />
           </Switch>
-          <Switch>
-            <Route exact path="/admin" component={AdminPlatform} />
-          </Switch>
-          <Switch>
-            <Route exact path="/quiz" component={Quiz} />
-          </Switch>
-          <Switch>
-            <Route exact path="/admin" component={AdminPlatform} />
-          </Switch>
-          <Route path="/admin/editeaza-descrieri" component={EditInfoCards} />
-          <Route path="/admin/editeaza-chestionar" component={QCards} />
-        </BrowserRouter>
       </div>
     );
   }

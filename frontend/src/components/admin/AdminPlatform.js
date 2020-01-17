@@ -76,11 +76,10 @@ class AdminPlatform extends React.Component {
     render() {
         return (
             <div>
-                <Router>
+                
                     <AdminNav />
-                    <Route path="/admin/editeaza-descrieri" component={EditInfoCards} />
-                    <Route path="/admin/editeaza-chestionar" component={QCards} />
-                </Router>
+                   
+            
             </div>
         )
     }

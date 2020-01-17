@@ -101,7 +101,6 @@ class Homepage extends React.Component {
         console.log("homepage: " + this.state.moveToTheRight)
         return (
             <div className="App">
-                <BrowserRouter>
                     <Navigation onClickLogin={this.toggleMoving} onClickSignup={this.toggleMoving} loginState={showLogin} signupState={showSignup} />
                     <GirlModel moveGirl={this.state.moveToTheRight} />
                     <div style={{ height: '60vh' }}>
@@ -109,16 +108,6 @@ class Homepage extends React.Component {
                     </div>
                     <Parteners />
                     <Footer />
-                    <Switch>
-                    {/* <Route path="/sign-up"><SignUp/></Route>
-                    <Route path="/log-in" component={Login} /> */}
-                    <Route exact path="/quiz" component={Quiz} />
-                    </Switch>
-                    <Switch>
-                        <Route exact path="/admin" component={AdminPlatform} />
-                    </Switch>
-                    
-                </BrowserRouter>
             </div>
         )
     }

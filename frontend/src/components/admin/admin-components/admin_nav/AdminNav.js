@@ -85,4 +85,4 @@ class AdminNav extends React.Component {
     }
 }
 
-export default withRouter(AdminNav);
+export default AdminNav;

@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+import BrowserRouter from 'react-router-dom/BrowserRouter'
 
 import Homepage from './components/homepage/Homepage';
 import Navigation from './components/homepage/homepage-components/navbar/NavBar';
@@ -32,13 +33,21 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <BrowserRouter baseline="https://wildcodeschool.github.io/bucharest-project3-interactive-platform/">
-        <Switch>
+        <BrowserRouter >
+          <Switch>
             <Route exact path="/" component={Homepage} />
-            </Switch>
-        <Switch>
-            <Route exact path="/admin" component={AdminPlatform}/>
-              </Switch>
+          </Switch>
+          <Switch>
+            <Route exact path="/admin" component={AdminPlatform} />
+          </Switch>
+          <Switch>
+            <Route exact path="/quiz" component={Quiz} />
+          </Switch>
+          <Switch>
+            <Route exact path="/admin" component={AdminPlatform} />
+          </Switch>
+          <Route path="/admin/editeaza-descrieri" component={EditInfoCards} />
+          <Route path="/admin/editeaza-chestionar" component={QCards} />
         </BrowserRouter>
       </div>
     );

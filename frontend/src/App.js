@@ -32,7 +32,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <BrowserRouter>
+        <BrowserRouter baseline="https://wildcodeschool.github.io/bucharest-project3-interactive-platform/">
         <Switch>
             <Route exact path="/" component={Homepage} />
             </Switch>

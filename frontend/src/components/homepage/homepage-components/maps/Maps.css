@@ -1,377 +1,57 @@
+.gMap {
+  position: relative;
+}
 
+@media (min-width: 0px) and (max-width: 480px) {
   .gMap {
-    position: relative;
+    width: 90vw !important;
+    height: 67vh !important;
+    top: 40vh;
+    left: 0.5%;
   }
-    .hover-question {
-      position: absolute;
-      margin: 0;
-      padding: 0;
-      -webkit-box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
-      -moz-box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
-      box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.45);
-      display: block;
-      z-index: 100;
-  
-    }
-    .hover-text,  .onhover-quiz-bttn, .onhover-findoutMore-bttn {
-      position: absolute;
-    }
-    
-    @media  (max-width: 480px) {
+}
 
-    }
-  @media (max-width: 600px)  {
+@media (min-width: 481px) and (max-width: 600px) {
+  .gMap {
+    width: 90vw !important;
+    height: 70vh !important;
+    top: 20vh;
+    left: 1%;
+  }
+}
 
-    .gMap {
-      width: 90vw!important;
-      height: 70vh!important;
-      top: 49px;
-      left: 0.5%;
-    }
-    .hover-question {
-      height: 220px!important;
-      width: 400px!important;
-      left: 1%;
-      top: 330px!important;
-      background-color: white;
-  
-     
-    }
-    
+@media (min-width: 601px) and (max-width: 768px) {
+  .gMap {
+    width: 90vw !important;
+    height: 70vh !important;
+    top: 20vh;
+    left: 1%;
   }
+}
 
-  @media (min-width: 601px ) and (max-width: 768px)  {
-    .gMap {
-      width: 90vw!important;
-      height: 70vh!important;
-      top: 100px;
-      left: -3%;
-    }
-    .hover-question {
-      height: 220px!important;
-      width: 440px!important;
-      left: 22%;
-      top: 170px!important;
-      background-color: white;
-    }
-    .hover-text {
-      width: 360px;
-    }
-    .onhover-quiz-bttn {
-      top: 150px;
-      left: 13%;
-      width: 160px;
-      color: grey!important;
-      font-size: 14px;
-      height: 40px;
-    }
-      .onhover-findoutMore-bttn {
-        top:150px;
-        left: 53%;
-        width: 190px;
-        height: 40px;
-      }
+@media (min-width: 769px) and (max-width: 992px) {
+  .gMap {
+    width: 90vw !important;
+    height: 70vh !important;
+    top: 24vh;
+    left: 3%;
   }
-  @media (min-width: 769px )  {
-    .gMap {
-      width: 90vw!important;
-      height: 70vh!important;
-      top: 100px;
-      left: -6%;
-    }
-    .hover-question {
-      height: 220px!important;
-      width: 440px!important;
-      left: 22%;
-      top: 170px!important;
-      background-color: white;
-    }
-    .hover-text {
-      width: 360px;
-    }
-    .onhover-quiz-bttn {
-      top: 150px;
-      left: 13%;
-      width: 160px;
-      color: grey!important;
-      font-size: 14px;
-      height: 40px;
-    }
-      .onhover-findoutMore-bttn {
-        top:150px;
-        left: 53%;
-        width: 190px;
-        height: 40px;
-      }
-  }
-  @media (min-width: 1267px) {
-    .gMap {
-      width: 20vw!important;
-      height: 80vh!important;
-      top: 28px;
-      left: -110%;
-    }
-  }
-  /* @media (min-width: 768px ) {
-    .gMap {
-      width: 90vw!important;
-      height: 70vh!important;
-      top: 120px!important;
-      left: 5%;
-    }
-    .hover-question {
-      height: 220px!important;
-      width: 440px!important;
-      left: 22%;
-      top: 170px!important;
-      background-color: white;
-    }
-    .hover-text {
-      width: 360px;
-    }
-    .onhover-quiz-bttn {
-      top: 150px;
-      left: 13%;
-      width: 160px;
-      color: grey!important;
-      font-size: 14px;
-      height: 40px;
-    }
-      .onhover-findoutMore-bttn {
-        top:150px;
-        left: 53%;
-        width: 190px;
-        height: 40px;
-      }
-  } */
-  @media (min-width: 992px ) {
-    .gMap {
-      width: 90vw!important;
-      height: 70vh!important;
-      top: 28px;
-      left: -9%;
-    }
-    .hover-question {
-      height: 220px!important;
-      width: 440px!important;
-      left: 42%;
-      top: 399px!important;
-      background-color: white;
-    }
-    .hover-text {
-      width: 360px;
-    }
-    .onhover-quiz-bttn {
-      top: 150px;
-      left: 13%;
-      width: 160px;
-      color: grey!important;
-      font-size: 14px;
-      height: 40px;
-    }
-      .onhover-findoutMore-bttn {
-        top:150px;
-        left: 53%;
-        width: 190px;
-        height: 40px;
-      }
-  }
+}
 
-  
-  
-/*   
-  @media (max-width: 767px) and (orientation: portrait) {
-  
-
-    .gMap {
-      width: 680px;
-      height: 50vh;
-      top:660px;
-      left: 4%;
-  
-    }
-  
-    
-    .q-question {
-      top: -33px;
-      font-size: 19px;
-      left: 2%;
-  
-    }
-    
-    .q-img {
-      margin: 80px;
-      border-radius: 80px;
-      left: -3%;
-      top: -49px;
-      width: 300px;
-      height: 250px;
-    }
-   
-    
-    .q-first-ans,
-    .q-second-ans
-     {
-      width: 300px;
-      left: 3%;
-      height: 77px;
-    }
-    
-    .q-first-ans{
-      top: 310px;
-    }
-    .q-second-ans {
-      top: 410px;
-    }
-    
-    
-  
-  } */
-/*   
-  @media (max-width: 767px) and (orientation: landscape) {
-  
-    .logo {
-      width: 250px;
-    }
-    .gMap {
-      width: 90vw!important;
-      height: 50vh;
-      top:590px;
-      left: 4%;
-  
-    }
-    .hover-question {
-      height: 290px!important;
-      width: 440px!important;
-      left: 15%;
-      top: 190px!important;
-      background-color: white;
-     
-    }
-    .hover-text {
-      width: 46vw;
-    }
-    .onhover-quiz-bttn {
-      top: 180px;
-      left: 9%;
-      width: 140px;
-      height: 60px;
-      }
-  
-      .onhover-findoutMore-bttn {
-        top:192px;
-        left: 53%
-      }
-
-      
-      .q-img {
-        margin: 80px;
-        border-radius: 80px;
-        left: -3%;
-        top: -89px;
-        width: 300px;
-        height: 250px;
-      }
-     
-      
-      .q-first-ans,
-      .q-second-ans
-       {
-        width: 260px;
-        left: 29%;
-        height: 77px;
-      }
-      
-      .q-first-ans{
-        top: 20px;
-      }
-      .q-second-ans {
-        top: 100px;
-      }
-      
-      
-  } */
-  /* @media (min-width: 768px) and (orientation: portrait) {
-    
-    .gMap {
-      width: 90vw!important;
-      height: 60vh!important;
-      top:100vh;
-      left: 4%;
-  
-    }
-    .hover-question {
-      height: 290px!important;
-      width: 440px!important;
-      left: 35%;
-      top: 190px!important;
-      background-color: white;
-     
-    }
-    .hover-text {
-      width: 370px;
-      top: 19px;
-    }
-    .onhover-quiz-bttn {
-      top: 180px;
-      left: 9%;
-      width: 140px;
-      height: 60px;
-      }
-      .onhover-findoutMore-bttn {
-        top:192px;
-        left: 53%
-      }
-   
-      
-      .q-first-ans,
-      .q-second-ans
-       {
-        width: 300px;
-        left: 29%;
-        height: 77px;
-      }
-      
-      .q-first-ans{
-        top: 19px;
-      }
-      .q-second-ans {
-        top: 119px;
-      }
-      
+@media (min-width: 993px) and (max-width: 1382px) {
+  .gMap {
+    width: 90vw !important;
+    height: 70vh !important;
+    top: 24vh;
+    left: 3%;
   }
-  
-  @media (min-width: 768px) and (orientation: landscape) {
-    .gMap {
-      width: 90vw!important;
-      height: 80vh!important;
-      top:115vh;
-      left: 5%;
-  
-    }
-    .hover-question {
-      height: 240px!important;
-      width: 490px!important;
-      left: 38%;
-      top: 190px!important;
-      background-color: white;
-     
-    }
-    .hover-text {
-      width: 440px;
-    }
-    .onhover-quiz-bttn {
-      top: 160px;
-      left: 12%;
-      width: 190px;
-      height: 40px;
-      }
-      .onhover-findoutMore-bttn {
-        top:162px;
-        left: 59%
-      }
-  } */
-  
- 
-  
-  
+}
+
+@media (min-width: 1383px) {
+  .gMap {
+    width: 90vw !important;
+    height: 70vh !important;
+    top: 24vh;
+    left: 3%;
+  }
+}

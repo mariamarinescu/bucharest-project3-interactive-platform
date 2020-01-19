@@ -32,7 +32,7 @@ class GMap extends React.Component {
     };
     render() {
         return (
-            <Container fuild>
+            <Container fluid>
             <Row noGutters>
                 <Col>
             <div className='map'>

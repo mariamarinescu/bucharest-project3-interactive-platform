@@ -47,22 +47,22 @@ class Login extends React.Component {
     render() {
         console.log(this.state.email)
         return (
-            <Container fuild>
+            <Container fluid>
            
                 {/* {this.props.isActive ? */}
                 <Row>
                 
-                    <Col className='py-3' md={{ offset: 8, span: 7 }} xs={{ offset: 4, span: 7 }} >
-                    <div id='login' >
+                    <Col className='py-3'  >
+                    <div id='user-form' >
                         <Form>
                             <Form.Group controlId="formBasicEmail">
-                                <Form.Control onChange={this.onChangeEmail} type="email" placeholder="Email" size='sm' />
+                                <Form.Control className="myinput" onChange={this.onChangeEmail} type="email" placeholder="Email" size='sm' />
                             </Form.Group>
                             <Form.Group controlId="formBasicPassword">
-                                <Form.Control onChange={this.onChangePass} type="password" placeholder="Parola" size='sm' />
+                                <Form.Control  className="myinput"onChange={this.onChangePass} type="password" placeholder="Parola" size='sm' />
                             </Form.Group>
-                            <Col md={{ offset: 4, span: 1 }}>
-                                <Button className='login-btn' variant="outline-secondary" type="submit" onClick={this.routeChange}>
+                            <Col>
+                                <Button variant="outline-secondary" className='submit' type="submit" onClick={this.routeChange}>
                                     <div className='login-text'>Logare</div>
                                 </Button>
                             </Col>

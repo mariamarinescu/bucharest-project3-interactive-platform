@@ -2,6 +2,8 @@ import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 import {withRouter,  BrowserRouter  as Router} from 'react-router-dom';
 import Question from './Question';
+import Navigation from '../navbar/NavBar';
+import Footer from '../footer/Footer';
 import data from '../info_modal/my_fake_db';
 
 
@@ -21,31 +23,22 @@ class Quiz extends React.Component {
             answers: ["Actiune hranitoare","Actiune exfolianta"],            
             firstQuestionCorrect: true,
             secondQuestionCorrect: false
-            // correct: 0
-            // category: "fata"
+         
         }
 
 
     }
 
-    // componentWillMount() {
-    //    document.getElementsByClassName('model')[0].style.display = 'none';
-    //    document.getElementsByClassName('gMap')[0].style.display = 'none';
-    // }
 
-    // componentWillUnmount() {
-    //     document.getElementsByClassName('model')[0].style.display = 'inline-block';
-    //     document.getElementsByClassName('gMap')[0].style.display = 'inline-block';
-
-    // }
 
     render() {
         return (
             
             <Container fluid>
+            <Navigation/>
             <Row noGutters>
             <Col>
-            <div className="quiz-container">
+         
                 <h1 className="quiz-title">Concurs Techir</h1>
                 <h6 className="quiz-desc">Participa, raspunzand la intrebare si poti castiga reduceri la produsele tale favorite.</h6>
                 <Question
@@ -54,9 +47,9 @@ class Quiz extends React.Component {
                     modalFailureDescription={this.state.modalFailureDescription} modalFailureLastMessage={this.state.modalFailureLastMessage}
                 />
 
-            </div>
             </Col>
             </Row>
+      
             </Container>
         )
     }

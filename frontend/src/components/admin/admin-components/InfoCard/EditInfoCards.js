@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import {withRouter} from 'react-router-dom'
+
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import InfoCard from "./EditInfoCard";
@@ -51,7 +53,7 @@ class EditInfoCards extends Component {
     }
 }
 
-export default EditInfoCards;
+export default withRouter(EditInfoCards);
 
 
 

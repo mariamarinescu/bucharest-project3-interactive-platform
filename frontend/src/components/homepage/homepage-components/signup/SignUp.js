@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Modal, Row, Col, Form, Container } from 'react-bootstrap';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 const FormErrors = ({ formErrors }) =>
     <div className='formErrors'>
@@ -102,25 +102,25 @@ class SignUp extends React.Component {
 
     render() {
         return (
-            <Container fuild>
+            <Container fluid>
                 <Row >
-                    <Col className='py-3' md={{ offset: 8, span: 7 }} xs={{ offset: 4, span: 7 }} >
-                        <div id='login' >
+                    <Col >
+                        <div id='user-form' >
                             <Form >
                                 <div className="form-group">
-                                    <input type="text" className="form-control mySignUp-input"
+                                    <input type="text" className="form-control myinput"
                                         name="name" value={this.state.name}
                                         placeholder="Nume complet"
                                         onChange={(event) => this.handleUserInput(event)} />
                                 </div>
                                 <div className="form-group">
-                                    <input type="email" className="form-control mySignUp-input"
+                                    <input type="email" className="form-control myinput"
                                         name="email" value={this.state.email}
                                         placeholder="Email"
                                         onChange={(event) => this.handleUserInput(event)} />
                                 </div>
                                 <div className="form-group">
-                                    <input type="password" className="form-control mySignUp-input"
+                                    <input type="password" className="form-control myinput"
                                         name="password" value={this.state.password}
                                         placeholder="Parola"
                                         onChange={(event) => this.handleUserInput(event)} />
@@ -132,10 +132,11 @@ class SignUp extends React.Component {
                                         onChange={(event) => this.handleUserInput(event)} />
                                 </div>
                                 <Col>
-                                    <Button variant="outline-secondary" className="mySignUp-bttn" type="submit"
+                                    <Button variant="outline-secondary" className="submit" type="submit"
                                         disabled={!this.state.formValid} onClick={this.routeChange}>
                                         Creeare cont
-                    </Button></Col>
+                    </Button>
+                                </Col>
                             </Form>
                             <div className="panel panel-default">
                                 <FormErrors formErrors={this.state.formErrors} />

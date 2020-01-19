@@ -1,4 +1,5 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom'
 import * as data from './my_fake_db.json';
 import QCard from './quiz-card/QCard';
 import './quiz-card/QCards.css';
@@ -61,7 +62,7 @@ class QCards extends React.Component {
     }
 }
 
-export default QCards;
+export default withRouter(QCards);
 
 
 // face: {

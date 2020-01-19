@@ -35,21 +35,24 @@ class AdminNav extends React.Component {
     componentDidUpdate() {
     }
 
-    handleDescription = () => {
+    handleDescription = (e) => {
+        e.preventDefault();
         this.setState({
             descriptionBttnState: false,
             quizBttnState: true
         })
-            let adminPath = '/admin'
-            this.props.history.push(adminPath)
-            
+            // let adminPath = '/admin'
+            // this.props.history.push(adminPath)
+            this.props.choose('info');
         }
     
-    handleQuiz = () => {
+    handleQuiz = (e) => {
+        e.preventDefault();
         this.setState({
             quizBttnState: false,
             descriptionBttnState: true
         })
+        this.props.choose('quiz');
     }
 
     render() {
@@ -59,7 +62,6 @@ class AdminNav extends React.Component {
             <NavBar/>
             <Row className="admin-nav">
                 <Col className='nav-container'>
-                    <Link to="/admin/editeaza-descrieri" className='nav-button-container'>
                         <Button variant="secondary" size="lg"
                             style={this.state.descriptionBttnState ? this.descbtnStyleActive : this.descbtnStyleInactive}
                             className="admin-desc-bttn custom-btn"
@@ -67,16 +69,13 @@ class AdminNav extends React.Component {
                         >
                             Descrieri
                         </Button>
-                    </Link>
 
-                    <Link to="/admin/editeaza-chestionar">
                         <Button variant="secondary" onClick={this.handleQuiz}
                             style={this.state.quizBttnState ? this.quizbtnStyleActive : this.quizbtnStyleInactive}
                             size="lg" className="admin-quiz-bttn custom-btn"
                         >
                             Chestionar
                         </Button>
-                    </Link>
                 </Col >
             </Row >
             <Footer/>
@@ -85,4 +84,4 @@ class AdminNav extends React.Component {
     }
 }
 
-export default AdminNav;
+export default withRouter(AdminNav);

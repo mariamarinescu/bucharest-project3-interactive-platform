@@ -80,7 +80,7 @@ class QCard extends React.Component {
                         onChange={(event) => this.handleAdminInput(event)}
                     />
                     <Card.Body>
-                        <Button variant="outline-dark" className="mySaveCardQuiz-bttn" type="submit" onClick={this.saveQuizQ}>Salveaza</Button>
+                        <Button variant="outline-dark" className="mySaveCardQuiz-bttn" style={{width: "190px"}} type="submit" onClick={this.saveQuizQ}>Salveaza</Button>
                     </Card.Body>
                 </Card>
             </Col>

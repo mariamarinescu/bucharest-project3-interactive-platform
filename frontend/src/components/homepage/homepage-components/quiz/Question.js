@@ -21,7 +21,7 @@ class Question extends React.Component {
 
     handleSuccessClose = () => {
         this.setShowSuccess(false);
-        this.props.history.push('/');
+        // this.props.history.push('/');
          
     }
 
@@ -38,7 +38,7 @@ class Question extends React.Component {
 
     handleFailureClose = () => {
         this.setShowFailure(false)
-        this.props.history.push('/');
+        // this.props.history.push('/');
     }
 
 
@@ -91,7 +91,7 @@ class Question extends React.Component {
                     title={this.props.modalFailureTitle}  description={this.props.modalFailureDescription}
                     lastMessage={this.props.modalFailureLastMessage} 
                     /> */}
-                    <Modal
+                    <Modal className='modal'
                         show={this.state.showSuccess}
                         onHide={this.handleSuccessClose}
                     >
@@ -117,12 +117,13 @@ class Question extends React.Component {
                             <img
                                 src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png"
                                 alt="logo"
+                                style={{width:'200px', height: '120px'}}
                             />
                         </Modal.Footer>
 
                     </Modal>
 
-                    <Modal
+                    <Modal className='modal'
                         show={this.state.showFailure}
                         onHide={this.handleFailureClose}
                     >
@@ -141,7 +142,7 @@ class Question extends React.Component {
                         </Modal.Body>
 
                         <Modal.Footer>
-                            <img src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" alt="logo" />
+                            <img src="http://www.techir.ro/wp-content/uploads/2015/03/logo_techir.png" alt="logo" style={{width:'200px', height: '120px'}} />
                         </Modal.Footer>
                     </Modal>
                 </div>

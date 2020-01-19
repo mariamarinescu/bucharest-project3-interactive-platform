@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter} from 'react-router-dom';
 import HashRouter from 'react-router-dom/HashRouter'
 
 import Homepage from './components/homepage/Homepage';
@@ -33,13 +33,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-          <Switch>
-            <Route exact path="/" component={Homepage} />
-            <Route path="/quiz" component={Quiz} />
-            <Route path="/admin" component={AdminPlatform} />
-            <Route path="/admin/editeaza-descrieri" component={EditInfoCards} />
-            <Route path="/admin/editeaza-chestionar" component={QCards} />
-          </Switch>
       </div>
     );
   }
@@ -47,4 +40,4 @@ class App extends React.Component {
 }
 
 
-export default App;
+export default withRouter(App);

@@ -90,7 +90,7 @@ class Homepage extends React.Component {
         } else if (param === 'signup') {
             this.setState({ moveToTheRight: true, showLogin: false, showSignup: true});
         } else if(param === false) {
-            this.setState({ moveToTheRight: true});
+            this.setState({ moveToTheRight: false});
         }
         console.log("homepage: " + this.state.moveToTheRight)
     }
@@ -102,7 +102,7 @@ class Homepage extends React.Component {
         return (
             <div className="App">
                     <Navigation onClickLogin={this.toggleMoving} onClickSignup={this.toggleMoving} loginState={showLogin} signupState={showSignup} />
-                    <GirlModel moveGirl={this.state.moveToTheRight} />
+                    <GirlModel moveGirl={this.state.moveToTheRight} loginState={showLogin} signupState={showSignup} />
                     <div style={{ height: '60vh' }}>
                         <Maps locationData={markerData} />
                     </div>

@@ -66,7 +66,7 @@ class Navigation extends React.Component  {
         return (
             <div>
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand ><a href="/"><img src={logo} alt="techir-logo" className="logo-t"></img></a></Navbar.Brand>
+                <Navbar.Brand ><a href="https://wildcodeschool.github.io/bucharest-project3-interactive-platform"><img src={logo} alt="techir-logo" className="logo-t"></img></a></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto nav-items">

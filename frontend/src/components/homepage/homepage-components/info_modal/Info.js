@@ -70,7 +70,6 @@ class Info extends React.Component {
           <Button className="onhover-quiz-bttn" variant="outline-danger" href={this.state.blogLink}>Participa si castiga</Button>
           <Button className="onhover-findoutMore-bttn" variant="outline-secondary" href={this.state.blogLink}>Afla detalii</Button>
         </div>
-        {/* <Content info={this.state.info}/> */}
       </div>
     )
   }

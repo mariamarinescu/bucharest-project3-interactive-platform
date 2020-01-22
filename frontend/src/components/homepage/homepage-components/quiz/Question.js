@@ -21,8 +21,6 @@ class Question extends React.Component {
 
     handleSuccessClose = () => {
         this.setShowSuccess(false);
-        // this.props.history.push('/');
-         
     }
 
 

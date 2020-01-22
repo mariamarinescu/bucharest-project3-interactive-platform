@@ -129,7 +129,6 @@ class GirlModel extends React.Component {
                                 </div>
                                 : null}
 
-                            {/* <div id="bulding-line-1"></div> */}
                             <div className='info-g-first-bttn' variant="outline-secondary">Pozitioneaza cursorul pe punctele de pe model pentru mai multe detalii</div>
                             <div className='info-g-second-bttn' variant="outline-secondary">Atinge punctele de pe model pentru mai multe detalii</div>
                             <div className={contentClass}>
@@ -138,13 +137,10 @@ class GirlModel extends React.Component {
                                 <Button className="onhover-quiz-bttn" variant="outline-dark" onClick={this.prepareQuiz}>Participa si castiga</Button>
                                 <Button className="onhover-findoutMore-bttn" variant="outline-secondary" href={this.state.blogLink}>Afla detalii</Button>
                             </div>
-                            {/* <Content info={this.state.info}/> */}
                         </div>
                     </Col>
                 </Row>
             </Container>
-
-
         );
     }
 }

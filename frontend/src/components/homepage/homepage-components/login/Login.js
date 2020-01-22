@@ -24,8 +24,7 @@ class Login extends React.Component {
 
     }
     onChangePass(event) {
-        // this.setState({pass: event.target.value})
-        // console.log(this.state.pass)
+  
     }
 
     routeChange = () => {
@@ -48,7 +47,6 @@ class Login extends React.Component {
         console.log(this.state.email)
         return (
             <Container fluid>
-           
                 {/* {this.props.isActive ? */}
                 <Row>
                 
@@ -71,9 +69,7 @@ class Login extends React.Component {
                     </Col>
                     
                 </Row>
-                
                 {/* // : null} */}
-          
             </Container>
         );
     }

@@ -13,10 +13,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     password: DataTypes.STRING,
     date: DataTypes.DATE,
-    acces_level: DataTypes.STRING
+    acces_level: DataTypes.INTEGER
   }, {});
   user.associate = function (models) {
-    // associations can be defined here
+    user.hasMany(models.coupons)
   };
   return user;
 };

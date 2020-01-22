@@ -9,12 +9,12 @@ module.exports = (sequelize, DataTypes) => {
     question: DataTypes.STRING,
     answer1: DataTypes.STRING,
     answer2: DataTypes.STRING,
-    correct_answer: DataTypes.STRING,
+    correct_answer: DataTypes.INTEGER,
     image_link: DataTypes.STRING,
     category_id: DataTypes.INTEGER
   }, {});
   quizzes.associate = function (models) {
-    // associations can be defined here
+    quizzes.hasMany(models.description)
   };
   return quizzes;
 };

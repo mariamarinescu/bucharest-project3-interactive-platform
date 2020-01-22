@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     catergory_name: DataTypes.STRING
   }, {});
   categories.associate = function (models) {
-    // associations can be defined here
+   categories.hasMany(models.description)
   };
   return categories;
 };

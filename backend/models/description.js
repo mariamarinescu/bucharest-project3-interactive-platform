@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     category_id: DataTypes.INTEGER
   }, {});
   description.associate = function (models) {
-    // associations can be defined here
+    description.belongsTo(models.categories)
   };
   return description;
 };

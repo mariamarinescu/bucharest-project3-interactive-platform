@@ -5,8 +5,18 @@ const morgan = require('morgan');
 const authRoute = require('./routes/authRoute')
 const port = 5500;
 
+const models = require('./models')
+
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use('/authentication', authRoute);
-app.listen(port, () => console.log(`Im on ${port}`));
+
+models
+    .sequelize
+    .sync(
+        // { force: true }
+        )
+    .then(() =>
+        app.listen(port, () => console.log(`Im on ${port}`))
+    )

@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     user_id: DataTypes.INTEGER
   }, {});
   coupons.associate = function (models) {
-    // associations can be defined here
+    coupons.belongsTo(models.user)
   };
   return coupons;
 };

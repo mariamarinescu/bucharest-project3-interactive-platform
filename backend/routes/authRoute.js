@@ -87,6 +87,26 @@ router.post('/quizz', passport.authenticate('jwt', { session: false }), (req, re
         .then((rez) => { rez ? res.status(200).json(rez) : res.status(500).json({ msg: 'quiz bad ):' }) })
 })
 
+router.get('/description', passport.authenticate('jwt', { session: false }), (req, res) => {
+    models
+        .description
+        .findAll()
+        .then(data => res.status(200).json(data))
+})
+
+router.post('/description', passport.authenticate('jwt', { session: false }), (req, res) => {
+    let myDescription = {
+        text: req.body.text,
+        link: req.body.link,
+        category_id: req.body.category_id
+    }
+    models
+        .description
+        .create({ ...myDescription })
+        .then((rez) => { rez ? res.status(200).json(rez) : res.status(500), json({ msg: 'description bad )x' }) })
+})
+
+
 router.post('/coupons', passport.authenticate('jwt', { session: false }), (req, res) => {
     let code = {
         code: Math.floor(Math.random() * (Math.floor(9999999999) - Math.ceil(999999)) + Math.ceil(999999)),

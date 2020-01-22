@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom';
 
-
 import Maps from './homepage-components/maps/Maps';
 import Navigation from './homepage-components/navbar/NavBar';
 import Quiz from './homepage-components/quiz/Quiz';
@@ -19,8 +18,6 @@ import './homepage-components/Gurl/GirlModel.css';
 import './homepage-components/signup/SignUp.css';
 import './homepage-components/maps/Maps.css';
 import AdminPlatform from '../admin/AdminPlatform';
-
-
 
 const markerData = [
     {
@@ -111,10 +108,6 @@ class Homepage extends React.Component {
             </div>
         )
     }
-
 }
-
-
-
 
 export default Homepage;

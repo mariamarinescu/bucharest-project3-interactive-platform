@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Serif&display=swap");
-
 .move-Gurl {
   position: relative;
 }
+
 .stay-Gurl {
   position: relative;
 }
@@ -12,6 +12,8 @@
   width: -moz-fit-content;
   width: fit-content;
   vertical-align: middle;
+  /*   //////////////////////     */
+  margin: 0
 }
 
 .gurlContainer {
@@ -263,8 +265,8 @@
     transform: rotate(360deg) scale(0.5);
   }
 }
-.info-g-first-bttn,
-.info-g-second-bttn {
+
+.info-g-first-bttn, .info-g-second-bttn {
   position: absolute;
   border: 1px solid grey;
   border-radius: 5px;
@@ -286,11 +288,11 @@
   display: block;
   z-index: 100;
 }
-.hover-text,
-.onhover-quiz-bttn,
-.onhover-findoutMore-bttn {
+
+.hover-text, .onhover-quiz-bttn, .onhover-findoutMore-bttn {
   position: absolute;
 }
+
 #building-line-1 {
   position: absolute;
   height: 50px;
@@ -356,7 +358,6 @@
     top: 74vh;
     left: 25%;
   }
-
   .hover-question {
     height: 38vh;
     width: 93vw;
@@ -529,7 +530,7 @@
     height: 40px;
   }
   .onhover-findoutMore-bttn {
-    top:270px!important;
+    top: 270px!important;
     left: 57%;
     width: 26vw!important;
     height: 40px;

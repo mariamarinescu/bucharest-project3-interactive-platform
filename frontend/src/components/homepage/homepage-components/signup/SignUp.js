@@ -49,50 +49,80 @@ class SignUp extends React.Component {
     handleUserInput = (e) => {
         const name = e.target.name;
         const value = e.target.value;
-        this.setState({ [name]: value },
-            () => { this.validateField(name, value) })
-        if (this.state.password === this.state.confirmPassword && this.state.password !== '' && this.state.confirmPassword !== '') {
-            this.setState({
-                confirmPasswordValid: true
-            })
-        }
-
-    }
-
-
-    validateField(fieldName, value) {
-        let fieldValidationErrors = this.state.formErrors;
-        let emailValid = this.state.emailValid;
-        let passwordValid = this.state.passwordValid;
-        let confirmPasswordValid = this.state.confirmPasswordValid;
-
-        switch (fieldName) {
-            case 'email':
-                emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i); //an example regex from the Devise library.
-                fieldValidationErrors.email = emailValid ? '' : ' nu este valid.';
-                break;
-            case 'password':
-                passwordValid = value.length >= 6;
-                fieldValidationErrors.password = passwordValid ? '' : ' este prea scurta.';
-                break;
-            case 'confirmPassword':
-                confirmPasswordValid = value === this.state.password;
-                fieldValidationErrors.confirmPassword = confirmPasswordValid ? '' : 'nu se potrivesc.';
-                break;
-            default:
-                break;
-
-        }
+        // console.log(`[${name}]: ${value}`, e)
 
         this.setState({
-            formErrors: fieldValidationErrors,
-            emailValid: emailValid,
-            passwordValid: passwordValid
-        }, this.validateForm);
+            name: e.target.value,
+            email: e.target.value,
+            password: e.target.value
+        })
+
+        // this.setState({ [name]: value },
+        //     () => { this.validateField(name, value) })
     }
+
+    // if (this.state.password === this.state.confirmPassword && this.state.password !== '' && this.state.confirmPassword !== '') {
+    //     this.setState({
+    //         confirmPasswordValid: true
+    //     })
+    // }
+    // }
+
+
+    // validateField(fieldName, value) {
+    //     let fieldValidationErrors = this.state.formErrors;
+    //     let emailValid = this.state.emailValid;
+    //     let passwordValid = this.state.passwordValid;
+    //     let confirmPasswordValid = this.state.confirmPasswordValid;
+    //     switch (fieldName) {
+    //         case 'email':
+    //             emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i); //an example regex from the Devise library.
+    //             fieldValidationErrors.email = emailValid ? '' : ' nu este valid.';
+    //             break;
+    //         case 'password':
+    //             passwordValid = value.length >= 6;
+    //             fieldValidationErrors.password = passwordValid ? '' : ' este prea scurta.';
+    //             break;
+    //         case 'confirmPassword':
+    //             confirmPasswordValid = value === this.state.password;
+    //             fieldValidationErrors.confirmPassword = confirmPasswordValid ? '' : 'nu se potrivesc.';
+    //             break;
+    //         default:
+    //             break;
+    //     }
+
+    //     this.setState({
+    //         formErrors: fieldValidationErrors,
+    //         emailValid: emailValid,
+    //         passwordValid: passwordValid
+    //     }, this.validateForm);
+    // }
+
+
     routeChange = () => {
         let path = `/quiz`;
+
+        fetch('/authentication/sign-up',
+            {
+                method: 'POST',
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                }),
+                body: JSON.stringify({
+                    name: this.state.name,
+                    email: this.state.email,
+                    password: this.state.password,
+                }),
+            }
+        )
+            .then(res => res.json())
+            .then(res => console.log(res)
+            )
+
         this.props.history.push(path);
+
+
+
     }
 
     validateForm() {
@@ -109,33 +139,55 @@ class SignUp extends React.Component {
                             <Form >
                                 <div className="form-group">
                                     <input type="text" className="form-control myinput"
-                                        name="name" value={this.state.name}
+                                        name="name"
+
+                                        // value={this.state.name}
+
                                         placeholder="Nume complet"
-                                        onChange={(event) => this.handleUserInput(event)} />
+
+                                        onChange={(event) => this.handleUserInput(event)}
+                                    />
                                 </div>
                                 <div className="form-group">
                                     <input type="email" className="form-control myinput"
-                                        name="email" value={this.state.email}
+                                        name="email"
+
+                                        // value={this.state.email}
+
                                         placeholder="Email"
-                                        onChange={(event) => this.handleUserInput(event)} />
+
+                                        onChange={(event) => this.handleUserInput(event)}
+                                    />
                                 </div>
                                 <div className="form-group">
                                     <input type="password" className="form-control myinput"
-                                        name="password" value={this.state.password}
+                                        name="password"
+
+                                        // value={this.state.password}
+
                                         placeholder="Parola"
-                                        onChange={(event) => this.handleUserInput(event)} />
+
+                                        onChange={(event) => this.handleUserInput(event)}
+                                    />
                                 </div>
                                 <div className="form-group">
                                     <input type="password" className="form-control mySignUp-input"
-                                        name="confirmPassword" value={this.state.confirmPassword}
+                                        name="confirmPassword"
+
+                                        // value={this.state.confirmPassword}
+
                                         placeholder="Confirma parola"
-                                        onChange={(event) => this.handleUserInput(event)} />
+
+                                        onChange={(event) => this.handleUserInput(event)}
+                                    />
                                 </div>
                                 <Col>
                                     <Button variant="outline-secondary" className="submit" type="submit"
-                                        disabled={!this.state.formValid} onClick={this.routeChange}>
+                                        // disabled={!this.state.formValid}
+                                        onClick={this.routeChange}
+                                    >
                                         Creeare cont
-                    </Button>
+                                    </Button>
                                 </Col>
                             </Form>
                             <div className="panel panel-default">

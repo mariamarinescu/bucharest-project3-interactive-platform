@@ -24,9 +24,9 @@ passport.use(new LocalStrategy(
                 }
             })
             .then(users => {
-                if (!users) return callback(null, { msg: 'stuff didnt work cuz username' })
+                if (!users) return callback(null, false, { msg: 'stuff didnt work cuz username' })
                 let bCryptPassword = bCrypt.compareSync(password, users[0].password)
-                if (!bCryptPassword) { return callback(null, { msg: 'stuff didnt work cuz passord' }) }
+                if (!bCryptPassword) { return callback(null, false, { msg: 'stuff didnt work cuz passord' }) }
                 callback(null, users)
             })
     }
@@ -54,6 +54,7 @@ router.post('/sign-up', (req, res) => {
 });
 
 router.post('/sign-in', (req, res) => {
+                      
     passport.authenticate('local', (err, user, info) => {
         const userData = {
             email: user[0].email,
